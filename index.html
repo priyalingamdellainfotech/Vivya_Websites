@@ -1,0 +1,1369 @@
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Vivya Corp - Vivya Cards">
+        <meta name="author" content="Scanner App,Business Card Scanner,Scan,Retain,Utilize,VCF file">
+       
+        <title>Vivya Corp - Vivya Cards</title>
+        
+		<link rel="shortcut icon" type="image/x-icon" href="img/vivya-cards/vcards-favico.svg" >
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <!-- Themify Icons CSS -->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- Elegant Line Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-line-icons.css">
+        <!-- Elegant Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-font-icons.css">
+        <!-- Saasbiz Icons CSS -->
+        <link rel="stylesheet" href="css/saasbiz-icons.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="css/nice-select.css">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Slicknav CSS -->
+        <link rel="stylesheet" href="css/slicknav.min.css">
+        <!-- Pricing CSS -->
+        <link rel="stylesheet" href="css/pricing-table.css">
+        <!-- Odometer CSS -->
+        <link rel="stylesheet" href="css/odometer.min.css">
+        <!-- Venobox CSS -->
+        <link rel="stylesheet" href="css/venobox/venobox.css">
+		<!-- OWL-Carousel CSS -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <script src="https://kit.fontawesome.com/d4ca3fea8b.js" crossorigin="anonymous"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+<style>
+        /* Add your CSS styles here */
+       #popupContainer {
+        /* Your existing styles for the popup container */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        background-color: white; /* Set the background color for the popup */
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: none; 
+        /* width: 65%; */
+        /* Initially hidden */
+    }
+
+        #popupContainer h2 {
+            margin-bottom: 10px;
+        }
+
+        #myForm {
+            padding: 10px 30px;
+        }
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+		 body.blurred {
+        backdrop-filter: blur(10px); /* Adjust the blur radius */
+    }
+
+	 /* Apply a transparent background to blur the rest of the page */
+    #blurBackground {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px); /* Adjust the blur radius */
+        z-index: 999; /* Ensure the background is above other elements */
+        display: none; /* Initially hidden */
+    }
+	   /* Add CSS styles for the form layout */
+    .form-row {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .form-column {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .form-column:last-child {
+        margin-right: 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+input,
+    textarea,
+    select {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid grey;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    height: 50px;
+    border-radius: none;
+    border-radius: 0px;
+    }
+
+    input:hover,
+    textarea:hover,
+    select:hover {
+        /* border-bottom: 1px solid #555;  */
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+        background-color: #f0f0f0; /* Change the background color on focus */
+        border-bottom: 2px solid green;
+    }	
+    .lbl_mand,.lbl_txt{
+        color: #6a8695;
+    }
+    .lbl_mand::after{
+        content: "*";
+        color: red;
+        font-size: 20px;
+        font-weight: 900;
+    }
+    
+    .sub-main{
+     /* width: 30%; */
+     margin: 22px;
+    /* float: left; */
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+
+.button-two{
+  text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0 0 0 0;
+}
+.button-two {
+  border-radius: 4px;
+  background-color: #dee2e6;
+  border: none;
+  padding: 10px;
+  width: 130px;
+  
+  background: linear-gradient(to right, #4361ee, #2a3299, #03a5ff, #0d60ff);
+    color: #ffffff;
+    border-style: none;
+}
+
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  /* transition: 0.5s; */
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button-two:active{
+    border:none;
+}
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  /* border: 1px solid rgba(0, 0, 0, 0.16); */
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+.errorMessage{
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+.error-msg{
+    color: red;
+    font-size: 15px;
+    margin-top: -15px;
+    position: absolute;
+}
+@media screen and (max-width: 480px){
+    #popupContainer{
+
+    }
+    .form-row{
+        display: flex;
+        flex-direction: column;
+    }
+}
+::placeholder{
+    font-weight: 100;
+}
+  
+
+    </style>
+<script>
+
+    let formVisible = false;
+    
+        function showPopup() {
+        console.log("###########SHOW TRIGGER")
+            const popupContainer = document.getElementById('popupContainer');
+            //const blurBackground = document.getElementById('blurBackground');
+            
+            if (popupContainer && blurBackground) {
+                // Display the popup and the blur background
+                popupContainer.style.display = 'block';
+                blurBackground.style.display = 'block';
+    
+                // Optionally, you can add an animation effect to the popup
+                popupContainer.classList.add('fadeIn'); // Add a CSS class for fadeIn animation
+            } else {
+                console.error("Popup container or blur background element not found");
+            }
+        }
+    
+    function closePopup() {
+    console.log("##########TRIGGERED")
+        const popupContainer = document.getElementById('popupContainer');
+        const blurBackground = document.getElementById('blurBackground');
+    
+        if (popupContainer && blurBackground) {
+            // Remove the animation class if added
+            popupContainer.classList.remove('fadeIn');
+    
+            // Remove the blur effect from blurBackground
+            blurBackground.classList.remove('blurred');
+    
+            // Delay hiding the elements to allow for the transition
+            setTimeout(function () {
+                // Hide both the popup and the blurBackground
+                popupContainer.style.display = 'none';
+                blurBackground.style.display = 'none';
+            }, 300); // Adjust the timeout based on your transition duration
+        } else {
+            console.error("Popup container or blur background element not found");
+        }
+    }
+    
+	
+	// Function to submit the form
+function submitFormBottom() {
+    
+    // Get form and form data
+    const form = document.getElementById('myFormBottom');
+    const formData = new FormData(form);
+
+    // Get values from specific form fields
+    const name = formData.get('contactNameBottom');
+    const email = formData.get('emailBottom');
+    const phone = formData.get('phoneBottom');
+
+    // Validate name
+    if (name.trim() === '') {
+        
+        document.getElementById('nameErrorBottom').innerText = 'Please enter your Name';
+        return;
+    } else {
+        document.getElementById('nameErrorBottom').innerText = '';
+    }
+
+    // Validate email
+    if (email.trim() === '') {
+        document.getElementById('emailErrorBottom').innerText = 'Please enter your Email address';
+        return;
+    } else if (!isValidEmail(email)) {
+        document.getElementById('emailErrorBottom').innerText = 'Please enter a valid Email address';
+        return;
+    } else {
+        document.getElementById('emailErrorBottom').innerText = '';
+    }
+
+    // Validate phone
+    if (phone.trim() === '') {
+        document.getElementById('phoneErrorBottom').innerText = 'Please enter your Phone number';
+        return;
+    } else {
+        document.getElementById('phoneErrorBottom').innerText = '';
+    }
+
+    // Create an object for non-file data
+    const jsonData = {
+        contact_name: name,
+        email_address: email,
+        phone_number: phone,
+        company_name: formData.get('companyBottom'),
+        job_title: formData.get('jobTitleBottom'),
+        subject: formData.get('subjectBottom'),
+        typeof_service_request: formData.get('serviceTypeBottom'),
+        product_name: "Vivya Cards",
+        location: formData.get('locationBottom'),
+        description: formData.get('descriptionBottom'),
+    };
+
+    // Convert the object to URL-encoded form data
+    const urlEncodedData = new URLSearchParams(jsonData).toString();
+
+    // Make API call with multipart form data and query parameters
+    fetch(`https://api.vivyacorp.com/add_test_data?${urlEncodedData}`, {
+        method: 'POST',
+        body: formData,
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle the response data as needed
+            console.log('API call successful:', data);
+            if (data.statusFlag) {
+                // Show success alert
+                alert('Thanks for submitting!');
+                document.getElementById("myForm").reset();
+                //document.body.classList.remove('blurred');
+                // window.closePopup(); // Commented out as it's not clear if this function exists
+				form.reset();
+            } else {
+                // Show error alert
+                alert('Error in submitting: ' + data.message);
+            }
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form.');
+        });
+}
+
+// Function to validate email using a regular expression
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+    
+    
+    
+    
+     document.addEventListener('DOMContentLoaded', function () {
+                // Check if the URL contains the parameter indicating the form should be shown
+                const urlParams = new URLSearchParams(window.location.search);
+                const showFormParam = urlParams.get('showForm');
+    
+                // Declare formVisible before any function calls
+                let formVisible = false;
+    
+                // Log to console to check if the script is running
+                console.log("Script is running");
+    
+                // If the parameter is present and the form is available, show the form
+                if (showFormParam === 'true') {
+                    const form = document.getElementById('myForm');
+                    if (form) {
+                        showPopup();
+                    } else {
+                        console.error("Form element with ID 'myForm' not found");
+                    }
+                }
+    
+                function toggleForm() {
+                    const form = document.getElementById('myForm');
+                    formVisible = !formVisible;
+    
+                    if (form) {
+                        form.style.display = formVisible ? 'block' : 'none';
+                    } else {
+                        console.error("Form element with ID 'myForm' not found");
+                    }
+                }		
+    
+                // Attach functions to the window object
+                window.closePopup = function () {
+                    const popupContainer = document.getElementById('popupContainer');
+                    const blurBackground = document.getElementById('blurBackground');
+                    if (popupContainer && blurBackground) {
+                        popupContainer.style.display = 'none';
+                        blurBackground.style.display = 'none';
+                    } else {
+                        console.error("Popup container element not found");
+                    }
+                }
+    
+    window.submitForm = function () {
+        
+        const form = document.getElementById('myForm');
+        const formData = new FormData(form);
+        var name = document.getElementById('contactName').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+
+    // Check if Name, Email, and Phone number are empty
+    if (name.trim() === '') {
+        document.getElementById('nameError').innerText = 'Please enter your Name';
+        return;
+    }
+    else {
+        document.getElementById('nameError').innerText = '';
+    }
+
+    if (email.trim() === '') {
+        document.getElementById('emailError').innerText = 'Please enter your Email address';
+        return;
+    }
+    else if (!isValidEmail(email)) {
+        document.getElementById('emailError').innerText = 'Please enter a valid Email address';
+        return;
+    }
+    else {
+        document.getElementById('emailError').innerText = '';
+    }
+
+
+    if (phone.trim() === '') {
+        document.getElementById('phoneError').innerText = 'Please enter your Phone number';
+        return;
+    } else {
+        document.getElementById('phoneError').innerText = '';
+    }
+
+
+    // if(name.length > 0 && email.value > 0 && phone.length > 0 ) {
+    //     alert("Thanks for Submitting")
+    // }
+    function isValidEmail(email) {
+    // Regular expression for basic email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+
+       
+
+
+    
+        // Create an object for non-file data
+        const jsonData = {
+            contact_name: formData.get('contactName'),
+            email_address: formData.get('email'),
+            phone_number: formData.get('phone'),
+            company_name: formData.get('company'),
+            job_title: formData.get('jobTitle'),
+            subject: formData.get('subject'),
+            typeof_service_request: formData.get('serviceType'),
+            product_name: "Vivya Cards",
+            location: formData.get('location'),
+            description: formData.get('description'),
+        };
+    
+        // Convert the object to URL-encoded form data
+        const urlEncodedData = new URLSearchParams(jsonData).toString();
+    
+        // Make API call with multipart form data and query parameters
+        fetch(`https://api.vivyacorp.com/add_test_data?${urlEncodedData}`, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle the response data as needed
+            console.log('API call successful:', data);
+            if (data.statusFlag) {
+                // Show success alert
+                alert('Thanks for submitting!');
+                document.getElementById("myForm").reset();
+                document.body.classList.remove('blurred');
+                window.closePopup(); // Close the popup if needed
+            } else {
+                // Show error alert
+                alert('Error in submitting: ' + data.message);
+            }
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+            alert('An error occurred while submitting the form.');
+        });
+    }
+    });
+
+    </script>
+
+        
+    </head>
+    <body data-spy="scroll" data-target="#navmenu" data-offset="70">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+        <div class="site-preloader-wrap">
+            <div class="spinner"></div>
+        </div><!-- Preloader -->
+
+        <div class="header">
+       
+            <h1 class="vivya_h1">VIVYA CARDS</h1>
+            <div class="vivya_div" style="width:100px;height:100px;"></div>
+            <img src="vivya_cards_logo.png" class="vivya_img"/>
+        </div>
+    
+
+        <section class="hero-section hero-5 bd-bottom d-flex align-items-center pos-rel">
+            
+            <div class="container">
+                <div class="row hero-wrap d-flex align-items-center">
+                    <div class="col-lg-6 sm-padding">
+                        <div class="slides">
+                            <ul class="vivya-scan-slider">
+                                <!-- slides -->
+                                <li>
+                                    <h2 class="txt-dark"style=" font-size: 26px; color: #fff;">Vivya Cards</h2>
+                                    <div class="v-cards-bannertxt" style="font-size:30px;">Business Card Scanner App!</div>
+                                </li>
+                                <li>
+                                    <h2 class="txt-dark" style=" font-size: 26px; color: #fff;">Vivya Cards</h2>
+                                    <div class="v-cards-bannertxt" style="font-size:30px;">Elevate Your Networking Effortlessly!</div>
+                                </li>
+                                <li>
+                                    <h2 class="txt-dark" style=" font-size: 26px; color: #fff;">Vivya Cards</h2>
+                                    <div class="v-cards-bannertxt" style="font-size:30px;">Business Card Scanner App!</div>
+                                </li>
+                                
+                            </ul>
+<!--<div class="playstore">
+   <div class="app"> <a href="https://apps.apple.com/in/app/vivya-cards/id1658487857"  target="_blank"><img src="img/appstore.png"/></a></div>
+   <div class="google"><a href="https://play.google.com/store/search?q=vivya+cards&c=apps&hl=en-IN" target="_blank"> <img src="img/googleplay.png"></a></div>
+</div>--> 
+
+                        </div>
+                        <a target="_blank"
+                               href="https://play.google.com/store/search?q=vivya%20cards&c=apps&hl=en-IN"
+                               ><img src="img/vivya-cards/Google play.svg" />  </a>
+                                                     <a target="_blank" href="https://apps.apple.com/in/app/vivya-cards/id1658487857"
+                                id="try-app-btn"><img src="img/vivya-cards/app store.svg" /></a>
+                    </div>
+                    <div class="col-lg-6 sm-padding">
+                        <div class="hero-img-wrap">
+                            <img src="img/vivya-card.png" alt="hero">
+                            <!-- <img class="h-icon h-icon-1" src="img/hero-icon-1.png" alt="hero">
+                            <img class="h-icon h-icon-2" src="img/hero-icon-2.png" alt="hero">
+                            <img class="h-icon h-icon-3" src="img/hero-icon-3.png" alt="hero">
+                            <img class="h-icon h-icon-4" src="img/hero-icon-4.png" alt="hero"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/.hero-section-->
+		<section>
+		<div id="blurBackground"></div>
+		<!-- <button onclick="showPopup()">Show/Hide</button> -->
+	  <div id="popupContainer">
+        <span class="closeButton" onclick="closePopup()">&times;</span>
+        <h2 style="align-items:center; text-align:center">Please fill the details</h2>
+       <form id="myForm">
+    <div class="form-row">
+        <div class="form-column">
+            <label for="contactName" class="lbl_mand">Name:</label>
+            <input type="text" id="contactName" name="contactName" placeholder="Enter your Name" required
+            onkeydown="return /[a-zA-Z]/i.test(event.key)" maxlength="30">
+            <div class="error-msg" id="nameError"></div>
+            
+        </div>
+
+        <div class="form-column">
+            <label for="email" class="lbl_mand">Email address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email Address" required
+            maxlength="30">
+            <div class="error-msg" id="emailError"></div>
+            
+        </div>
+
+        <div class="form-column">
+            <label for="phone" class="lbl_mand" >Phone number:</label>
+            <!-- <input type="tel" id="phone" name="phone" required maxlength="10"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+            onkeypress="return isNumber(event)" > -->
+            <input type="text" class="textfield" value="" id="phone" name="phone" onkeypress="return isNumber(event)"
+            maxlength="15" placeholder="Enter Phone Number"/>
+            
+            <div class="error-msg" id="phoneError"></div>
+        </div>
+    </div>
+
+    <!-- Add more rows as needed -->
+
+    <div class="form-row">
+        <div class="form-column">
+            <label for="company" class="lbl_txt">Company name:</label>
+            <input type="text" id="company" name="company" placeholder="Enter Company Name"
+            maxlength="30">
+        </div>
+
+        <div class="form-column">
+            <label for="jobTitle" class="lbl_txt">Job title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter Job title"
+            maxlength="30">
+        </div>
+
+        <div class="form-column">
+            <label for="subject"class="lbl_txt">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter Subject"
+            maxlength="30">
+        </div>
+    </div>
+
+    <!-- Add more rows as needed -->
+
+    <div class="form-row">
+        <!-- Add more columns as needed for the remaining fields -->
+    </div>
+
+    <div class="form-row">
+        <div class="form-column">
+            <label for="serviceType"class="lbl_txt">Type of service request:</label>
+            <input type="text" id="serviceType" name="serviceType" placeholder="Enter Type of Service"
+            maxlength="30">
+        </div>
+
+        <div class="form-column">
+            <label for="productName"class="lbl_txt">Product or service name:</label>
+            <input type="text" id="productName" name="productName" placeholder="Enter Product or service name"
+            maxlength="30">
+        </div>
+
+        <div class="form-column">
+            <label for="location"class="lbl_txt">Location :</label>
+            <input type="text" id="location" name="location" placeholder="Enter Location"
+            maxlength="30">
+        </div>
+    </div>
+
+    <!-- Add more rows as needed -->
+
+    <div class="form-row">
+        <div class="form-column">
+            <label for="description"class="lbl_txt">Description (Optional):</label>
+            <textarea id="description" name="description" placeholder="Write your comment"
+            maxlength="500"></textarea>
+        </div>
+
+         <!-- <div class="form-column">
+            <label for="file"class="lbl_txt">Add a file:</label>
+            <input type="file" id="file" name="file">
+        </div>  -->
+    </div>
+
+    <!-- <button type="button" onclick="submitForm()">Submit</button> -->
+    <div class="sub-main">
+        <!-- <button type="submit" class="button-two" onclick="submitForm(e)"><span>Submit</span></button> -->
+        <button type="button" class="button-two" onclick="submitForm()"><span>Submit</span></button>
+        
+    </div>
+</form>
+    </div>
+	
+	</section>
+        <section class="promo-section bg-red bd-bottom padding">
+            <h2 class="text-center">Digitize Your Contacts on the Go!</h2>
+            <h3 class="text-center">We Drill to the core to make A BEST OUT OF IT!</h3>
+            <div class="container">
+                <div class="row promo-wrap">
+                    <div class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="promo-item wow fadeInUp" data-wow-delay="200ms">
+                            <img src="img/mobile-account.svg" />
+                            <h3>Never lose a potential lead</h3>
+                            <p>
+                                Save the contact details of each business card instantly with our
+                                powerful scanning technology.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="promo-item wow fadeInUp" data-wow-delay="300ms">
+                            <img src="img/organized.svg" />
+                            <h3>Effortless access anytime</h3>
+                            <p>
+                                Store your business card details directly in your phone's contacts and
+                                access them.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="promo-item wow fadeInUp" data-wow-delay="400ms">
+                            <img src="img/professional-growth.svg" />
+                            <h3>Accelerate your professional growth</h3>
+                            <p>
+                                Invest less time in manually entering data and more time in building
+                                valuable connections.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="promo-item wow fadeInUp" data-wow-delay="500ms">
+                            <img src="img/contact-detail.svg" />
+                            <h3>Stay organized with your contacts</h3>
+                            <p>
+                                Vivya Cards automatically categorize and save your contacts for easy
+                                access and management.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content-section  content-3 padding">
+            <div class="container">
+                <div class="row content-wrap">
+                    <div class="col-lg-6 sm-padding wow fadeInLeft" data-wow-delay="300ms">
+                        <img src="img/Asset 8xxxhdpi.svg" alt="content-img" width="427px">
+                    </div>
+                    <div class="col-lg-6 sm-padding">
+                        <div class="content-info wow fadeInRight" data-wow-delay="300ms">
+                            <span style="font-size: 20px;">Features</span>
+                            <h2>SCAN, RETAIN, UTILIZE</h2>
+                            <p>
+                                Vivya Cards, a business card scanner application for Android and
+                                iOS allows you to integrate any business card and deftly transfer the
+                                information to your phone contacts. Our app stands as a comprehensive
+                                solution for business networking where the user can save contacts
+                                with a single touch. The new-fangled AI and ML technology make the
+                                user communicate effortlessly with their collaborators and
+                                associates. The sophisticated OCR technology has been integrated
+                                into our application for better performance.
+                            </p>
+                           
+
+                        </div>
+
+                    </div>
+                   
+                    
+                    
+                </div>
+            </div>
+        </section>
+        
+       
+        <div class="vivyacards-container">
+            <div class="card dark">
+              <img src="img/vivya-cards/VIVYA CARD.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="text-section">
+                  <h5 class="card-title" style="visibility: hidden;">Card title</h5>
+                  <p class="card-text">Vivya Cards for Android and iOS further allows the user to quickly scan and
+                     save information on Google or Apple cloud. It enables the user to translate the card data 
+                    without a hitch thus achieving exceptional accuracy.
+                      Being an expedient tool for entrepreneurs, retailers, stakeholders, and marketing executives, 
+                      the app enhances the productive interaction in heterogenous coactions.
+                    </p>
+                    <a target="_blank"
+                               href="https://play.google.com/store/search?q=vivya%20cards&c=apps&hl=en-IN"
+                               ><img src="img/vivya-cards/Google play.svg" />  </a>
+                                                     <a target="_blank" href="https://apps.apple.com/in/app/vivya-cards/id1658487857"
+                                id="try-app-btn"><img src="img/vivya-cards/app store.svg" /></a>
+                </div>
+               
+              </div>
+            </div>
+           
+           
+          </div>
+          
+       
+        <section class="service-section bg-blue padding">
+            <div class="container">
+                <h1 class="text-center">Exclusive Features</h1>
+                <div class="row service-wrap">
+
+                    <div class="col-lg-4 col-sm-6 padding-15">
+                        <!--<div class="service-item wow fadeInUp" data-wow-delay="200ms">
+                        <i class="ti-harddrives color-red"></i>
+                        <h3>Shared Hosting</h3>
+                        <p>We provide marketing services to startups and small businesses to looking for a partner of their digital media.</p>
+                    </div>-->
+                    <div class="blog-item">
+                        <div class="blog-thumb">
+                            <img src="img/vivya-cards/digitalcard.png" alt="post">
+                            <!--<span class="category"><a href="#">Design</a></span>-->
+                        </div>
+                        <div class="blog-content">
+                            <h3>Digitize business cards in seconds</h3>
+
+
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15">
+                        <!--<div class="service-item wow fadeInUp" data-wow-delay="300ms">
+                        <i class="ti-layers-alt color-blue"></i>
+                        <h3>Web Hosting</h3>
+                        <p>We provide marketing services to startups and small businesses to looking for a partner of their digital media.</p>
+                    </div>-->
+                    <div class="blog-item">
+                        <div class="blog-thumb">
+                            <img src="img/vivya-cards/gatherings.jpg" alt="post">
+                            <!--<span class="category"><a href="#">Design</a></span>-->
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                
+Connections forged during gatherings.</h3>
+
+
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15">
+                       
+
+                        <div class="blog-item">
+                            <div class="blog-thumb">
+                                <img src="img/vivya-cards/secure.png" alt="post">
+                                <!--<span class="category"><a href="#">Design</a></span>-->
+                            </div>
+                            <div class="blog-content">
+                                <h3>Keeps your data safe and secure</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15">
+                        <!--<div class="service-item wow fadeInUp" data-wow-delay="400ms">
+                        <i class="ti-cloud-up color-yellow"></i>
+                        <h3>Cloud Hosting</h3>
+                        <p>We provide marketing services to startups and small businesses to looking for a partner of their digital media.</p>
+                    </div>-->
+
+                        <div class="blog-item">
+                            <div class="blog-thumb">
+                                <img src="img/vivya-cards/adjust-event.jpg" alt="post">
+                                <!--<span class="category"><a href="#">Design</a></span>-->
+                            </div>
+                            <div class="blog-content">
+                                <h3>Adjust event information and craft a fresh event.</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15">
+                       
+
+                        <div class="blog-item">
+                            <div class="blog-thumb">
+                                <img src="img/vivya-cards/vcf-share.jpg" alt="post">
+                                <!--<span class="category"><a href="#">Design</a></span>-->
+                            </div>
+                            <div class="blog-content">
+                                <h3>
+                                    Distribute contact information using a VCF file.
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    </h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15">
+                       
+
+                        <div class="blog-item">
+                            <div class="blog-thumb">
+                                <img src="img/vivya-cards/import-export.jpg" alt="post">
+                                <!--<span class="category"><a href="#">Design</a></span>-->
+                            </div>
+                            <div class="blog-content">
+                                <h3>Modify contact import and export information.</h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section><!--/.promo-section-->
+        <!--/.widget-section-->
+        <section class="service-section bg-red padding">
+            <h2 class="text-center">Contact Info</h2>
+        <div class="about-vcards">
+            <a class="bg_links-vcards social-vcards portfolio-vcards" href="https://www.rafaelalucas.com" target="_blank">
+               <span class="icon-vcards"></span>
+            </a>
+            <a class="bg_links-vcards social-vcards dribbble-vcards" href="https://dribbble.com/rafaelalucas" target="_blank">
+               <span class="icon-vcards"></span>
+            </a>
+            <a class="bg_links-vcards social-vcards linkedin-vcards" href="https://www.linkedin.com/in/rafaelalucas/" target="_blank">
+               <span class="icon-vcards"></span>
+            </a>
+            <a class="bg_links-vcards logo-vcards"></a>
+         </div>
+         <!-- end about -->
+            
+            <div class="content-vcards">
+               <!-- card -->
+               
+               <div class="card-vcards">
+                  
+                     <div class="icon-vcards"><i class="material-icons md-36">
+                        <img src="img/vivya-cards/1.svg" style="width: 50px;"/>
+                     </i></div>
+                     <p class="title-vcards">5 Independence Way, Office #26,Suite #300 Princeton NJ-08540, United States</p>
+                     
+                  
+               </div>
+               <!-- end card -->
+               <!-- card -->
+               <div class="card-vcards">
+                  
+                     <div class="icon-vcards"><i class="material-icons md-36">
+                        <img src="img/vivya-cards/2.svg" style="width: 50px;"/>
+                     </i></div>
+                     <p class="title-vcards">+1 609-964-4254</p>
+                     <!-- <p class="text-vcards">+1 609-964-4254</p> -->
+                  
+               </div>
+               <!-- end card -->
+               <!-- card -->
+               <div class="card-vcards">
+                  
+                     <div class="icon-vcards"><i class="material-icons md-36"><img src="img/vivya-cards/3.svg" style="width: 50px;"/></i></div>
+                     <p class="title-vcards">enquiry@vivyacorp.com
+                        <!-- sales@vivyacorp.com -->
+                    </p>
+                    <p class="title-vcards">sales@vivyacorp.com</p>
+                     
+                     <!-- <p class="text-vcards">enquiry@vivyacorp.com</p> -->
+                  
+               </div>
+               <!-- end card -->
+            
+         
+            
+            </div>
+         </div>
+        </section>
+
+        
+        
+       
+         
+           
+        <section class="bg-blue padding">
+            
+            <form action="#" method="post"  id="myFormBottom" class="vcards-contactform">
+                <h1 class="vcards-contact-title">Contact Us</h1>
+                <p class="vcards-contact-desc">Please take a moment to get in touch, we will get back to you shortly.</p>
+              
+                <div class="column-vcardscontact">
+                    <label for="contactName" class="lbl_mand">Name:</label>
+                    <input type="text" id="contactNameBottom" name="contactNameBottom" placeholder="Enter your Name"
+                    onkeydown="return /[a-zA-Z]/i.test(event.key)" maxlength="30">
+                    <div class="error-msg" id="nameErrorBottom"></div>
+              
+                    <label for="email" class="lbl_mand">Email address:</label>
+                    <input type="email" id="emailBottom" name="emailBottom" placeholder="Enter Email Address"
+                    maxlength="30" required>
+                    <div class="error-msg" id="emailErrorBottom"></div>
+              
+                    <label for="phone" class="lbl_mand" >Phone number:</label>
+                    <!-- <input type="tel" id="phone" name="phone" required maxlength="10"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                    onkeypress="return isNumber(event)" > -->
+                    <input type="text" class="textfield" value="" id="phoneBottom" name="phoneBottom" onkeypress="return isNumber(event)"
+                    maxlength="15" placeholder="Enter Phone Number" maxlength="15" required/>
+                    
+                    <div class="error-msg" id="phoneErrorBottom"></div>
+              
+                    <label for="subject"class="lbl_txt">Subject:</label>
+                    <input type="text" id="subjectBottom" name="subjectBottom" placeholder="Enter Subject"
+                    maxlength="30">
+               
+                    <label for="productName"class="lbl_txt">Product or service name:</label>
+                    <input type="text" id="productNameBottom" name="productNameBottom" 
+                    placeholder="Enter Product or service name" maxlength="30">
+                
+                  
+                 
+                </div>
+                <div class="column-vcardscontact">
+                    <label for="company" class="lbl_txt">Company name:</label>
+                    <input type="text" id="companyBottom" name="companyBottom" placeholder="Enter Company name"
+                    maxlength="30">
+                    <label for="jobTitle" class="lbl_txt">Job title:</label>
+                    <input type="text" id="jobTitleBottom" name="jobTitleBottom" placeholder="Enter Job Title"
+                    maxlength="30">
+                    
+                    <label for="location"class="lbl_txt">Location :</label>
+                    <input type="text" id="locationBottom" name="locationBottom" placeholder="Enter Location"
+                    maxlength="30">
+                    <label for="serviceType"class="lbl_txt">Type of service request:</label>
+                    <input type="text" id="serviceTypeBottom" name="serviceTypeBottom" placeholder="Enter Type of service"
+                    maxlength="30">
+                    <label for="description"class="lbl_txt">Description (Optional):</label>
+                    <textarea id="descriptionBottom" name="descriptionBottom" placeholder="Write your Comment"
+                    maxlength="500"></textarea>
+                
+                </div>
+                
+               
+                <div class="sub-main">
+                    <!-- <button type="submit" class="button-two" onclick="submitForm(e)"><span>Submit</span></button> -->
+                    <button type="button" class="button-two" onclick="submitFormBottom()"><span>Submit</span></button>
+                </div>
+            
+              </form>
+            </section>
+            <!-- COntact design  -->
+            
+          
+        
+        <section>
+
+        <footer class="footer-section footer-2 align-center">
+            <div class="container">
+              
+                <p>
+                    <a href="Privacy_Policy.html" style="color: #FFFFFF;float:left;position: relative;
+                    bottom: 10px;">Privacy Policy</a>
+                </p>
+                <p>
+                    <a href="terms_and_conditions.html" style="color: #FFFFFF;float:right;position: relative;
+                    bottom: 10px;">Terms and Condition</a>
+                </p>
+            </div>
+        </footer>
+    </section>
+        <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
+      
+
+        <!-- jQuery Lib -->
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <!-- Tether JS -->
+        <script src="js/vendor/tether.min.js"></script>
+        <!-- Slicknav JS -->
+        <script src="js/vendor/jquery.slicknav.min.js"></script>
+        <!-- OWL-Carousel JS -->
+        <script src="js/vendor/owl.carousel.min.js"></script>
+        <!-- Smooth Scroll JS -->
+        <script src="js/vendor/smooth-scroll.min.js"></script>
+        <!-- Venobox JS -->
+        <script src="js/vendor/venobox.min.js"></script>
+        <!-- Ajaxchimp JS -->
+        <script src="js/vendor/jquery.ajaxchimp.min.js"></script>
+        <!--YTPlayer Js-->
+        <script src="js/vendor/jquery.mb.YTPlayer.min.js"></script>
+        <!-- Nice Select JS -->
+        <script src="js/vendor/jquery.nice-select.min.js"></script>
+        <!-- Pricing Switcher JS -->
+        <script src="js/vendor/pricing-switcher.js"></script>
+        <!-- Waypoints JS -->
+        <script src="js/vendor/waypoints.min.js"></script>
+        <!-- Odometer JS -->
+        <script src="js/vendor/odometer.min.js"></script>
+        <!-- Wow JS -->
+        <script src="js/vendor/wow.min.js"></script>
+        <!-- Main JS -->
+        <script src="js/main.js"></script>
+        
+
+        <script>
+
+            let formVisible = false;
+            
+                function showPopup() {
+                    const popupContainer = document.getElementById('popupContainer');
+                    if (popupContainer) {
+                        popupContainer.style.display = 'block';
+                    } else {
+                        console.error("Popup container element not found");
+                    }
+                }
+                function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+            
+             document.addEventListener('DOMContentLoaded', function () {
+                        // Check if the URL contains the parameter indicating the form should be shown
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const showFormParam = urlParams.get('showForm');
+            
+                        // Declare formVisible before any function calls
+                        let formVisible = false;
+            
+                        // Log to console to check if the script is running
+                        console.log("Script is running");
+            
+                        // If the parameter is present and the form is available, show the form
+                        if (showFormParam === 'true') {
+                            const form = document.getElementById('myForm');
+                            if (form) {
+                                showPopup();
+                            } else {
+                                console.error("Form element with ID 'myForm' not found");
+                            }
+                        }
+            
+                        function toggleForm() {
+                            const form = document.getElementById('myForm');
+                            formVisible = !formVisible;
+            
+                            if (form) {
+                                form.style.display = formVisible ? 'block' : 'none';
+                            } else {
+                                console.error("Form element with ID 'myForm' not found");
+                            }
+                        }
+            
+                        function showPopup() {
+                            const popupContainer = document.getElementById('popupContainer');
+                            if (popupContainer) {
+                                popupContainer.style.display = 'block';
+                            } else {
+                                console.error("Popup container element not found");
+                            }
+                        }
+            
+                        // Attach functions to the window object
+                        window.closePopup = function () {
+                            const popupContainer = document.getElementById('popupContainer');
+                            if (popupContainer) {
+                                popupContainer.style.display = 'none';
+                            } else {
+                                console.error("Popup container element not found");
+                            }
+                        }
+            
+                       window.submitFormBottom = function () {
+                        debugger
+                        alert("Hi")
+        
+        
+                    const form = document.getElementById('myFormBotttom');
+                const formData = new FormData(form);
+                var name = document.getElementById('contactNameBottom').value;
+            var email = document.getElementById('emailBottom').value;
+            var phone = document.getElementById('phoneBottom').value;
+        
+            // Check if Name, Email, and Phone number are empty
+            if (name.trim() === '') {
+                document.getElementById('nameErrorBottom').innerText = 'Please enter your Name';
+                return;
+            }
+            else {
+                document.getElementById('nameErrorBottom').innerText = '';
+            }
+        
+            if (email.trim() === '') {
+                document.getElementById('emailErrorBottom').innerText = 'Please enter your Email address';
+                return;
+            }
+            else if (!isValidEmail(email)) {
+                document.getElementById('emailErrorBottom').innerText = 'Please enter a valid Email address';
+                return;
+            }
+            else {
+                document.getElementById('emailErrorBottom').innerText = '';
+            }
+        
+        
+            if (phone.trim() === '') {
+                document.getElementById('phoneErrorBottom').innerText = 'Please enter your Phone number';
+                return;
+            } else {
+                document.getElementById('phoneErrorBottom').innerText = '';
+            }
+        
+        
+            // if(name.length > 0 && email.value > 0 && phone.length > 0 ) {
+            //     alert("Thanks for Submitting")
+            // }
+            function isValidEmail(email) {
+            // Regular expression for basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(emailBottom);
+        }
+        
+        
+               
+        
+        
+            
+                // Create an object for non-file data
+                const jsonData = {
+                    contact_name: formData.get('contactNameBottom'),
+                    email_address: formData.get('emailBottom'),
+                    phone_number: formData.get('phoneBottom'),
+                    company_name: formData.get('companyBottom'),
+                    job_title: formData.get('jobTitleBottom'),
+                    subject: formData.get('subjectBottom'),
+                    typeof_service_request: formData.get('serviceTypeBottom'),
+                    product_name: formData.get('productNameBottom'),
+                    location: formData.get('locationBottom'),
+                    description: formData.get('descriptionBottom'),
+                };
+            
+                // Convert the object to URL-encoded form data
+                const urlEncodedData = new URLSearchParams(jsonData).toString();
+            
+                // Make API call with multipart form data and query parameters
+                fetch(`https://api.vivyacorp.com/add_test_data?${urlEncodedData}`, {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Handle the response data as needed
+                    console.log('API call successful:', data);
+                    if (data.statusFlag) {
+                        // Show success alert
+                        alert('Thanks for submitting!');
+                        
+                        document.body.classList.remove('blurred');
+                        window.closePopup(); // Close the popup if needed
+                    } else {
+                        // Show error alert
+                        alert('Error in submitting: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    // Handle errors
+                    console.error('Error:', error);
+                    alert('An error occurred while submitting the form.');
+                });
+        
+                    //     const form = document.getElementById('myForm');
+                    //     const nameInput = document.getElementById('name');
+                    //     const messageValue = nameInput.value;
+            
+                    //     // Check if the name input is not empty
+                    //     if (!messageValue.trim()) {
+                    //         alert('Please enter a name.');
+                    //         return;
+                    //     }
+            
+                    //     // Make API call
+                    //     fetch('http://13.127.130.23:2913/add_test_data', {
+                    //         method: 'POST',
+                    //         headers: {
+                    //             'Content-Type': 'application/json',
+                    //         },
+                    //         body: JSON.stringify({
+                    //             message: messageValue,
+                    //         }),
+                    //     })
+                    //     .then(response => {
+                    //         if (!response.ok) {
+                    //             throw new Error('Network response was not ok');
+                    //         }
+                    //         return response.json();
+                    //     })
+                    //    .then(data => {
+                    //         // API call successful, check statusFlag
+                    //         console.log('API call successful:', data);
+                    //         if (data.statusFlag) {
+                    //             // Show success alert
+                    //             window.closePopup();
+                    //             alert('Thanks for submitting!');
+                    //         } else {
+                    //             // Show error alert
+                    //             alert('Error in submitting: ' + data.message);
+                    //         }
+                    //     })
+                    //     .catch(error => {
+                    //         // Handle errors
+                    //         console.error('Error:', error);
+                    //         alert('An error occurred while submitting the form.');
+                    //     });
+                    }
+                    });
+                    
+            </script>
+
+    <script>
+        function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+    </script>
+
+    </body>
+</html>
