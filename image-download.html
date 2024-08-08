@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link rel="stylesheet" href="css/font-awesome5.css">
+
+    <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <style>
+    .imgDownloadBtn,.js-download-link{
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+    background-color: #ffffff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 0.22em;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    /* padding: 19px 46px; */
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    margin: 2em auto;
+    display: block;
+    max-width: 12em;
+    text-align: center;
+    text-transform: capitalize;
+    }
+    .row-apartment{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .demo-description
+    {
+	font-size: 1.1em;
+	line-height: 1.4em;
+	margin: 2em 0;
+    }
+    .card-apartment{
+        padding:20px;
+    }
+    </style>
+
+</head>
+<body>
+    <section class="page_title ds s-parallax s-overlay s-py-80 s-py-xl-160 s-py-md-100" 
+    >
+        <img src="images/Vivya_Apartment/MicrosoftTeams-image (6).png"/>
+       
+    </section>
+    <div class="whatsapp-button">
+				
+        <a href="https://api.whatsapp.com/send?phone=917810025201&text=Hello!%20I'm%20interested%20in%20exploring%20construction%20service%20offered%20by%20Vriho%20Infratech" target=        "_blank">
+					<img src="images/icon/whatsapp-icon.png"alt=whatsapp-icon/>
+					
+				</a>
+
+			</div>
+
+    <div>
+        <h3 style="text-align: center;padding: 20px;">Explore Here</h3>
+       <!-- <img src="https://s3.ap-south-1.amazonaws.com/vriho.com/images/02-min-min.jpg" alt=""> -->
+       <div class="row-apartment align-center">
+        <div class="column medium-4">
+          <!-- image has no padding -->
+          <div class="card-apartment">
+            <img src="images/Vivya_Apartment/front-elevation-view (1).jpg">
+            
+          </div>
+        </div>
+        
+      </div>
+       <button id="btn" onclick="imgDownload()" class="imgDownloadBtn">Click Here to Download Front Elevation</button>
+       <div class="row-apartment align-center">
+        <div class="column-apartment medium-4-apartment">
+          <!-- image has no padding -->
+          <div class="card-apartment">
+            <img src="images/Vivya_Apartment/side-elevation-view1.jpg">
+            
+          </div>
+        </div>
+        <div class="column-apartment medium-4-apartment">
+          <!-- image has padding -->
+          <div class="card-apartment">
+            <div class="card-section-apartment">
+              <img src="images/Vivya_Apartment/side-elevation-view3.jpg">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+       <button id="btn" onclick="imgDownload1()" class="imgDownloadBtn">Click Here to Download Side Elevation</button>
+    </div>
+    <div class="demo-description">
+        <a class="js-download-link button"
+        href="https://vriho.com/">
+            View Website
+        </a>
+    </div>
+    <div class="demo-description">
+        <a class="js-download-link button"
+        href="reportsdownload.html">
+            Back 
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <footer class="page_footer ls s-pt-55 s-pb-60 s-pt-md-85 s-pb-md-90 s-pt-lg-125 s-pb-lg-130 s-pt-xl-155 s-pb-xl-160 c-gutter-80 s-parallax c-mb-50 c-mb-lg-0">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 col-md-4 text-center animate" data-animation="fadeInUp">
+
+                    <div class="widget widget_icons_list">
+                        <h3 class="widget-title">Get in Touch</h3>
+                        <ul>
+                            <li class="icon-inline">
+                                <i class="fa fa-map-marker icon-styled icon-top color-main2 fs-14"></i>
+
+                                <p>
+                                    B-1,B Block Greenwoods Apartment,
+                                    <br>Morais city,Sempat,Trichy-07
+                                </p>
+                            </li>
+                            <li class="icon-inline">
+                                <i class="fa fa-phone icon-styled icon-top color-main2 fs-14"></i>
+
+                                <p>6374824859</p>
+                            </li>
+                            <li class="icon-inline">
+                                <i class="fa fa-envelope icon-styled icon-top color-main2 fs-14"></i>
+
+                                <p><a href="#">enquiry@vriho.com</a></p>
+                            </li>
+                            <!--<li class="icon-inline"><i class="fa fa-envelope icon-styled icon-top color-main2 fs-14"></i>
+
+                    <p><a href="#">vrdellaconstructions@gmail.com </a></p></li>-->
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 text-left animate" data-animation="fadeInUp">
+
+                    <div class="widget widget_instagram">
+                        <h3 class="widget-title">Useful Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home Page </a></p></li>
+                            <li><a href="about.html">About Us </a></p></li>
+                            <li><a href="career.html">Career </a></p></li>
+                            <li><a href="package_Construction.html">Construction </a></p></li>
+                            <!--<li><a href="#">vrdellaconstructions@gmail.com </a></p></li>-->
+
+                        </ul>
+
+                    </div>
+                </div>
+
+               
+
+
+               
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="page_copyright ds s-py-25">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-left">
+
+                    <p>
+                        &copy; Copyright
+
+                        <span class="copyright_year">
+                            2020
+                        </span> All Rights Reserved
+                    </p>
+                </div>
+
+                <div class="col-md-6 text-md-right text-center">
+
+                    <span class="social-icons">
+                        <a href="https://www.facebook.com/VR-Della-Constructions-LLP-107439124395827" class="fab fa-facebook" target="_blank" title="facebook"></a><a href="https://www.instagram.com/vrihoinfratech/" class="fab fa-instagram" target="_blank" title="instagram"></a><a href="https://www.youtube.com/c/VRDellaGroup" class="fab fa-youtube " target="_blank" title="youtube"></a><a href="https://twitter.com/vrihoinfratech" class="fab fa-twitter " target="_blank" title="youtube"></a>
+                        <a href="https://www.linkedin.com/company/vrihoinfratech" class="fab fa-linkedin " target="_blank" title="youtube"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script> -->
+
+    <script>
+      
+   
+       // alert("sdf")
+       
+        const downloadFile = async (fileName, fileUrl) => {
+   
+   try {
+    // const fileUrl = "https://s3.ap-south-1.amazonaws.com/vriho.com/images/02-min-min.jpg"
+     const response = await fetch(fileUrl);
+     const blob = await response.blob();
+    
+
+     // Check if the content-disposition header is present
+     const suggestedFileName = fileName;
+  
+
+     // Create an object URL for the blob
+     const blobUrl = URL.createObjectURL(blob);
+
+     // Create an invisible link element
+     const link = document.createElement("a");
+
+     // Set the download attribute and the file name
+     link.download = decodeURIComponent(suggestedFileName);
+
+     // Set the href attribute to the object URL
+     link.href = blobUrl;
+
+     // Append the link to the document
+     document.body.appendChild(link);
+
+     // Trigger a click on the link to start the download
+     link.click();
+
+     // Remove the link and revoke the object URL from the document
+     document.body.removeChild(link);
+     URL.revokeObjectURL(blobUrl);
+   } catch (error) {
+     console.error("Error downloading file:", error);
+    //  toast.error("Error downloading file");
+   }
+   
+
+}
+function imgDownload(){
+    downloadFile("apartment.jpg","https://s3.ap-south-1.amazonaws.com/vriho.com/images/02-min-min.jpg");
+    
+    //downloadFile("img","https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png");
+
+}
+function imgDownload1(){
+    downloadFile("apartment.jpg","https://s3.ap-south-1.amazonaws.com/vriho.com/images/Vivya_Apartment/side-elevation1+(1).jpg");
+    downloadFile("apartment.jpg","https://s3.ap-south-1.amazonaws.com/vriho.com/images/Vivya_Apartment/side-elevation1+(2).jpg");
+    
+   
+}
+// const button = document.getElementById("btn");
+//         button.addEventListener("click", downloadFile("img","https://s3-ap-southeast-1.amazonaws.com/tksproduction/bmtimages/pY3BnhPQYpTxasKfx.jpeg"))
+</script>
+ 
+</body>
+</html>

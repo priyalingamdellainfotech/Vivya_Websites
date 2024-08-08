@@ -1,0 +1,554 @@
+/*
+** Header
+*/
+
+.page_header {
+  //same as .page_header_side
+  transition: $headerTransition;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+
+  //display_table fix on affix
+  height: auto;
+
+  .boxed &,
+  &.affix {
+    position: fixed !important;
+    z-index: 1001;
+    box-shadow: 0 2px 15px 0 rgba(100, 100, 100, 0.05);
+    opacity: 0.98;
+    //remove bottom border for affixed header with s-borderbottom class
+    &:after {
+      background-color: transparent;
+    }
+
+
+      a.logo{
+        img{
+          width: 60px;
+          max-height: 60px;
+        }
+      }
+
+  }
+  //hidding top border on affixed header
+  &.affix.s-bordertop::before {
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    &.mobile-active {
+      z-index: 1003;
+      opacity: 1;
+    }
+  }
+
+  //fix bug when refresh page at the bottom and header goes down
+  &.affix-bottom {
+    //!important is necessary
+    top: 0 !important;
+    position: fixed !important;
+  }
+
+  //min height for mobile toggler be always on header
+  //for prevent header mobile menu toggler overlap bordered header
+  // 62 - broken design on 60px color toggler - back to 60
+  .row {
+    min-height: 60px;
+  }
+
+
+  //fix header buttons dropdown
+  .dropdown {
+    //white-space: nowrap;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .btn {
+    margin-bottom: 0;
+
+  }
+}
+
+.page_header_wrapper {
+  transition: height 0.5s ease;
+}
+.topline-1{
+  @media(max-width: 1200px){
+    border-bottom: 2px solid $borderColor;
+  }
+}
+//when refreshing page - header height is smaller because it is affixed
+//fixing
+//absolute header when using header on slider or on title (for parallax or image background)
+.header_absolute {
+  position: absolute;
+  right: 0;
+  left: 0;
+@media(max-width: 1200px){
+  position: relative;
+}
+  .page_header,
+  .page_topline,
+  .page_header_wrapper {
+    z-index: 1002;
+    position: relative;
+    right: 0;
+    left: 0;
+
+  }
+
+  //&.cover-background {
+
+
+    //fix for boxed layout
+
+  //}
+
+}
+
+  a.logo{
+    img{
+      width: 120px;
+      max-height: 120px;
+    }
+  }
+
+.media_support{
+  color: $darkColor;
+  a{
+    &:hover{
+      color: $fontColor;
+    }
+  }
+  @media(max-width: 768px){
+    margin: 15px 0;
+    justify-content: center;
+  }
+  & > p{
+    @media(max-width: 575px){
+      display: none;
+    }
+  }
+  p{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    margin-bottom: 0;
+
+  }
+  .media{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    @media(max-width: 991px){
+      margin-left: 15px;
+    }
+    .media_img{
+      padding: 3px;
+      border: 1px solid $borderColor;
+      @media(max-width: 991px){
+        display: none;
+      }
+
+      img{
+        border-radius: 50%;
+        object-fit: cover;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .media-body{
+      margin-left: 10px;
+    }
+  }
+}
+
+.header-1{
+  &.header-2{
+    &.affix-top{
+      .toggle_menu{
+        background-color: transparent;
+      }
+    }
+    &.affix{
+      background: $lightColor;
+      .logo{
+        padding: 0;
+      }
+    }
+    .logo, .appointment{
+      @media(min-width: 1650px){
+        background-color: $lightColor;
+      }
+
+    }
+    .logo{
+      @media(min-width: 1650px){
+        padding: 34px 50px 20px;
+        top: -72%;
+        left: 0;
+      }
+
+
+    }
+    .appointment{
+      @media(min-width: 1650px){
+        padding: 39px 52px 40px;
+        right: 0;
+        top: -68%;
+      }
+
+    }
+  }
+.sf-menu-item-mobile-toggler{
+  display: none;
+  &:after{
+    display: none;
+  }
+}
+  .logo, .appointment{
+    position: absolute;
+    top: -42%;
+
+  }
+  .logo{
+    left: 6.7%;
+  }
+  .appointment{
+    right: 115px;
+    top: -34%;
+
+    .btn{
+      width: 120px;
+      min-width: auto;
+      height: 120px;
+      white-space: unset;
+      text-align: center;
+      line-height: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      text-indent: 0;
+      padding: 18px 16px 18px 26px;
+    }
+
+  }
+  &.affix{
+    .logo{
+
+      top: 50%;
+      transform: translateY(-50%);
+      left: 81px;
+      @media(max-width: 1450px){
+        left: 40px !important;
+        margin-right: 20px;
+      }
+
+    }
+    .appointment{
+      display: none;
+    }
+    .media_support{
+      position: absolute;
+      right: 68px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media(max-width: 1600px){
+        right: 15px;
+      }
+      @media(max-width: 1450px){
+        position: relative;
+        top: 0;
+        transform: none;
+
+        right: 2%;
+        .media{
+          margin-left: 0;
+        }
+      }
+      @media(max-width: 1200px){
+        right: 1%;
+        width: 220px;
+      }
+
+    }
+    .top-nav{
+      @media(max-width: 1450px){
+        margin-left: 20px;
+      }
+
+      .nav{
+        margin-top: 0;
+        li{
+          ul{
+            padding: 43px 0 43px;
+            li{
+              a{
+                padding: 0 50px 0;
+                width: 100%;
+                text-align: center;
+                &.sf-with-ul{
+                  &:after{
+                     font-family: "Font Awesome 5 Free", sans-serif;
+                    padding-left: 7px;
+                    content: '\f0da';
+                  }
+                }
+              }
+            }
+          }
+          a{
+            padding: 34px 40px 32px;
+            margin-right: 0;
+            margin-left: 0;
+            @media(max-width: 1450px){
+              padding: 55px 20px 50px;
+            }
+            &.sf-with-ul{
+              &:after{
+                 font-family: "Font Awesome 5 Free", sans-serif;
+                padding-left: 7px;
+                font-weight: 900;
+                content: '\f0d7';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.affix-top{
+    display: flex;
+    .media_support{
+      display: none !important;
+      position: absolute;
+    }
+    .top-nav{
+
+      border-top: 1px solid $borderColor;
+      .nav{
+        margin-top: -2px;
+        li{
+          ul{
+            padding: 43px 0 43px;
+            li{
+              a{
+                padding: 0 50px 0;
+                width: 100%;
+                text-align: center;
+                &.sf-with-ul{
+                  &:after{
+                     font-family: "Font Awesome 5 Free", sans-serif;
+                    padding-left: 7px;
+                    content: '\f0da';
+                  }
+                }
+              }
+            }
+          }
+          a{
+            padding: 55px 40px 50px;
+            margin-right: 0;
+            margin-left: 0;
+            &.sf-with-ul{
+              &:after{
+                 font-family: "Font Awesome 5 Free", sans-serif;
+                padding-left: 7px;
+                content: '\f0d7';
+                font-weight: 900;
+              }
+            }
+            @media(max-width: 1450px){
+              padding: 55px 30px 50px;
+            }
+          }
+        }
+      }
+    }
+
+    a.logo{
+      flex-direction: column;
+    }
+
+  }
+  @media(max-width: 1650px){
+    .logo{
+      left: 1% !important;
+      margin-right: 30px;
+    }
+    .appointment{
+      right: 1%;
+    }
+  }
+  @media(max-width: 1450px){
+    display: flex;
+
+    .logo{
+      position: relative;
+      transform: none !important;
+      left: 1% !important;
+      margin: 10px 0;
+      img{
+        width: 80px;
+      }
+    }
+    .appointment{
+      position: relative;
+      top: 12px;
+      .btn{
+        max-width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  @media(max-width: 1200px){
+
+    .appointment{
+      right: 2%;
+
+    }
+  }
+  @media(max-width: 991px){
+
+    .appointment{
+      right: 2%;
+
+
+    }
+  }
+
+  @media(max-width: 575px){
+  .appointment, .media_support{
+    display: none !important;
+  }
+  }
+}
+//other header sections
+.page_topline {
+  line-height: 1.4;
+
+  &.small-text i {
+    font-size: 14px;
+  }
+
+  .icon-inline {
+    justify-content: center;
+  }
+  .social-icons {
+    display: inline-block;
+    a{
+      margin-right: 20px;
+      font-size: 16px;
+      &:last-child{
+        margin-right: 0;
+      }
+      @media(max-width: 991px){
+        margin-right: 8px;
+      }
+    }
+  }
+  //topline menu
+  .widget_nav_menu {
+    display: inline-block;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+    }
+  }
+
+  .dropdown-menu {
+    margin: 23px 0 0 -25px;
+    min-width: auto;
+  }
+  .dropdown-language {
+    //flags
+    a > img {
+      max-width: 16px;
+      position: relative;
+      bottom: 1px;
+      margin-right: 6px;
+    }
+  }
+
+  //news owl-carousel
+  .owl-news-slider-dates {
+    font-weight: 700;
+  }
+  .topline-news-item {
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 90px;
+    .cat-links {
+      display: inline;
+    }
+  }
+  .topline-news-nav-arrow {
+    border: 1px solid $darkgreyColor;
+    font-size: 10px;
+    position: relative;
+    bottom: 20px;
+    line-height: 38px;
+    width: 40px;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .owl-nav > div {
+    opacity: 1;
+  }
+
+}
+
+.page_toplogo {
+  @media (min-width: 992px) {
+    .media + .media {
+      margin-left: 60px;
+    }
+  }
+
+  .widget_search form, .widget_product_search form,
+  .widget_search input, .widget_product_search input {
+    max-width: none;
+  }
+
+  @media (max-width: 991px) {
+    .media {
+      margin: 10px;
+    }
+  }
+}
+
+.page_topline,
+.page_toplogo,
+.page_header {
+  .container-fluid {
+    @media(min-width: 1500px) {
+      padding-left: 128px;
+      padding-right: 112px;
+    }
+  }
+}
+
+@import 'header/header_includes';
+@import 'header/logo';
+@import 'header/search_modal';

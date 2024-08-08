@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Downloader</title>
+  <script>
+    function downloadImage() {
+      // Replace the URL below with your actual image URL
+      var imageUrl = 'https://s3.ap-south-1.amazonaws.com/vriho.com/images/02-min-min.jpg';
+      // Use the fetch API to get the image
+      fetch(imageUrl)
+        .then(response => response.blob())
+        .then(blob => {
+          // Create a link element
+          var link = document.createElement('a');
+    
+          // Create a download link with the Blob
+          link.href = window.URL.createObjectURL(blob);
+    
+          // Specify the download attribute and filename
+          link.download = 'downloaded_image.jpg';
+    
+          // Append the link to the document
+          document.body.appendChild(link);
+    
+          // Trigger a click on the link to start the download
+          link.click();
+    
+          // Remove the link from the document
+          document.body.removeChild(link);
+        })
+        .catch(error => console.error('Error downloading image:', error));
+    }
+    </script>
+</head>
+<body>
+
+  <button onclick="downloadImage()">Download Image</button>
+
+
+
+</body>
+</html>

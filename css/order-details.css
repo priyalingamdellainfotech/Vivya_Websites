@@ -1,0 +1,354 @@
+/* screen - order-details */
+
+.order-details {
+  align-items: flex-start;
+  background-color: var(--eerie-black);
+  cursor: pointer;
+  display: flex;
+  height: 534px;
+  padding: 24px 26px;
+  width: 681px;
+}
+
+#overlay-order-details {
+  background-color: var(--eerie-black);
+}
+
+.overlay .order-details {
+  background-color: #00000000;
+}
+
+#overlay-order-details .order-details {
+  left: 463px;
+  top: 147px;
+}
+
+#overlay-order-details .container-center-horizontal {
+  justify-content: normal;
+}
+
+.order-details .overlap-group {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px solid var(--dove-gray);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-top: 1px;
+  min-height: 485px;
+  padding: 19.5px 24px;
+  width: 624px;
+}
+
+.order-details .order-details-1 {
+  color: var(--cape-cod-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 33px;
+  min-height: 27px;
+  white-space: nowrap;
+}
+
+.order-details .overlap-group1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: #deffb4;
+  display: flex;
+  height: 153px;
+  margin-top: 2px;
+  min-width: 567px;
+  padding: 23px 18px;
+}
+
+.order-details .flex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 85px;
+  width: 353px;
+}
+
+.order-details .flex-row {
+  align-items: flex-end;
+  display: flex;
+  height: 23px;
+  min-width: 353px;
+}
+
+.order-details .order-id {
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 23px;
+  min-width: 69px;
+  white-space: nowrap;
+}
+
+.order-details .car-1-0093-11 {
+  color: var(--japanese-laurel);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 13px;
+  margin-left: 9px;
+  min-height: 21px;
+  min-width: 98px;
+  white-space: nowrap;
+}
+
+.order-details .address {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 111px;
+  min-height: 23px;
+  min-width: 66px;
+  white-space: nowrap;
+}
+
+.order-details .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 23px;
+  margin-top: 7px;
+  min-width: 198px;
+}
+
+.order-details .customer-name {
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 23px;
+  min-width: 133px;
+  white-space: nowrap;
+}
+
+.order-details .hendry {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 10px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+
+.order-details .flex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  height: 23px;
+  margin-top: 9px;
+  min-width: 238px;
+}
+
+.order-details .contact-number {
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 23px;
+  min-width: 139px;
+  white-space: nowrap;
+}
+
+.order-details .phone {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 4px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+
+.order-details .a45-3rd-floorroh {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 3px;
+  margin-left: 9px;
+  min-height: 92px;
+  min-width: 143px;
+  white-space: nowrap;
+}
+
+.order-details .flex-row-3 {
+  align-items: center;
+  display: flex;
+  margin-left: 27px;
+  margin-top: 27px;
+  min-width: 190px;
+}
+
+.order-details .status {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 62px;
+  white-space: nowrap;
+}
+
+.order-details .overlap-group3 {
+  height: 27px;
+  margin-left: 11px;
+  position: relative;
+  width: 117px;
+}
+
+.order-details .rectangle-2096 {
+  border-radius: 6px;
+  height: 25px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 117px;
+}
+
+.order-details .delivered {
+  left: 22px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 5px;
+  white-space: nowrap;
+}
+
+.order-details .flex-row-4 {
+  align-items: center;
+  align-self: flex-end;
+  background-color: #e6e6e6;
+  border-radius: 11px;
+  display: flex;
+  height: 195px;
+  margin-right: 23px;
+  margin-top: 13px;
+  min-width: 521px;
+  padding: 8.5px 21px;
+}
+
+.order-details .flex-col-1 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+  width: 228px;
+}
+
+.order-details .product-name-walnut-new {
+  color: #177311;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 1px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+
+.order-details .qty-1 {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-top: 9px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+
+.order-details .total-rs-243 {
+  color: #1d4804;
+  font-family: var(--font-family-poppins);
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin-left: 1px;
+  margin-top: 58px;
+  min-height: 47px;
+  white-space: nowrap;
+}
+
+.order-details .flex-col-2 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-left: 65px;
+  margin-top: 3.5px;
+  min-height: 146px;
+  width: 184px;
+}
+
+.order-details .surname {
+  align-self: center;
+  color: #1d4804;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 16px;
+  margin-right: 10.0px;
+  min-height: 25px;
+  min-width: 110px;
+  white-space: nowrap;
+}
+
+.order-details .overlap-group5 {
+  align-items: flex-end;
+  background-color: #b8b7b7;
+  border-radius: 8px;
+  display: flex;
+  height: 32px;
+  margin-top: 8px;
+  min-width: 184px;
+  padding: 1px 10px;
+}
+
+.order-details .delivery-charge {
+  color: #0a0a0a;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 14px;
+  min-height: 22px;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.order-details .rs-0 {
+  color: #0a0a0a;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 14px;
+  margin-left: 4px;
+  min-height: 22px;
+  min-width: 35px;
+  white-space: nowrap;
+}
+
+.order-details .overlap-group4 {
+  align-items: flex-end;
+  background-color: #db1212;
+  border-radius: 6px;
+  display: flex;
+  height: 32px;
+  margin-top: 49px;
+  min-width: 94px;
+  padding: 1px 22px;
+}
+
+.order-details .close {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 15px;
+  min-height: 23px;
+  min-width: 48px;
+  white-space: nowrap;
+}

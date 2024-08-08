@@ -1,0 +1,824 @@
+/* screen - parent-category-list */
+
+.parent-category-list {
+  align-items: flex-start;
+  background-color: var(--cararra);
+  display: flex;
+  height: 1722px;
+  overflow: hidden;
+  width: 1366px;
+}
+
+.parent-category-list .overlap-group7 {
+  height: 1763px;
+  margin-left: -16px;
+  margin-top: -38px;
+  position: relative;
+  width: 1385px;
+}
+
+.parent-category-list .overlap-group1 {
+  height: 1763px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1385px;
+}
+
+.parent-category-list .rectangle-2 {
+  background-color: var(--cararra);
+  height: 1632px;
+  left: 15px;
+  position: absolute;
+  top: 131px;
+  width: 292px;
+}
+
+.parent-category-list .x18 {
+  height: 272px;
+  left: 24px;
+  object-fit: cover;
+  position: absolute;
+  top: 1439px;
+  width: 272px;
+}
+
+.parent-category-list .rectangle-1 {
+  background-color: var(--white);
+  box-shadow: 0px 3px 6px #00000029;
+  height: 90px;
+  left: 16px;
+  position: absolute;
+  top: 38px;
+  width: 1369px;
+}
+
+.parent-category-list .leaf1 {
+  height: 181px;
+  left: 30px;
+  object-fit: cover;
+  position: absolute;
+  top: 164px;
+  width: 177px;
+}
+
+.parent-category-list .rectangle-3 {
+  background-color: var(--white);
+  border-radius: 12px;
+  height: 45px;
+  left: 26px;
+  position: absolute;
+  top: 171px;
+  width: 273px;
+}
+
+.parent-category-list .rectangle-5 {
+  background-color: var(--mantis);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 104px;
+  left: 26px;
+  position: absolute;
+  top: 321px;
+  width: 273px;
+}
+
+.parent-category-list .rectangle-6 {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 46px;
+  left: 26px;
+  position: absolute;
+  top: 440px;
+  width: 273px;
+}
+
+.parent-category-list .rectangle-7 {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 47px;
+  left: 26px;
+  position: absolute;
+  top: 515px;
+  width: 273px;
+}
+
+.parent-category-list .rectangle-8 {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 52px;
+  left: 26px;
+  position: absolute;
+  top: 591px;
+  width: 273px;
+}
+
+.parent-category-list .dashboard {
+  left: 90px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 186px;
+  white-space: nowrap;
+}
+
+.parent-category-list .welcome {
+  left: 1241px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 67px;
+  white-space: nowrap;
+}
+
+.parent-category-list .administrator {
+  left: 1241px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  top: 92px;
+  white-space: nowrap;
+}
+
+.parent-category-list .category-management {
+  left: 72px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 336px;
+  white-space: nowrap;
+}
+
+.parent-category-list .product-management {
+  left: 71px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 454px;
+  white-space: nowrap;
+}
+
+.parent-category-list .order-management {
+  left: 72px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 530px;
+  white-space: nowrap;
+}
+
+.parent-category-list .manage-notifications {
+  left: 75px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 608px;
+  white-space: nowrap;
+}
+
+.parent-category-list .admin-panel {
+  left: 628px;
+  letter-spacing: 0;
+  line-height: 33px;
+  position: absolute;
+  top: 73px;
+  white-space: nowrap;
+}
+
+.parent-category-list .x4 {
+  height: 85px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 1287px;
+  width: 82px;
+}
+
+.parent-category-list .x4-1 {
+  height: 63px;
+  left: 214px;
+  object-fit: cover;
+  position: absolute;
+  top: 1073px;
+  width: 61px;
+}
+
+.parent-category-list .x4-2 {
+  height: 63px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 877px;
+  width: 61px;
+}
+
+.parent-category-list .leaf1-1 {
+  height: 181px;
+  left: 98px;
+  object-fit: cover;
+  position: absolute;
+  top: 663px;
+  width: 177px;
+}
+
+.parent-category-list .leaf2 {
+  height: 204px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 1098px;
+  width: 197px;
+}
+
+.parent-category-list .untitled-design {
+  height: 167px;
+  left: 16px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 167px;
+}
+
+.parent-category-list .laptop-svgrepo-com {
+  height: 20px;
+  left: 42px;
+  object-fit: cover;
+  position: absolute;
+  top: 183px;
+  width: 29px;
+}
+
+.parent-category-list .group-35 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  display: flex;
+  height: 45px;
+  left: 26px;
+  min-width: 273px;
+  padding: 3.5px 50px;
+  position: absolute;
+  top: 246px;
+}
+
+.parent-category-list .user-management {
+  letter-spacing: 0;
+  line-height: 17px;
+  min-height: 26px;
+  min-width: 161px;
+  white-space: nowrap;
+}
+
+.parent-category-list .users-silhouettes-svgrepo-com {
+  height: 22px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 257px;
+  width: 29px;
+}
+
+.parent-category-list .category-alt-svgrepo-com {
+  height: 18px;
+  left: 45px;
+  object-fit: cover;
+  position: absolute;
+  top: 336px;
+  width: 18px;
+}
+
+.parent-category-list .sell-product-svgrepo-com {
+  height: 22px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 452px;
+  width: 23px;
+}
+
+.parent-category-list .menu-order-svgrepo-com {
+  height: 19px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 531px;
+  width: 19px;
+}
+
+.parent-category-list .notification-svgrepo-com {
+  height: 19px;
+  left: 45px;
+  object-fit: cover;
+  position: absolute;
+  top: 609px;
+  width: 17px;
+}
+
+.parent-category-list .parent-categories {
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 368px;
+  white-space: nowrap;
+}
+
+.parent-category-list .sub-categories {
+  cursor: pointer;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 398px;
+  white-space: nowrap;
+}
+
+.parent-category-list .enter-arrow-svgrepo-com {
+  height: 10px;
+  left: 79px;
+  object-fit: cover;
+  position: absolute;
+  top: 370px;
+  width: 16px;
+}
+
+.parent-category-list .enter-arrow-svgrepo-com-1 {
+  height: 10px;
+  left: 79px;
+  object-fit: cover;
+  position: absolute;
+  top: 400px;
+  width: 16px;
+}
+
+.parent-category-list .line-1 {
+  height: 1617px;
+  left: 307px;
+  object-fit: cover;
+  position: absolute;
+  top: 143px;
+  width: 1px;
+}
+
+.parent-category-list .overlap-group {
+  align-items: center;
+  background-image: url(../img/rectangle-9-1@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  left: 348px;
+  min-height: 769px;
+  padding: 28px 0;
+  position: absolute;
+  top: 192px;
+  width: 993px;
+}
+
+.parent-category-list .flex-row {
+  align-items: flex-end;
+  display: flex;
+  height: 64px;
+  margin-left: 4.0px;
+  margin-top: 18px;
+  min-width: 953px;
+}
+
+.parent-category-list .parent-category-list-1 {
+  align-self: flex-start;
+  letter-spacing: 0;
+  line-height: 30px;
+  min-height: 45px;
+  min-width: 310px;
+  white-space: nowrap;
+}
+
+.parent-category-list .search {
+  color: var(--cape-cod);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 8.5px;
+  margin-left: 82px;
+  min-height: 27px;
+  min-width: 66px;
+  white-space: nowrap;
+}
+
+.parent-category-list .rectangle-2112 {
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 54px;
+  margin-bottom: 2.0px;
+  margin-left: 16px;
+  width: 273px;
+}
+
+.parent-category-list .overlap-group6 {
+  border-radius: 15px;
+  height: 56px;
+  margin-left: 19px;
+  position: relative;
+  width: 187px;
+}
+
+.parent-category-list .group-38 {
+  align-items: flex-end;
+  background-color: #2d6f9b;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #00000029;
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 187px;
+  padding: 9.5px 19px;
+  position: absolute;
+  top: 0;
+}
+
+.parent-category-list .add-category {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 27px;
+  min-width: 129px;
+  white-space: nowrap;
+}
+
+.parent-category-list .plus-svgrepo-com-1 {
+  background-image: url(../img/path-75-1@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 14px;
+  left: 12px;
+  position: absolute;
+  top: 22px;
+  width: 14px;
+}
+
+.parent-category-list .overlap-group4 {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 55px;
+  margin-top: 25px;
+  min-width: 993px;
+  padding: 7.5px 35px;
+}
+
+.parent-category-list .text-2 {
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 27px;
+  min-width: 18px;
+  white-space: nowrap;
+}
+
+.parent-category-list .product-name {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 90px;
+  min-height: 27px;
+  min-width: 143px;
+  white-space: nowrap;
+}
+
+.parent-category-list .product-image {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 52px;
+  min-height: 27px;
+  min-width: 149px;
+  white-space: nowrap;
+}
+
+.parent-category-list .cart-id {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 2.0px;
+  margin-left: 227px;
+  min-height: 27px;
+  min-width: 72px;
+  white-space: nowrap;
+}
+
+.parent-category-list .action {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 2.0px;
+  margin-left: 87px;
+  min-height: 27px;
+  min-width: 70px;
+  white-space: nowrap;
+}
+
+.parent-category-list .overlap-group5 {
+  align-items: center;
+  background-color: #fffefe;
+  box-shadow: 0px 3px 6px #00000029;
+  display: flex;
+  height: 98px;
+  margin-top: 7px;
+  min-width: 993px;
+  padding: 3px 38px;
+}
+
+.parent-category-list .number-2 {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-top: 8.0px;
+  min-height: 27px;
+  min-width: 19px;
+  white-space: nowrap;
+}
+
+.parent-category-list .place {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 121px;
+  margin-top: 8.0px;
+  min-height: 27px;
+  min-width: 74px;
+  white-space: nowrap;
+}
+
+.parent-category-list .x4-3 {
+  align-self: flex-start;
+  height: 89px;
+  margin-left: 102px;
+  object-fit: cover;
+  width: 89px;
+}
+
+.parent-category-list .number-3 {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 301px;
+  margin-top: 8.0px;
+  min-height: 27px;
+  min-width: 20px;
+  white-space: nowrap;
+}
+
+.parent-category-list .text-edit-1 {
+  cursor: pointer;
+  height: 24px;
+  margin-bottom: 12.0px;
+  margin-left: 119px;
+  object-fit: cover;
+  width: 19px;
+}
+
+.parent-category-list .bin-svgrepo-com-1 {
+  height: 24px;
+  margin-bottom: 14.0px;
+  margin-left: 21px;
+  object-fit: cover;
+  width: 20px;
+}
+
+.parent-category-list .overlap-group2 {
+  height: 105px;
+  margin-top: 3px;
+  position: relative;
+  width: 993px;
+}
+
+.parent-category-list .rectangle-210 {
+  background-color: var(--white);
+  box-shadow: 0px 3px 6px #00000029;
+  height: 98px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 993px;
+}
+
+.parent-category-list .number {
+  left: 38px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 46px;
+  white-space: nowrap;
+}
+
+.parent-category-list .number-1 {
+  left: 744px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 46px;
+  white-space: nowrap;
+}
+
+.parent-category-list .apple {
+  left: 180px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 46px;
+  white-space: nowrap;
+}
+
+.parent-category-list .text-edit {
+  height: 24px;
+  left: 883px;
+  object-fit: cover;
+  position: absolute;
+  top: 37px;
+  width: 19px;
+}
+
+.parent-category-list .bin-svgrepo-com {
+  height: 24px;
+  left: 923px;
+  object-fit: cover;
+  position: absolute;
+  top: 36px;
+  width: 20px;
+}
+
+.parent-category-list .x5 {
+  height: 105px;
+  left: 349px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 105px;
+}
+
+.parent-category-list .overlap-group3 {
+  height: 335px;
+  margin-top: 3px;
+  position: relative;
+  width: 993px;
+}
+
+.parent-category-list .rectangle-2103 {
+  background-color: #fff9f9;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 98px;
+  left: 0;
+  position: absolute;
+  top: 112px;
+  width: 993px;
+}
+
+.parent-category-list .rectangle-2104 {
+  background-color: var(--white);
+  box-shadow: 0px 3px 6px #00000029;
+  height: 98px;
+  left: 0;
+  position: absolute;
+  top: 220px;
+  width: 993px;
+}
+
+.parent-category-list .path-74 {
+  height: 1px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 129px;
+  width: 988px;
+}
+
+.parent-category-list .number-4 {
+  left: 38px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 152px;
+  white-space: nowrap;
+}
+
+.parent-category-list .number-5 {
+  left: 38px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 260px;
+  white-space: nowrap;
+}
+
+.parent-category-list .number-6 {
+  left: 744px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 152px;
+  white-space: nowrap;
+}
+
+.parent-category-list .number-7 {
+  left: 744px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 260px;
+  white-space: nowrap;
+}
+
+.parent-category-list .color {
+  left: 180px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 46px;
+  white-space: nowrap;
+}
+
+.parent-category-list .grapes {
+  left: 180px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 152px;
+  white-space: nowrap;
+}
+
+.parent-category-list .spinach {
+  left: 180px;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 260px;
+  white-space: nowrap;
+}
+
+.parent-category-list .text-edit-2 {
+  height: 24px;
+  left: 883px;
+  object-fit: cover;
+  position: absolute;
+  top: 143px;
+  width: 19px;
+}
+
+.parent-category-list .text-edit-3 {
+  height: 24px;
+  left: 883px;
+  object-fit: cover;
+  position: absolute;
+  top: 251px;
+  width: 19px;
+}
+
+.parent-category-list .bin-svgrepo-com-2 {
+  height: 24px;
+  left: 923px;
+  object-fit: cover;
+  position: absolute;
+  top: 142px;
+  width: 20px;
+}
+
+.parent-category-list .bin-svgrepo-com-3 {
+  height: 24px;
+  left: 923px;
+  object-fit: cover;
+  position: absolute;
+  top: 250px;
+  width: 20px;
+}
+
+.parent-category-list .x6 {
+  height: 110px;
+  left: 344px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 110px;
+}
+
+.parent-category-list .x7 {
+  height: 114px;
+  left: 338px;
+  object-fit: cover;
+  position: absolute;
+  top: 104px;
+  width: 114px;
+}
+
+.parent-category-list .x8 {
+  height: 131px;
+  left: 325px;
+  object-fit: cover;
+  position: absolute;
+  top: 204px;
+  width: 131px;
+}

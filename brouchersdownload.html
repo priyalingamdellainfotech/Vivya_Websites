@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" type="image/png" href="images/dellaicon.png">
+    <title>
+        Best Construction Company in Tiruchirappalli | Top Building Construction Company in Trichy - Vriho Infratech
+    </title>
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="title" content="Build your dream home with Vriho Infratech, the best construction company in Tiruchirappalli. Discover the expertise and quality work with the top building construction company in Trichy.
+
+">
+
+    <meta name="description" content="Build your dream home with Vriho Infratech, a leading construction firm that prioritizes quality, reliability, and exceptional customer service.
+" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link rel="stylesheet" href="css/font-awesome5.css">
+
+    <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="multiselect/bootstrap-select.min.css">
+    <!--
+
+    <link rel="stylesheet" href="multiselect/bootstrap.min.css">-->
+    <script src="js/vendor/modernizr-2.6.2.min.js">
+    </script>
+    <script src="js/script.js">
+    </script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174947235-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-174947235-1');
+    </script>
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.min.js">
+    </script>
+    <script src="js/vendor/respond.min.js">
+    </script>
+    <script src="js/vendor/jquery-1.12.4.min.js">
+    </script><![endif]-->
+    <!--
+    <script>var popit = true; window.onbeforeunload = function() { if(popit == true) { popit = false; return document.querySelector(".login-popup").classList.add("show"); } }
+    </script>-->
+    <script>
+        function submitToAPI(e) {
+            e.preventDefault();//
+            var URL = "API Gateway";
+            let headers = new Headers();
+            headers.append('Access-Control-Allow-Origin', '*');
+            headers.append('GET', 'POST', 'OPTIONS');
+            var name = document.getElementById("name").value;
+            var location = document.getElementById("location").value;
+            var interested = document.getElementById("interested").value;
+            var budget = document.getElementById("budget").value;
+            var prelocation = document.getElementById("prelocation").value;
+            var selected = []; for (var option of document.getElementById('prelocation').options) {
+                if (option.selected) {
+                    selected.push(option.value);
+                }
+            }
+            console.log(selected);
+            var subject = document.getElementById("subject").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            if (name == "" || phone == "" || email == "" || location == "" || interested == "" || budget == "" || subject == "" || selected == "") {
+                alert("Please Fill All Required Field");
+                return false;
+            }
+            if ($("#name").val() == "") {
+                alert("Name entered, is not valid");
+                return false;
+            }
+            if ($("#location").val() == "") {
+                alert("Location entered, is not valid");
+                return false;
+            }
+            if ($("#interested").val() == "") {
+                alert("Interested entered, is not valid");
+                return false;
+            } if ($("#prelocation").val() == "") {
+                alert("prelocation entered, is not valid");
+                return false;
+            }
+            if ($("#budget").val() == "") {
+                alert("budget entered, is not valid");
+                return false;
+            }
+            if ($("#subject").val() == "") {
+                alert("subject entered, is not valid");
+                return false;
+            }
+            phoneRE = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+            if (!phoneRE.test(phone)) {
+                alert("Phone number entered, is not valid");
+                return false;
+            } emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!emailRE.test(email)) {
+                alert("Email Address entered, is not valid");
+                return false;
+            }
+            var data = { name: name, location: location, interested: interested, budget: budget, subject: subject, phone: phone, email: email, prelocation: selected, };
+            var xmlhttp = new XMLHttpRequest(); xmlhttp.open("POST", "https://2trth6jq68.execute-api.us-east-1.amazonaws.com/Prod/submitForm");
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.send(JSON.stringify(data));
+            xmlhttp.onloadend = response => {
+                if (xmlhttp.readyState === 4) {
+                    if (response.target.status === 200) {
+                        console.log('successful');
+                        document.getElementById("contact-form").innerHTML = "<h1> </br></br></br></br></br></br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Thank you for submitting..</br></br> </br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  our team will get back to you soon! </br></br></br></br></br></br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h1>";
+                    }
+                    else {
+                        document.getElementById("contact-form").innerHTML = "<h1>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Error! Please try again.</h1>";
+                        console.log('failed');
+                    }
+                }
+            };
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+    <style>
+      .wwdemo,
+.wwdemo a
+{
+	font-family: Arial;
+	color: #585858;
+}
+
+.wwdemo .demo-container
+{
+	background-color: #FFFFFF;
+    width: 88%;
+    margin: 2% auto;
+    max-width: 40em;
+    padding: 1.5% 3% 3%;
+}
+
+.wwdemo h1
+{
+	text-align: center;
+	word-spacing: -0.1em;
+   letter-spacing: -0.02em;
+}
+
+.wwdemo a.button
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:0.22em;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:19px 46px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	margin: 2em auto;
+	display: block;
+	max-width: 12em;
+	text-align: center;
+}
+
+.wwdemo a.button:hover
+{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+
+.wwdemo a.button:active
+{
+	position:relative;
+	top:1px;
+}
+
+.demo-description
+{
+	font-size: 1.1em;
+	line-height: 1.4em;
+	margin: 2em 0;
+}
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+
+    <div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.
+    </div><![endif]-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X54LX36MTS"></script>
+    <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-X54LX36MTS');
+    </script>
+    <div class="preloader">
+
+        <div class="preloader_image">
+        </div>
+    </div>
+    <!-- search modal -->
+
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+            <span aria-hidden="true">
+                &times;
+            </span>
+        </button>
+
+        <div class="widget widget_search">
+
+            <form method="get" class="searchform search-form" action="/">
+
+                <div class="form-group">
+                    <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+                </div><button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </div>
+    <!-- Unyson messages modal -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+
+        <div class="fw-messages-wrap ls p-normal">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            <!--
+            <ul class="list-unstyled">
+            <li>Message To User</li>
+            </ul>-->
+        </div>
+    </div>
+    <!-- eof .modal -->
+    <!-- wrappers for visual page editor and boxed version of template -->
+
+    <div id="canvas">
+
+        <div id="box_wrapper">
+            <!-- template sections -->
+            <!--topline section visible only on small screens|-->
+
+
+          
+
+
+
+
+
+            <script src="js/script.js">
+            </script>
+
+
+
+           
+            <section class="page_title ds s-parallax s-overlay s-py-80 s-py-xl-160 s-py-md-100" 
+            >
+                <img src="images/Vivya_Apartment/MicrosoftTeams-image (6).png"/>
+              
+            </section>
+             <div class="whatsapp-button">
+				
+        <a href="https://api.whatsapp.com/send?phone=917810025201&text=Hello!%20I'm%20interested%20in%20exploring%20construction%20service%20offered%20by%20Vriho%20Infratech" target=        "_blank">
+					<img src="images/icon/whatsapp-icon.png"alt=whatsapp-icon/>
+					
+				</a>
+
+			</div>
+            <section>
+              <div class="wwdemo demo-body">
+                <div class="demo-container">
+                    <h3 style="text-align: center;">Explore Here</h3>
+              
+              <!-- 		<h1>Force a File to Download with Javascript</h1> -->
+             
+              <a class="js-download-link button" 
+              href="images/Vivya_Apartment/Vivya Apartments final brochure (1)_compressed (1) (1).pdf">
+              View and Download
+            </a>
+           
+            <!-- <a class="js-download-link button" 
+            href="https://wattswork.s3.amazonaws.com/test-media/PDFs/test-file.pdf">
+            Download PDF File2
+          </a> -->
+          <div class="demo-description">
+            <a class="js-download-link button"
+            href="https://vriho.com/">
+                View Website
+            </a>
+          </div>
+          <div class="demo-description">
+            <a class="js-download-link button"
+            href="reportsdownload.html">
+                Back <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+          </div>
+          
+               
+              
+                </div>
+              </div>
+            </section>
+
+            
+            <footer class="page_footer ls s-pt-55 s-pb-60 s-pt-md-85 s-pb-md-90 s-pt-lg-125 s-pb-lg-130 s-pt-xl-155 s-pb-xl-160 c-gutter-80 s-parallax c-mb-50 c-mb-lg-0">
+
+                <div class="container">
+
+                    <div class="row justify-content-center">
+
+                        <div class="col-lg-4 col-md-4 text-center animate" data-animation="fadeInUp">
+
+                            <div class="widget widget_icons_list">
+                                <h3 class="widget-title">Get in Touch</h3>
+                                <ul>
+                                    <li class="icon-inline">
+                                        <i class="fa fa-map-marker icon-styled icon-top color-main2 fs-14"></i>
+
+                                        <p>
+                                            B-1,B Block Greenwoods Apartment,
+                                            <br>Morais city,Sempat,Trichy-07
+                                        </p>
+                                    </li>
+                                    <li class="icon-inline">
+                                        <i class="fa fa-phone icon-styled icon-top color-main2 fs-14"></i>
+
+                                        <p>6374824859</p>
+                                    </li>
+                                    <li class="icon-inline">
+                                        <i class="fa fa-envelope icon-styled icon-top color-main2 fs-14"></i>
+
+                                        <p><a href="#">enquiry@vriho.com</a></p>
+                                    </li>
+                                    <!--<li class="icon-inline"><i class="fa fa-envelope icon-styled icon-top color-main2 fs-14"></i>
+
+                            <p><a href="#">vrdellaconstructions@gmail.com </a></p></li>-->
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 text-left animate" data-animation="fadeInUp">
+
+                            <div class="widget widget_instagram">
+                                <h3 class="widget-title">Useful Links</h3>
+                                <ul>
+                                    <li><a href="index.html">Home Page </a></p></li>
+                                    <li><a href="about.html">About Us </a></p></li>
+                                    <li><a href="career.html">Career </a></p></li>
+                                    <li><a href="package_Construction.html">Construction </a></p></li>
+                                    <!--<li><a href="#">vrdellaconstructions@gmail.com </a></p></li>-->
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                       
+
+
+                        <!--
+                <div class="col-lg-4 col-md-6 text-center animate mb-0" data-animation="fadeInUp">
+
+                <div class="widget widget_mailchimp"><h3 class="widget-title">Newsletter</h3>
+
+                <form class="signup" action="/">
+                <input name="email" type="email" class="form-control mailchimp_email" placeholder="Email"><button type="submit" class="search-submit">
+
+                <span class="screen-reader-text">Subscribe
+                </span></button>
+
+                <div class="response">
+                </div>
+                </form>
+                </div>
+                </div> -->
+                    </div>
+                </div>
+            </footer>
+            <!-- <section class="ls after_footer container-px-xl-110 s-py-50">
+
+    <div class="container-fluid">
+
+    <div class="row">
+
+    <div class="col-sm-12 text-center">
+
+    <div class="owl-carousel widget widget_partners_carousel" data-center="false" data-margin="0" data-loop="true" data-responsive-lg="6" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2"><a href="#"><img src="images/partners/01.png" alt=""></a><a href="#"><img src="images/partners/02.png" alt=""></a><a href="#"><img src="images/partners/03.png" alt=""></a><a href="#"><img src="images/partners/04.png" alt=""></a><a href="#"><img src="images/partners/05.png" alt=""></a><a href="#"><img src="images/partners/06.png" alt=""></a>
+    </div>
+    </div>
+    </div>
+    </div></section> -->
+
+            <div class="page_copyright ds s-py-25">
+
+                <div class="container">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-md-6 text-left">
+
+                            <p>
+                                &copy; Copyright
+
+                                <span class="copyright_year">
+                                    2020
+                                </span> All Rights Reserved
+                            </p>
+                        </div>
+
+                        <div class="col-md-6 text-md-right text-center">
+
+                            <span class="social-icons">
+                                <a href="https://www.facebook.com/VR-Della-Constructions-LLP-107439124395827" class="fab fa-facebook" target="_blank" title="facebook"></a><a href="https://www.instagram.com/vrihoinfratech/" class="fab fa-instagram" target="_blank" title="instagram"></a><a href="https://www.youtube.com/c/VRDellaGroup" class="fab fa-youtube " target="_blank" title="youtube"></a><a href="https://twitter.com/vrihoinfratech" class="fab fa-twitter " target="_blank" title="youtube"></a>
+                                <a href="https://www.linkedin.com/company/vrihoinfratech" class="fab fa-linkedin " target="_blank" title="youtube"></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+    <script src="js/compressed.js">
+    </script>
+    <script src="js/main.js">
+    </script>
+    <script>
+		// Get the modal
+		var modal = document.getElementById('login-popup');
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+    </script>
+    <script>
+		$(document).ready(function () {
+			$('#interested').change(function () {
+				var method = $('option:selected', this).text();
+				if (method == "buy a individual house" || method == "buy apartment" || method == "buy plot ") {
+					$('#contact-label').text("Description of amenities that you expect");
+				} else if (method == "Rent commercial shops" || method == "buy commercial shops" || method == "Rent commercial shops" || method == "Join Venture for construction" || method == "i am a supplier of construction material" || method == "i want to sell my land") { $('#contact-label').html("Provide description on your expectation"); }
+			});
+		});
+    </script>
+    <script>
+		$(function () { $('.selectpicker').selectpicker(); });
+    </script>
+    <script>
+		$(document).ready(function () { $('#prelocation').multiSelect(); });
+    </script>
+    <script>
+		document.getElementById('submit').onclick = function () { var selected = []; for (var option of document.getElementById('prelocation').options) { if (option.selected) { selected.push(option.value); } } alert(selected); }
+    </script>
+    <script src="multiselect/bootstrap-select.min.js">
+    </script>
+    <script src="multiselect/bootstrap-select.min.js">
+    </script>
+    <!--
+    <script src="multiselect/bootstrap.bundle.min.js">
+    </script>-->
+    <script>
+		function trackVisitors() {
+			// Get the current date and time
+			var now = new Date();
+
+			// Get the visitor's IP address
+			var ip = getIPAddress();
+
+			// Store the visitor's information in a database
+			storeVisitorInfo(ip, now);
+
+			// Log the visitor's information to the console
+			console.log("Visitor with IP " + ip + " visited at " + now);
+		}
+    </script>
+
+
+</body>
+</html>

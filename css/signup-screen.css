@@ -1,0 +1,136 @@
+/* screen - signup-screen */
+
+.signup-screen {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 768px;
+  width: 1366px;
+}
+
+.signup-screen .overlap-group {
+  background-image: url(../img/group-37@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 776px;
+  margin-top: -8px;
+  position: relative;
+  width: 1366px;
+}
+
+.signup-screen .rectangle-2093 {
+  background-color: var(--white);
+  border: 1px solid var(--dove-gray);
+  border-radius: 23px;
+  height: 667px;
+  left: 406px;
+  position: absolute;
+  top: 65px;
+  width: 557px;
+}
+
+.signup-screen .first-name {
+  left: 427px;
+  letter-spacing: 0;
+  line-height: 21px;
+  position: absolute;
+  top: 268px;
+  white-space: nowrap;
+}
+
+.signup-screen .last-name {
+  left: 427px;
+  letter-spacing: 0;
+  line-height: 21px;
+  position: absolute;
+  top: 341px;
+  white-space: nowrap;
+}
+
+.signup-screen .email {
+  left: 427px;
+  letter-spacing: 0;
+  line-height: 21px;
+  position: absolute;
+  top: 416px;
+  white-space: nowrap;
+}
+
+.signup-screen .password {
+  left: 427px;
+  letter-spacing: 0;
+  line-height: 21px;
+  position: absolute;
+  top: 493px;
+  white-space: nowrap;
+}
+
+.signup-screen .line-3 {
+  height: 3px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 290px;
+  width: 307px;
+}
+
+.signup-screen .line-4 {
+  height: 3px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 363px;
+  width: 307px;
+}
+
+.signup-screen .line-5 {
+  height: 3px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 438px;
+  width: 307px;
+}
+
+.signup-screen .line-6 {
+  height: 3px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 515px;
+  width: 307px;
+}
+
+.signup-screen .untitled-design {
+  height: 261px;
+  left: 553px;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  width: 261px;
+}
+
+.signup-screen .group-34 {
+  align-items: flex-end;
+  background: linear-gradient(180deg, #2f8635 0%, #18431b 100%);
+  border-radius: 15px;
+  display: flex;
+  height: 50px;
+  left: 625px;
+  min-width: 156px;
+  padding: 4px 37px;
+  position: absolute;
+  top: 617px;
+}
+
+.signup-screen .submit {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 21px;
+  min-height: 31px;
+  min-width: 78px;
+  white-space: nowrap;
+}

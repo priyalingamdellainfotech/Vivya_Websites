@@ -1,0 +1,1060 @@
+/* screen - dashboard */
+
+.dashboard {
+  align-items: flex-start;
+  background-color: var(--cararra);
+  display: flex;
+  height: 1722px;
+  overflow: hidden;
+  width: 1366px;
+}
+
+.dashboard .overlap-group23 {
+  height: 1763px;
+  margin-left: -16px;
+  margin-top: -38px;
+  position: relative;
+  width: 1385px;
+}
+
+.dashboard .overlap-group6 {
+  align-items: flex-end;
+  background-image: url(../img/untitled-design--16-@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 26px;
+  display: flex;
+  height: 300px;
+  left: 320px;
+  min-width: 1049px;
+  padding: 94px 57px;
+  position: absolute;
+  top: 228px;
+}
+
+.dashboard .title {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: 61px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 61px;
+  min-height: 87px;
+  min-width: 772px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group1 {
+  height: 1763px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1385px;
+}
+
+.dashboard .rectangle-2 {
+  background-color: var(--cararra);
+  height: 1632px;
+  left: 15px;
+  position: absolute;
+  top: 131px;
+  width: 292px;
+}
+
+.dashboard .x18 {
+  height: 272px;
+  left: 24px;
+  object-fit: cover;
+  position: absolute;
+  top: 1439px;
+  width: 272px;
+}
+
+.dashboard .rectangle-1 {
+  background-color: var(--white);
+  box-shadow: 0px 3px 6px #00000029;
+  height: 90px;
+  left: 16px;
+  position: absolute;
+  top: 38px;
+  width: 1369px;
+}
+
+.dashboard .leaf1 {
+  height: 181px;
+  left: 30px;
+  object-fit: cover;
+  position: absolute;
+  top: 164px;
+  width: 177px;
+}
+
+.dashboard .rectangle-3 {
+  background-color: var(--mantis);
+  border-radius: 12px;
+  height: 45px;
+  left: 26px;
+  position: absolute;
+  top: 171px;
+  width: 273px;
+}
+
+.dashboard .rectangle-6 {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 46px;
+  left: 26px;
+  position: absolute;
+  top: 397px;
+  width: 273px;
+}
+
+.dashboard .rectangle-7 {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 47px;
+  left: 26px;
+  position: absolute;
+  top: 472px;
+  width: 273px;
+}
+
+.dashboard .rectangle-8 {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 52px;
+  left: 26px;
+  position: absolute;
+  top: 548px;
+  width: 273px;
+}
+
+.dashboard .dashboard-1 {
+  left: 90px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 186px;
+  white-space: nowrap;
+}
+
+.dashboard .welcome {
+  left: 1241px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 67px;
+  white-space: nowrap;
+}
+
+.dashboard .administrator {
+  left: 1241px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  top: 92px;
+  white-space: nowrap;
+}
+
+.dashboard .product-management {
+  left: 71px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 412px;
+  white-space: nowrap;
+}
+
+.dashboard .order-management {
+  left: 72px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 488px;
+  white-space: nowrap;
+}
+
+.dashboard .manage-notifications {
+  left: 75px;
+  letter-spacing: 0;
+  line-height: 17px;
+  position: absolute;
+  top: 566px;
+  white-space: nowrap;
+}
+
+.dashboard .admin-panel {
+  left: 628px;
+  letter-spacing: 0;
+  line-height: 33px;
+  position: absolute;
+  top: 73px;
+  white-space: nowrap;
+}
+
+.dashboard .x4 {
+  height: 85px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 1287px;
+  width: 82px;
+}
+
+.dashboard .x4-1 {
+  height: 63px;
+  left: 214px;
+  object-fit: cover;
+  position: absolute;
+  top: 1073px;
+  width: 61px;
+}
+
+.dashboard .x4-2 {
+  height: 63px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 877px;
+  width: 61px;
+}
+
+.dashboard .leaf1-1 {
+  height: 181px;
+  left: 98px;
+  object-fit: cover;
+  position: absolute;
+  top: 663px;
+  width: 177px;
+}
+
+.dashboard .leaf2 {
+  height: 204px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 1098px;
+  width: 197px;
+}
+
+.dashboard .untitled-design {
+  height: 167px;
+  left: 16px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 167px;
+}
+
+.dashboard .laptop-svgrepo-com {
+  height: 20px;
+  left: 42px;
+  object-fit: cover;
+  position: absolute;
+  top: 183px;
+  width: 29px;
+}
+
+.dashboard .group-35 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  cursor: pointer;
+  display: flex;
+  height: 45px;
+  left: 26px;
+  min-width: 273px;
+  padding: 3.5px 50px;
+  position: absolute;
+  top: 246px;
+}
+
+.dashboard .user-management {
+  letter-spacing: 0;
+  line-height: 17px;
+  min-height: 26px;
+  min-width: 161px;
+  white-space: nowrap;
+}
+
+.dashboard .icon-user {
+  height: 22px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 257px;
+  width: 29px;
+}
+
+.dashboard .group-40 {
+  align-items: flex-end;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+  cursor: pointer;
+  display: flex;
+  height: 46px;
+  justify-content: space-between;
+  left: 26px;
+  position: absolute;
+  top: 321px;
+  width: 273px;
+}
+
+.dashboard .category-alt-svgrepo-com {
+  height: 18px;
+  margin-bottom: -8.4px;
+  margin-left: 19px;
+  object-fit: cover;
+  width: 18px;
+}
+
+.dashboard .category-management {
+  height: 26px;
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-bottom: -7.2px;
+  margin-right: 24px;
+  white-space: nowrap;
+  width: 203px;
+}
+
+.dashboard .sell-product-svgrepo-com {
+  height: 22px;
+  left: 40px;
+  object-fit: cover;
+  position: absolute;
+  top: 409px;
+  width: 23px;
+}
+
+.dashboard .menu-order-svgrepo-com {
+  height: 19px;
+  left: 44px;
+  object-fit: cover;
+  position: absolute;
+  top: 488px;
+  width: 19px;
+}
+
+.dashboard .icon-notifications {
+  height: 19px;
+  left: 45px;
+  object-fit: cover;
+  position: absolute;
+  top: 566px;
+  width: 17px;
+}
+
+.dashboard .line-1 {
+  height: 1617px;
+  left: 307px;
+  object-fit: cover;
+  position: absolute;
+  top: 143px;
+  width: 1px;
+}
+
+.dashboard .overlap-group4 {
+  align-items: flex-start;
+  background-image: url(../img/2@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 17px;
+  display: flex;
+  height: 276px;
+  left: 335px;
+  min-width: 477px;
+  padding: 34px 42px;
+  position: absolute;
+  top: 551px;
+}
+
+.dashboard .new-orders {
+  letter-spacing: 0;
+  line-height: 41px;
+  margin-top: 10px;
+  min-height: 59px;
+  min-width: 243px;
+  white-space: nowrap;
+}
+
+.dashboard .number {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 41px;
+  margin-left: 92px;
+  min-height: 59px;
+  min-width: 52px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group5 {
+  align-items: flex-end;
+  background-image: url(../img/3@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  left: 884px;
+  min-height: 274px;
+  padding: 31px 0;
+  position: absolute;
+  top: 550px;
+  width: 473px;
+}
+
+.dashboard .pending-orders {
+  align-self: center;
+  letter-spacing: 0;
+  line-height: 41px;
+  margin-right: 53.0px;
+  margin-top: 14px;
+  min-height: 59px;
+  min-width: 324px;
+  white-space: nowrap;
+}
+
+.dashboard .number-1 {
+  letter-spacing: 0;
+  line-height: 41px;
+  margin-right: 48px;
+  margin-top: 80px;
+  min-height: 59px;
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group3 {
+  align-items: flex-start;
+  background-image: url(../img/4-1x-png-1x-png@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  left: 336px;
+  min-height: 276px;
+  padding: 50px 41px;
+  position: absolute;
+  top: 841px;
+  width: 477px;
+}
+
+.dashboard .cancelled-orders {
+  letter-spacing: 0;
+  line-height: 41px;
+  min-height: 59px;
+  white-space: nowrap;
+}
+
+.dashboard .number-2 {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 41px;
+  margin-right: 7px;
+  margin-top: 56px;
+  min-height: 59px;
+  min-width: 53px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group {
+  align-items: flex-end;
+  background-image: url(../img/5@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  left: 880px;
+  min-height: 278px;
+  padding: 38px 31px;
+  position: absolute;
+  top: 839px;
+  width: 481px;
+}
+
+.dashboard .flex-row {
+  align-items: center;
+  display: flex;
+  height: 59px;
+  margin-top: 14px;
+  min-width: 398px;
+}
+
+.dashboard .app-users {
+  letter-spacing: 0;
+  line-height: 41px;
+  min-height: 59px;
+  min-width: 212px;
+  white-space: nowrap;
+}
+
+.dashboard .this-week {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 110px;
+  margin-top: 4.0px;
+  min-height: 23px;
+  min-width: 76px;
+  white-space: nowrap;
+}
+
+.dashboard .number-3 {
+  letter-spacing: 0;
+  line-height: 41px;
+  margin-right: 22px;
+  margin-top: 70px;
+  min-height: 59px;
+  min-width: 50px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group2 {
+  align-items: flex-start;
+  background-image: url(../img/rectangle-9@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  left: 340px;
+  min-height: 600px;
+  padding: 27.5px 0;
+  position: absolute;
+  top: 1132px;
+  width: 993px;
+}
+
+.dashboard .orders {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-left: 37px;
+  min-height: 45px;
+  white-space: nowrap;
+}
+
+.dashboard .latest-order-history {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 37px;
+  margin-top: 2px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group12 {
+  align-items: flex-end;
+  background-color: var(--white);
+  display: flex;
+  height: 55px;
+  margin-top: 18px;
+  min-width: 993px;
+  padding: 7.5px 35px;
+}
+
+.dashboard .no {
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 27px;
+  min-width: 31px;
+  white-space: nowrap;
+}
+
+.dashboard .cart-id {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 119px;
+  min-height: 27px;
+  min-width: 72px;
+  white-space: nowrap;
+}
+
+.dashboard .user-details {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-left: 81px;
+  min-height: 27px;
+  min-width: 119px;
+  white-space: nowrap;
+}
+
+.dashboard .status {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 2.0px;
+  margin-left: 73px;
+  min-height: 27px;
+  min-width: 69px;
+  white-space: nowrap;
+}
+
+.dashboard .amount {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 2.0px;
+  margin-left: 115px;
+  min-height: 27px;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+.dashboard .details {
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 2.0px;
+  margin-left: 79px;
+  min-height: 27px;
+  min-width: 71px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group9 {
+  align-items: flex-end;
+  background-color: var(--ebb);
+  display: flex;
+  height: 53px;
+  justify-content: flex-end;
+  margin-top: 27px;
+  min-width: 993px;
+  padding: 10px 29px;
+}
+
+.dashboard .number-4 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 1px;
+  min-height: 23px;
+  min-width: 16px;
+  white-space: nowrap;
+}
+
+.dashboard .car-1-0093-11 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 1px;
+  margin-left: 128px;
+  min-height: 23px;
+  min-width: 109px;
+  white-space: nowrap;
+}
+
+.dashboard .hendry {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 1px;
+  margin-left: 85px;
+  min-height: 23px;
+  min-width: 55px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group13 {
+  align-self: center;
+  height: 27px;
+  margin-bottom: 2.0px;
+  margin-left: 94px;
+  position: relative;
+  width: 117px;
+}
+
+.dashboard .rectangle {
+  border-radius: 6px;
+  height: 25px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 117px;
+}
+
+.dashboard .delivered {
+  left: 22px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 5px;
+  white-space: nowrap;
+}
+
+.dashboard .rs24300 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 1px;
+  margin-left: 78px;
+  min-height: 23px;
+  min-width: 74px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group14 {
+  align-items: flex-end;
+  background-color: var(--surfie-green);
+  border-radius: 8px;
+  display: flex;
+  height: 31px;
+  margin-left: 70px;
+  min-width: 100px;
+  padding: 0 30px;
+}
+
+.dashboard .view-1 {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 14px;
+  min-height: 22px;
+  min-width: 36px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group11 {
+  align-items: center;
+  background-color: var(--ebb);
+  display: flex;
+  height: 53px;
+  justify-content: flex-end;
+  margin-top: 23px;
+  min-width: 993px;
+  padding: 0 29px;
+}
+
+.dashboard .number-5 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-top: 6.0px;
+  min-height: 23px;
+  min-width: 20px;
+  white-space: nowrap;
+}
+
+.dashboard .car-1-0043-41 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 122px;
+  margin-top: 8.0px;
+  min-height: 23px;
+  min-width: 114px;
+  white-space: nowrap;
+}
+
+.dashboard .name {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 82px;
+  margin-top: 8.0px;
+  min-height: 23px;
+  min-width: 40px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group16 {
+  height: 27px;
+  margin-left: 109px;
+  margin-top: 2.0px;
+  position: relative;
+  width: 117px;
+}
+
+.dashboard .rectangle-17 {
+  background-color: #24881d;
+  border-radius: 6px;
+  height: 25px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 117px;
+}
+
+.dashboard .rs54300 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 78px;
+  margin-top: 6.0px;
+  min-height: 23px;
+  min-width: 76px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group15 {
+  align-items: flex-end;
+  background-color: var(--surfie-green);
+  border-radius: 8px;
+  display: flex;
+  height: 31px;
+  justify-content: flex-end;
+  margin-left: 68px;
+  min-width: 100px;
+  padding: 0 31px;
+}
+
+.dashboard .view {
+  letter-spacing: 0;
+  line-height: 14px;
+  min-height: 22px;
+  min-width: 36px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group10 {
+  align-items: flex-end;
+  background-color: var(--ebb);
+  display: flex;
+  height: 53px;
+  justify-content: flex-end;
+  margin-left: 3px;
+  margin-top: 23px;
+  min-width: 988px;
+  padding: 9px 27px;
+}
+
+.dashboard .number-6 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 3px;
+  min-height: 23px;
+  min-width: 20px;
+  white-space: nowrap;
+}
+
+.dashboard .car-1-0031-56 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 3px;
+  margin-left: 122px;
+  min-height: 23px;
+  min-width: 114px;
+  white-space: nowrap;
+}
+
+.dashboard .markov {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 3px;
+  margin-left: 82px;
+  min-height: 23px;
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group18 {
+  height: 27px;
+  margin-bottom: 2px;
+  margin-left: 93px;
+  position: relative;
+  width: 146px;
+}
+
+.dashboard .rectangle-19 {
+  border-radius: 6px;
+  height: 25px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 146px;
+}
+
+.dashboard .out-for-delivery {
+  left: 12px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 5px;
+  white-space: nowrap;
+}
+
+.dashboard .rs85400 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 2px;
+  margin-left: 49px;
+  min-height: 23px;
+  min-width: 76px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group17 {
+  align-items: flex-end;
+  align-self: flex-start;
+  background-image: url(../img/rectangle-23@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 8px;
+  display: flex;
+  height: 31px;
+  margin-left: 68px;
+  min-width: 100px;
+  padding: 0 30px;
+}
+
+.dashboard .overlap-group7 {
+  align-items: flex-end;
+  background-color: var(--ebb);
+  display: flex;
+  height: 53px;
+  justify-content: flex-end;
+  margin-left: 2px;
+  margin-top: 30px;
+  min-width: 988px;
+  padding: 9px 26px;
+}
+
+.dashboard .number-7 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 2px;
+  min-height: 23px;
+  min-width: 21px;
+  white-space: nowrap;
+}
+
+.dashboard .car-1-0061-26 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 2px;
+  margin-left: 121px;
+  min-height: 23px;
+  min-width: 114px;
+  white-space: nowrap;
+}
+
+.dashboard .name-1 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: 2px;
+  margin-left: 82px;
+  min-height: 23px;
+  min-width: 49px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group19 {
+  height: 27px;
+  margin-bottom: 2px;
+  margin-left: 100px;
+  position: relative;
+  width: 117px;
+}
+
+.dashboard .rs87400 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 78px;
+  min-height: 23px;
+  min-width: 75px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group20 {
+  align-items: flex-end;
+  align-self: center;
+  background-color: var(--surfie-green);
+  border-radius: 8px;
+  display: flex;
+  height: 31px;
+  margin-left: 69px;
+  min-width: 100px;
+  padding: 0 30px;
+}
+
+.dashboard .overlap-group8 {
+  align-items: center;
+  background-color: var(--ebb);
+  display: flex;
+  height: 53px;
+  justify-content: flex-end;
+  margin-left: 2px;
+  margin-top: 30px;
+  min-width: 988px;
+  padding: 0 26px;
+}
+
+.dashboard .number-8 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-top: 4.0px;
+  min-height: 23px;
+  min-width: 21px;
+  white-space: nowrap;
+}
+
+.dashboard .car-2-0021-25 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 121px;
+  margin-top: 6.0px;
+  min-height: 23px;
+  min-width: 117px;
+  white-space: nowrap;
+}
+
+.dashboard .name-2 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 79px;
+  margin-top: 8.0px;
+  min-height: 23px;
+  min-width: 60px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group22 {
+  height: 27px;
+  margin-left: 89px;
+  margin-top: 2.0px;
+  position: relative;
+  width: 117px;
+}
+
+.dashboard .cancelled {
+  left: 19px;
+  letter-spacing: 0;
+  line-height: 14px;
+  position: absolute;
+  top: 5px;
+  white-space: nowrap;
+}
+
+.dashboard .rs90400 {
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-left: 78px;
+  margin-top: 6.0px;
+  min-height: 23px;
+  min-width: 76px;
+  white-space: nowrap;
+}
+
+.dashboard .overlap-group21 {
+  align-items: flex-end;
+  background-color: var(--surfie-green);
+  border-radius: 8px;
+  display: flex;
+  height: 31px;
+  margin-left: 68px;
+  min-width: 100px;
+  padding: 1px 30px;
+}
+
+.dashboard .hi-admin-check-your-vrihodha-status {
+  color: #1c1b1b;
+  font-family: var(--font-family-poppins);
+  font-size: 33px;
+  font-weight: 600;
+  left: 350px;
+  letter-spacing: 0;
+  line-height: 33px;
+  position: absolute;
+  top: 167px;
+  white-space: nowrap;
+}

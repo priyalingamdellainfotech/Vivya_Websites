@@ -1,0 +1,173 @@
+/* screen - login-page */
+
+.login-page {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 766px;
+  overflow: hidden;
+  width: 1366px;
+}
+
+.login-page .overlap-group {
+  height: 830px;
+  margin-top: -63px;
+  position: relative;
+  width: 1366px;
+}
+
+.login-page .group-36 {
+  height: 768px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 62px;
+  width: 1366px;
+}
+
+.login-page .rectangle-2088 {
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 702px;
+  left: 396px;
+  position: absolute;
+  top: 105px;
+  width: 716px;
+}
+
+.login-page .untitled-design {
+  height: 445px;
+  left: 532px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 445px;
+}
+
+.login-page .user-name {
+  color: var(--camouflage-green);
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+  font-weight: 500;
+  left: 425px;
+  letter-spacing: 0;
+  line-height: 25px;
+  position: absolute;
+  top: 404px;
+  white-space: nowrap;
+}
+
+.login-page .password {
+  color: var(--camouflage-green);
+  font-family: var(--font-family-poppins);
+  font-size: 25px;
+  font-weight: 500;
+  left: 425px;
+  letter-spacing: 0;
+  line-height: 25px;
+  position: absolute;
+  top: 499px;
+  white-space: nowrap;
+}
+
+.login-page .new-user-signup-here {
+  color: var(--camouflage-green);
+  cursor: pointer;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  left: 705px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  top: 650px;
+  white-space: nowrap;
+}
+
+.login-page .span1 {
+  color: #5ba722;
+}
+
+.login-page .span2 {
+  color: #244809;
+}
+
+.login-page .forgot-password-click-here {
+  color: #151614;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  left: 679px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  top: 682px;
+  white-space: nowrap;
+}
+
+.login-page .group-34 {
+  align-items: flex-end;
+  background: linear-gradient(180deg, #2f8635 0%, #18431b 100%);
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  left: 709px;
+  min-width: 156px;
+  padding: 4px 37px;
+  position: absolute;
+  top: 568px;
+}
+
+.login-page .submit {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 21px;
+  min-height: 31px;
+  min-width: 78px;
+  white-space: nowrap;
+}
+
+.login-page .line-2 {
+  height: 3px;
+  left: 608px;
+  object-fit: cover;
+  position: absolute;
+  top: 524px;
+  width: 426px;
+}
+
+.login-page .line-3 {
+  height: 3px;
+  left: 609px;
+  object-fit: cover;
+  position: absolute;
+  top: 437px;
+  width: 426px;
+}
+
+.login-page .vrdella6 {
+  color: var(--camouflage-green);
+  font-family: var(--font-family-poppins);
+  font-size: 26px;
+  font-weight: 500;
+  left: 614px;
+  letter-spacing: 0;
+  line-height: 26px;
+  position: absolute;
+  top: 403px;
+  white-space: nowrap;
+}
+
+.login-page .text-1 {
+  left: 609px;
+  letter-spacing: 0;
+  line-height: 21px;
+  position: absolute;
+  top: 499px;
+  white-space: nowrap;
+}

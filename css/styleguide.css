@@ -1,0 +1,268 @@
+:root { 
+  --black: #000000;
+  --black-2: #050404;
+  --camouflage-green: #75816c;
+  --cape-cod: #434343;
+  --cape-cod-2: #424440;
+  --cararra: #ebebeb;
+  --chicago: #5e5e5e;
+  --dell: #325924;
+  --desert-storm: #f8f8f8;
+  --don-juan: #5c4d4d;
+  --dove-gray: #707070;
+  --ebb: #e3e3e3;
+  --eerie-black: #1d1d1d;
+  --everglade: #1e4321;
+  --fern-green: #517744;
+  --japanese-laurel: #116b07;
+  --lemon-glacier: #f6ff06;
+  --mantis: #80c36b;
+  --quill-gray: #d2d1d1;
+  --red: #ff1111;
+  --romance: #fefffd;
+  --shady-lady: #aaaaaa;
+  --snow-flurry: #e5ffd5;
+  --surfie-green: #0a7981;
+  --white: #ffffff;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 15px;
+  --font-size-s: 14px;
+  --font-size-xl: 17px;
+  --font-size-xs: 13px;
+  --font-size-xxl: 18px;
+  --font-size-xxs: 9px;
+ 
+  --font-family-poppins: "Poppins", Helvetica;
+}
+.poppins-normal-cape-cod-15px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-normal-black-9px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-semi-bold-dell-18px {
+  color: var(--dell);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-medium-don-juan-17px {
+  color: var(--don-juan);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-normal-black-7px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-normal-black-8px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-medium-cape-cod-18px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-normal-white-14px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-medium-cape-cod-13px {
+  color: var(--cape-cod-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-normal-cape-cod-18px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-medium-cape-cod-15px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-semi-bold-white-41px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: 41px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-normal-black-15px {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-medium-camouflage-green-21px {
+  color: var(--camouflage-green);
+  font-family: var(--font-family-poppins);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-medium-white-17px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-semi-bold-dell-15px {
+  color: var(--dell);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-medium-lemon-glacier-14px {
+  color: var(--lemon-glacier);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-medium-don-juan-14px {
+  color: var(--don-juan);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-medium-don-juan-16px {
+  color: var(--don-juan);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-semi-bold-chicago-33px {
+  color: var(--chicago);
+  font-family: var(--font-family-poppins);
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-semi-bold-everglade-30px {
+  color: var(--everglade);
+  font-family: var(--font-family-poppins);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-normal-shady-lady-8px {
+  color: var(--shady-lady);
+  font-family: var(--font-family-poppins);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-semi-bold-cape-cod-21px {
+  color: var(--cape-cod-2);
+  font-family: var(--font-family-poppins);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-medium-cape-cod-15px-2 {
+  color: var(--cape-cod-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-medium-romance-15px {
+  color: var(--romance);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-medium-camouflage-green-16px {
+  color: var(--camouflage-green);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-normal-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-normal-japanese-laurel-15px {
+  color: var(--japanese-laurel);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-medium-black-15px {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}

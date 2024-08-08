@@ -1,0 +1,335 @@
+/*
+** Widgets
+*/
+aside h2 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+aside > * + * {
+  margin-top: 60px;
+  @media(max-width: 575px){
+    margin-top: 40px;
+  }
+}
+
+
+
+.widget {
+  position: relative;
+  & > h3,
+  .widget-title {
+    @include widget-title();
+  }
+&.widget_icons_list{
+  .widget-title{
+    margin-bottom: 0.9em;
+  }
+}
+  //for shortcodes demo
+  & > h2:last-child {
+    line-height: 1;
+  }
+
+  //our custom widgets with bootstrap .media element
+  li.media {
+    margin-bottom: 3px;
+
+    img {
+      max-width: 105px;
+      height: 105px;
+    }
+    h3, h4 {
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 1em;
+      text-transform: none;
+      font-size: inherit;
+      margin-top: 1em;
+      @media(max-width: 768px){
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+    }
+    p {
+      line-height: 1.4;
+      margin-bottom: 0.5em;
+      color: $darkColor;
+      @media(max-width: 768px){
+        display: flex;
+        flex-direction: column;
+      }
+      span{
+        color: $colorMain2;
+        @media(max-width: 768px){
+          padding: 0;
+        }
+      }
+    }
+    .media-body{
+      margin-left: 30px;
+      padding-right: 26px;
+      .item-media{
+        font-weight: 500;
+      }
+    }
+  }
+
+  .page_footer & + &{
+
+
+    & > h3,
+    .widget-title {
+      margin-bottom: 1.5em;
+    }
+  }
+
+
+  &.widget_contact_us{
+    display: flex;
+    @media(max-width: 1200px){
+      flex-direction: column;
+    }
+    .contact_us_title, .contact_us_share{
+      width: 50%;
+      @media(max-width: 1200px){
+        width: 100%;
+      }
+    }
+    .contact_us_title{
+      background: url("../img/patterns/pattern4.png");
+
+      padding: 74px 32px 74px 0;
+      @media(max-width: 1300px){
+        padding: 74px 0 74px 0;
+      }
+      @media(max-width: 1200px){
+        padding: 74px 20px;
+      }
+      @media(max-width: 575px){
+        padding: 34px 20px;
+      }
+      h3{
+        max-width: 545px;
+        margin-left: auto;
+        @media(max-width: 1200px){
+          max-width: none;
+          text-align: center;
+        }
+      }
+    }
+    .contact_us_share{
+      background: url("../img/patterns/pattern1.png");
+      padding: 80px 0 74px 86px;
+      @media(max-width: 1300px){
+        padding: 80px 0 74px 36px;
+      }
+      @media(max-width: 1200px){
+        padding: 80px 0;
+        text-align: center;
+      }
+      @media(max-width: 575px){
+        padding: 40px 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .btn{
+        min-width: 240px;
+      }
+      .btn + .btn{
+        margin-left: 20px;
+        @media(max-width: 575px){
+          margin-left: 0;
+          margin-top: 20px;
+        }
+
+      }
+    }
+  }
+  &.widget_about{
+    .widget_about__content{
+      box-shadow: $boxShadow;
+      text-align: center;
+      padding: 35px 41px;
+     p{
+       line-height: 1.6;
+     }
+      .social-icons{
+        margin-top: 10px;
+        a{
+          margin-right: 20px;
+          &:before{
+            font-size: 18px;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+
+.widget-title.next-image-background {
+  position: relative;
+  z-index: 2;
+  & + img {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    opacity: 0.5;
+  }
+  .text-center & + img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media(max-width: 991px) {
+  aside {
+    margin: 60px auto 0;
+    max-width: 370px;
+  }
+}
+
+/* affix-aside */
+.affix-aside {
+  position: relative;
+  &.affix {
+    position: fixed;
+    //oriented header height
+    top: 100px;
+  }
+  &.affix-bottom {
+    position: absolute !important;
+  }
+  &.affix-top {
+    width: inherit !important;
+    left: auto !important;
+  }
+
+  @media(max-width: 991px) {
+    &,
+    &.affix-top,
+    &.affix,
+    &.affix-bottom {
+      position: static !important;
+      width: 100% !important;
+    }
+  }
+}
+
+//p.stars removed
+.stars {
+  & > span {
+    display: flex;
+  }
+
+  a {
+    position: relative;
+    width: 1em;
+    color: transparent;
+    text-indent: -999em;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      line-height: 1;
+      text-indent: 0;
+       font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+    }
+    &:before,
+    &:hover ~ a:before {
+      color: $fontColor;
+      content: "\f005"
+    }
+  }
+  &.selected a.active:before,
+  &:hover a:before {
+    content: "\f005";
+    color: $colorMain;
+    opacity: 1;
+  }
+  &.selected {
+    a.active ~ a:before {
+      content: "\f005";
+      color: $fontColor;
+      opacity: .75
+    }
+    a:not(.active):before {
+      content: "\f005";
+      color: $colorMain;
+      opacity: 1
+    }
+  }
+}
+
+.star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1;
+  font-size: 1em;
+  width: 6em;
+  letter-spacing: 0.1em;
+   font-family: "Font Awesome 5 Free", sans-serif;
+  color: $colorMain;
+
+  &:before {
+    font-family: "Font Awesome 5 Free", sans-serif;
+    content: '\f005\f005\f005\f005\f005';
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  span {
+    overflow: hidden;
+    float: left;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding-top: 1.5em;
+
+    &:before {
+      font-family: "Font Awesome 5 Free", sans-serif;
+      content: '\f005\f005\f005\f005\f005';
+      top: 0;
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+  }
+}
+
+@import 'widgets/search_mailchimp';
+@import 'widgets/nav_cat_arch_meta_pages';
+@import 'widgets/calendar';
+@import 'widgets/rss';
+@import 'widgets/tag_cloud';
+@import 'widgets/flickr';
+@import 'widgets/instagram';
+@import 'widgets/access_press';
+@import 'widgets/twitter';
+@import 'widgets/post_slider';
+@import 'widgets/post_tabs';
+@import 'widgets/post_2cols';

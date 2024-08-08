@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<link rel="shortcut icon" type="image/png" href="images/dellaicon.png">
+	<title>
+		Best Construction Company in Tiruchirappalli | Top Building Construction Company in Trichy - Vriho Infratech
+	</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+	<meta name="title" content="Build your dream home with Vriho Infratech, the best construction company in Tiruchirappalli. Discover the expertise and quality work with the top building construction company in Trichy.
+
+">
+
+	<meta name="description" content="Build your dream home with Vriho Infratech, a leading construction firm that prioritizes quality, reliability, and exceptional customer service.
+" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/animations.css">
+
+	<link rel="stylesheet" href="css/font-awesome5.css">
+
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="multiselect/bootstrap-select.min.css">
+	<!--
+
+	<link rel="stylesheet" href="multiselect/bootstrap.min.css">-->
+	<script src="js/vendor/modernizr-2.6.2.min.js">
+	</script>
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/script.js">
+	</script>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174947235-1">
+	</script>
+	<script>
+	window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-174947235-1');
+	</script>
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-606499080"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'AW-606499080');
+</script>
+<!-- Event snippet for Page_View conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-606499080/ft9SCPz5kLMZEIjimaEC',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+</script>
+	
+	<script>
+	function submitToAPI(e) {
+			e.preventDefault();//
+			var URL = "API Gateway";
+			let headers = new Headers();
+			headers.append('Access-Control-Allow-Origin', '*');
+			headers.append('GET', 'POST', 'OPTIONS');
+			var name = document.getElementById("name").value;
+			var location = document.getElementById("location").value;
+			var interested = document.getElementById("interested").value;
+		var budget = document.getElementById("budget").value;
+		/*var prelocation = document.getElementById("prelocation").value;*/ 
+	 var selected = []; for (var option of document.getElementById('prelocation').options) {
+				if (option.selected) {
+					selected.push(option.value);
+				}
+			}
+			console.log(selected);
+			var subject = document.getElementById("subject").value;
+			var phone = document.getElementById("phone").value;
+			var email = document.getElementById("email").value;
+			if (name == "" || phone == "" || email == "" || location == "" || interested == "" || budget == "" || subject == "" || selected == "") {
+				alert("Please Fill All Required Field");
+				return false;
+			}
+			if ($("#name").val() == "") {
+				alert("Name entered, is not valid");
+				return false;
+			}
+			if ($("#location").val() == "") {
+				alert("Location entered, is not valid");
+				return false;
+			}
+			if ($("#interested").val() == "") {
+				alert("Interested entered, is not valid");
+				return false;
+			} if ($("#prelocation").val() == "") {
+				alert("prelocation entered, is not valid");
+				return false;
+			}
+			if ($("#budget").val() == "") {
+				alert("budget entered, is not valid");
+				return false;
+			}
+			if ($("#subject").val() == "") {
+				alert("subject entered, is not valid");
+				return false;
+			}
+			phoneRE = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+			if (!phoneRE.test(phone)) {
+				alert("Phone number entered, is not valid");
+				return false;
+			} emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if (!emailRE.test(email)) {
+				alert("Email Address entered, is not valid");
+				return false;
+			}
+			var data = { name: name, location: location, interested: interested, budget: budget, subject: subject, phone: phone, email: email, prelocation: selected, };
+			var xmlhttp = new XMLHttpRequest(); xmlhttp.open("POST", "https://2trth6jq68.execute-api.us-east-1.amazonaws.com/Prod/submitForm");
+			xmlhttp.setRequestHeader("Content-Type", "application/json");
+			xmlhttp.send(JSON.stringify(data));
+			xmlhttp.onloadend = response => {
+				if (xmlhttp.readyState === 4) {
+					if (response.target.status === 200) {
+						console.log('successful');
+						document.getElementById("contact-form").innerHTML = "<h1> </br></br></br></br></br></br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Thank you for submitting..</br></br> </br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  our team will get back to you soon! </br></br></br></br></br></br> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h1>";
+					}
+					else {
+						document.getElementById("contact-form").innerHTML = "<h1>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Error! Please try again.</h1>";
+						console.log('failed');
+					}
+				}
+			};
+			document.getElementById('contact-form').reset();
+		}
+	</script>
+
+<style>
+	/* Add your CSS styles here */
+   #popupContainer {
+	/* Your existing styles for the popup container */
+	position: fixed;
+	top: 12%;
+	left: 25%;
+	/* transform: translate(-50%, -50%); */
+	z-index: 1000;
+	background-color: white; /* Set the background color for the popup */
+	padding: 20px;
+	border: 1px solid #ccc;
+	display: none; 
+	width: 65%;/* Initially hidden */
+  }
+  
+	#popupContainer h2 {
+		margin-bottom: 10px;
+	}
+  
+	#myForm {
+		/* Additional styling for the form if needed */
+	}
+  
+	.closeButton {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		font-size: 30px;
+		color: #000;
+	}
+	 body.blurred {
+	backdrop-filter: blur(10px); /* Adjust the blur radius */
+  }
+  
+  /* Apply a transparent background to blur the rest of the page */
+  #blurBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(10px); /* Adjust the blur radius */
+	z-index: 999; /* Ensure the background is above other elements */
+	display: none; /* Initially hidden */
+  }
+   /* Add CSS styles for the form layout */
+  .form-row {
+	display: flex;
+	margin-bottom: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+  }
+  
+  .form-column {
+	flex: 1;
+	margin-right: 10px;
+  }
+  
+  .form-column:last-child {
+	margin-right: 0;
+  }
+  
+  label {
+	display: block;
+	margin-bottom: 5px;
+  }
+  input,
+  textarea,
+  select {
+	width: 100%;
+	max-width: 100%;
+	border: none;
+	border-bottom: 1px solid #ccc; /* Set the color of the bottom border */
+	padding: 8px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	outline: none; /* Remove the default focus border */
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+	height: 40px; /* Add transitions for border color and background color */
+  }
+  
+  input:hover,
+  textarea:hover,
+  select:hover {
+	/* border-bottom: 1px solid #555;  */
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+	background-color: #f0f0f0; /* Change the background color on focus */
+	border-bottom: 2px solid green;
+  }	
+  .lbl_mand,.lbl_txt{
+	color: #6a8695;
+  }
+  .lbl_mand::after{
+	content: "*";
+	color: red;
+	font-size: 20px;
+	font-weight: 900;
+  }
+  
+  .sub-main{
+	width: 30%;
+	  margin: 22px auto; /* Center the button by setting auto margins */
+	  text-align: center; 
+  /* float: left; */
+  }
+  
+  .button-two{
+	width: 100%;
+  text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0 0 0 0;
+  }
+  .button-two {
+  border-radius: 4px;
+  background-color: #dee2e6;
+  border: none;
+  padding: 10px;
+  width: 130px;
+  transition: all 0.5s;
+  }
+  
+  
+  .button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 20px;
+  padding-right: 20px;
+  }
+  
+  .button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+  
+  .button-two:hover span {
+  padding-right: 25px;
+  }
+  
+  .button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+  }
+  .button-two:active{
+  border:none;
+  }
+  input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  /* border: 1px solid rgba(0, 0, 0, 0.16); */
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+  }
+  
+  /* file upload button hover state */
+  input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+  }
+  
+  /* file upload button active state */
+  input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+  }
+  .errorMessage{
+  color: red;
+  font-size: 14px;
+  display: none;
+  }
+  .error-msg{
+  color: red;
+  font-size: 13px;
+  }
+  
+  .vcards-contactform{
+	  background: white;
+	  width:90%;
+	  max-width: 800px;
+	  margin:50px auto;
+	  font-family: Calibri, Arial, sans-serif;
+	  padding:20px;
+	}
+	.vcards-contact-title, .vcards-contact-desc{
+	  text-align: center;
+	  color: #000;
+	  font-size: 18px;
+	}
+	.vcards-contactlabel{
+	  display:block;
+	  margin:1em 0 .2em;
+	}
+	/* single-line text, checkbox, and button */
+	.vcards-contactinput, .vcards-contactselect, .vcards-contact-textarea{
+	  display:block;
+	  width:100%;
+	  padding:.3em;
+	  font-size:20px;
+	  background-color:#fbfbfb;
+	  border:solid 1px #CCC;
+	  resize:vertical;
+	  border: none;
+	  border-bottom: 2px solid grey;
+	}
+	.vcards-contact-textarea{
+	  min-height:180px;
+	}
+	.vcards-contactselect{
+	  color:indigo;
+	}
+	option{
+	  color:blue;
+	  background: lavenderBlush;
+	}
+	.vcards-contactinput[type=checkbox]{
+	  display:inline;
+	  width:auto;
+	  color:red;
+	}
+	
+	.vcards-contactinput[type=submit]{
+	  background:lightcoral;
+	  margin:1em 0 0;
+	  color:white;
+	  border:none;
+	  border-radius:8px;
+	  transition:all .3s ease-out;
+	}
+	
+	.vcards-contactinput:focus,
+	.vcards-contactinput:hover,
+	.vcards-contactselect:focus,
+	.vcards-contactselect:hover,
+	.vcards-contact-textarea:focus,
+	.vcards-contact-textarea:hover{
+	  background: lavenderBlush;
+	}
+	
+	/* hover and focus states */
+	.vcards-contactinput[type=submit]:hover,
+	.vcards-contactinput[type=submit]:focus{
+	  background: lightgreen;
+	  outline:none;
+	}
+	  /* Styles for tablets and larger screens */
+	  @media screen and (min-width: 768px) {
+	  #popupContainer {
+		width: 50%;
+	  }
+	  .form-column {
+		
+	  }
+	  .form-row{
+  
+	  }
+	  .sub-main {
+		width: 40%;
+	  }
+	}
+	@media screen and (max-width: 480px) {
+	  #popupContainer {
+		/* width: 90%; */
+		height: 90%;
+	  overflow: auto;
+	  margin-top: 10%;
+	  left: 15%;
+	  }
+  
+	  .sub-main {
+		width: 70%;
+	  }
+	  .form-row{
+		display: flex;
+		flex-direction: column;
+	  }
+	  
+	}
+  
+	
+	@media screen and (min-width:600px) {
+	  /*  make the form 2 columns */
+	  vcards-contactform:after{
+		content:'';
+		display:block;
+		clear:both;
+	  }
+	  .form-row{
+  
+	  }
+	  .column-vcardscontact{
+		width:50%;
+		padding:1em;
+		float:left;
+	  }
+	}
+  
+  </style>
+  
+  <script>
+  
+	let formVisible = false;
+	
+		function showPopup() {
+			
+		console.log("###########SHOW TRIGGER")
+			const popupContainer = document.getElementById('popupContainer');
+			//const blurBackground = document.getElementById('blurBackground');
+			
+			if (popupContainer && blurBackground) {
+				// Display the popup and the blur background
+				popupContainer.style.display = 'block';
+				blurBackground.style.display = 'block';
+	
+				// Optionally, you can add an animation effect to the popup
+				popupContainer.classList.add('fadeIn'); // Add a CSS class for fadeIn animation
+			} else {
+				console.error("Popup container or blur background element not found");
+			}
+		}
+	
+	function closePopup() {
+	console.log("##########TRIGGERED")
+		const popupContainer = document.getElementById('popupContainer');
+		const blurBackground = document.getElementById('blurBackground');
+	
+		if (popupContainer && blurBackground) {
+			// Remove the animation class if added
+			popupContainer.classList.remove('fadeIn');
+	
+			// Remove the blur effect from blurBackground
+			blurBackground.classList.remove('blurred');
+	
+			// Delay hiding the elements to allow for the transition
+			setTimeout(function () {
+				// Hide both the popup and the blurBackground
+				popupContainer.style.display = 'none';
+				blurBackground.style.display = 'none';
+			}, 300); // Adjust the timeout based on your transition duration
+		} else {
+			console.error("Popup container or blur background element not found");
+		}
+	}
+	
+  
+  // Function to submit the form
+  function submitFormBottom() {
+	
+	// Get form and form data
+	const form = document.getElementById('myFormBottom');
+	const formData = new FormData(form);
+  
+	// Get values from specific form fields
+	const name = formData.get('contactNameBottom');
+	const email = formData.get('emailBottom');
+	const phone = formData.get('phoneBottom');
+  
+	// Validate name
+	if (name.trim() === '') {
+		
+		document.getElementById('nameErrorBottom').innerText = 'Please enter your Name';
+		return;
+	} else {
+		document.getElementById('nameErrorBottom').innerText = '';
+	}
+  
+	// Validate email
+	if (email.trim() === '') {
+		document.getElementById('emailErrorBottom').innerText = 'Please enter your Email address';
+		return;
+	} else if (!isValidEmail(email)) {
+		document.getElementById('emailErrorBottom').innerText = 'Please enter a valid Email address';
+		return;
+	} else {
+		document.getElementById('emailErrorBottom').innerText = '';
+	}
+  
+	// Validate phone
+	if (phone.trim() === '') {
+		document.getElementById('phoneErrorBottom').innerText = 'Please enter your Phone number';
+		return;
+	} else {
+		document.getElementById('phoneErrorBottom').innerText = '';
+	}
+  
+	// Create an object for non-file data
+	const jsonData = {
+		contact_name: name,
+		email_address: email,
+		phone_number: phone,
+		company_name: formData.get('companyBottom'),
+		job_title: formData.get('jobTitleBottom'),
+		subject: formData.get('subjectBottom'),
+		typeof_service_request: formData.get('serviceTypeBottom'),
+		product_name: formData.get('productNameBottom'),
+		location: formData.get('locationBottom'),
+		description: formData.get('descriptionBottom'),
+	};
+  
+	// Convert the object to URL-encoded form data
+	const urlEncodedData = new URLSearchParams(jsonData).toString();
+  
+	// Make API call with multipart form data and query parameters
+	fetch(`https://api.vivyacorp.com/add_test_data?${urlEncodedData}`, {
+		method: 'POST',
+		body: formData,
+	})
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
+			}
+			return response.json();
+		})
+		.then(data => {
+			// Handle the response data as needed
+			console.log('API call successful:', data);
+			if (data.statusFlag) {
+				// Show success alert
+				alert('Thanks for submitting!');
+				document.getElementById("myForm").reset();
+				//document.body.classList.remove('blurred');
+				// window.closePopup(); // Commented out as it's not clear if this function exists
+		form.reset();
+			} else {
+				// Show error alert
+				alert('Error in submitting: ' + data.message);
+			}
+		})
+		.catch(error => {
+			// Handle errors
+			console.error('Error:', error);
+			alert('An error occurred while submitting the form.');
+		});
+  }
+  
+  // Function to validate email using a regular expression
+  function isValidEmail(email) {
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
+  }
+  
+	
+	
+	
+	
+	 document.addEventListener('DOMContentLoaded', function () {
+				// Check if the URL contains the parameter indicating the form should be shown
+				const urlParams = new URLSearchParams(window.location.search);
+				const showFormParam = urlParams.get('showForm');
+	
+				// Declare formVisible before any function calls
+				let formVisible = false;
+	
+				// Log to console to check if the script is running
+				console.log("Script is running");
+	
+				// If the parameter is present and the form is available, show the form
+				if (showFormParam === 'true') {
+					const form = document.getElementById('myForm');
+					if (form) {
+						showPopup();
+					} else {
+						console.error("Form element with ID 'myForm' not found");
+					}
+				}
+	
+				function toggleForm() {
+					const form = document.getElementById('myForm');
+					formVisible = !formVisible;
+	
+					if (form) {
+						form.style.display = formVisible ? 'block' : 'none';
+					} else {
+						console.error("Form element with ID 'myForm' not found");
+					}
+				}		
+	
+				// Attach functions to the window object
+				window.closePopup = function () {
+					const popupContainer = document.getElementById('popupContainer');
+					const blurBackground = document.getElementById('blurBackground');
+					if (popupContainer && blurBackground) {
+						popupContainer.style.display = 'none';
+						blurBackground.style.display = 'none';
+					} else {
+						console.error("Popup container element not found");
+					}
+				}
+	
+	window.submitForm = function () {
+		
+		const form = document.getElementById('myForm');
+		const formData = new FormData(form);
+		var name = document.getElementById('contactName').value;
+	var email = document.getElementById('email').value;
+	var phone = document.getElementById('phone').value;
+  
+	// Check if Name, Email, and Phone number are empty
+	if (name.trim() === '') {
+		document.getElementById('nameError').innerText = 'Please enter your Name';
+		return;
+	}
+	else {
+		document.getElementById('nameError').innerText = '';
+	}
+  
+	if (email.trim() === '') {
+		document.getElementById('emailError').innerText = 'Please enter your Email address';
+		return;
+	}
+	else if (!isValidEmail(email)) {
+		document.getElementById('emailError').innerText = 'Please enter a valid Email address';
+		return;
+	}
+	else {
+		document.getElementById('emailError').innerText = '';
+	}
+  
+  
+	if (phone.trim() === '') {
+		document.getElementById('phoneError').innerText = 'Please enter your Phone number';
+		return;
+	} else {
+		document.getElementById('phoneError').innerText = '';
+	}
+  
+  
+	// if(name.length > 0 && email.value > 0 && phone.length > 0 ) {
+	//     alert("Thanks for Submitting")
+	// }
+	function isValidEmail(email) {
+	// Regular expression for basic email validation
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
+  }
+  
+  
+	   
+  
+  
+	
+		// Create an object for non-file data
+		const jsonData = {
+			contact_name: formData.get('contactName'),
+			email_address: formData.get('email'),
+			phone_number: formData.get('phone'),
+			company_name: formData.get('company'),
+			job_title: formData.get('jobTitle'),
+			subject: formData.get('subject'),
+			typeof_service_request: formData.get('serviceType'),
+			product_name: "Vriho",
+			location: formData.get('location'),
+			description: formData.get('description'),
+		};
+	
+		// Convert the object to URL-encoded form data
+		const urlEncodedData = new URLSearchParams(jsonData).toString();
+	
+		// Make API call with multipart form data and query parameters
+		fetch(`https://api.vivyacorp.com/add_test_data?${urlEncodedData}`, {
+			method: 'POST',
+			body: formData,
+		})
+		.then(response => {
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
+			}
+			return response.json();
+		})
+		.then(data => {
+			// Handle the response data as needed
+			console.log('API call successful:', data);
+			if (data.statusFlag) {
+				// Show success alert
+				alert('Thanks for submitting!');
+				document.getElementById("myForm").reset();
+				document.body.classList.remove('blurred');
+				window.closePopup(); // Close the popup if needed
+			} else {
+				// Show error alert
+				alert('Error in submitting: ' + data.message);
+			}
+		})
+		.catch(error => {
+			// Handle errors
+			console.error('Error:', error);
+			alert('An error occurred while submitting the form.');
+		});
+	}
+	});
+  
+	</script>
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+
+	<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="color-main">upgrade your browser</a> to improve your experience.
+	</div><![endif]-->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X54LX36MTS"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-X54LX36MTS');
+	</script>
+	<div class="preloader">
+
+		<div class="preloader_image">
+		</div>
+	</div>
+	<!-- search modal -->
+
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+			<span aria-hidden="true">
+				&times;
+			</span>
+		</button>
+
+		<div class="widget widget_search">
+
+			<form method="get" class="searchform search-form" action="/">
+
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div><button type="submit" class="btn">Search</button>
+			</form>
+		</div>
+	</div>
+	<!-- Unyson messages modal -->
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+
+		<div class="fw-messages-wrap ls p-normal">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+			<ul class="list-unstyled">
+			<li>Message To User</li>
+			</ul>-->
+		</div>
+	</div>
+	<!-- eof .modal -->
+	<!-- wrappers for visual page editor and boxed version of template -->
+
+	<div id="canvas">
+
+		<div id="box_wrapper">
+			<!-- template sections -->
+			<!--topline section visible only on small screens|-->
+			
+			<nav>
+
+				<div class="navbar">
+					<a href="index.html" class="logo">
+						<img src="images/vriho.png" alt="">
+
+					</a>
+					<i class='bx bx-menu'></i>
+					<div class="logo"><a href="index.html"></a></div>
+					<div class="nav-links">
+						<div class="sidebar-logo">
+							<!--<span class="logo-name"><img src="images/vriho.png" alt=""></span>-->
+							<i class='bx bx-x'></i>
+						</div>
+						<ul class="links">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="about.html">ABOUT</a></li>
+							<li>
+								<a href="residency.html">RESIDENTIAL</a>
+								<i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+								<ul class="htmlCss-sub-menu sub-menu">
+									<li><a href="turnkey.html">Affordable Villa</a></li>
+									<li><a href="luxury.html">Luxury Villa</a></li>
+									<li><a href="apartment.html">Apartment</a></li>
+
+								</ul>
+							</li>
+
+							<li><a href="commercial.html">Commercial</a></li>
+							<li><a href="package_Construction.html">Construction Package</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+
+						</ul>
+					</div>
+					<div class="search-box">
+						<i class='bx bx-search'></i>
+						<div class="input-box">
+							<input type="text" placeholder="Search...">
+						</div>
+					</div>
+				</div>
+			</nav>
+			<section class="page_slider cs text-center">
+
+				<div class="mouse_down">
+					<a class="animate" href="#about" data-animation="pulse" data-delay="150">
+					<img src="images/mouse.png" alt=""></a>
+				</div>
+				<div class="flexslider">
+					<ul class="slides">
+						<li class="ds cover-image text-center">
+							<img src="images/slide 1 final.jpg" alt="img">
+						</li>
+						<li class="ds cover-image text-center">
+							<img src="images/slide 2 (1).jpg" alt="img">
+
+						
+						</li>
+
+
+						<li class="ds cover-image text-center">
+							<img src="images/slide 3 (1).jpg" alt="img">
+
+
+							
+						</li>
+
+						
+					</ul>
+				</div>
+				
+			</section>
+      	<div class="whatsapp-button">
+				
+        <a href="https://api.whatsapp.com/send?phone=917810025201&text=Hello!%20I'm%20interested%20in%20exploring%20construction%20service%20offered%20by%20Vriho%20Infratech" target=        "_blank">
+					<img src="images/icon/whatsapp-icon.png"alt=whatsapp-icon/>
+					
+				</a>
+
+			</div>
+			
+			
+       <!-- Landing Form -->
+	   <div id="blurBackground"></div>
+       <!-- <button onclick="showPopup()">Show/Hide</button> -->
+       <div id="popupContainer">
+           <span class="closeButton" onclick="closePopup()">&times;</span>
+           <h2 style="align-items:center; text-align:center;color: #000;">Please fill the details</h2>
+          <form id="myForm">
+       <div class="form-row">
+           <div class="form-column">
+               <label for="contactName" class="lbl_mand">Name:</label>
+               <input type="text" id="contactName" name="contactName" placeholder="Enter your Name" required>
+               <div class="error-msg" id="nameError"></div>
+               
+           </div>
+   
+           <div class="form-column">
+               <label for="email" class="lbl_mand">Email address:</label>
+               <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+               <div class="error-msg" id="emailError"></div>
+               
+           </div>
+   
+           <div class="form-column">
+               <label for="phone" class="lbl_mand" >Phone number:</label>
+               <!-- <input type="tel" id="phone" name="phone" required maxlength="10"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+               onkeypress="return isNumber(event)" > -->
+               <input type="text" class="textfield" value="" id="phone" name="phone"
+               placeholder="Enter Phone Number" onkeypress="return isNumber(event)"
+               maxlength="10" required/>
+               
+               <div class="error-msg" id="phoneError"></div>
+           </div>
+       </div>
+   
+       <!-- Add more rows as needed -->
+   
+       <div class="form-row" style="display:none;">
+           <div class="form-column">
+               <label for="company" class="lbl_txt">Company name:</label>
+               <input type="text" id="company" name="company" placeholder="Enter Company Name">
+           </div>
+   
+           <div class="form-column">
+               <label for="jobTitle" class="lbl_txt">Job title:</label>
+               <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter Job Title">
+           </div>
+   
+           <div class="form-column">
+               <label for="subject"class="lbl_txt">Subject:</label>
+               <input type="text" id="subject" name="subject" placeholder="Enter Subject">
+           </div>
+       </div>
+   
+       <!-- Add more rows as needed -->
+   
+       <div class="form-row">
+           <!-- Add more columns as needed for the remaining fields -->
+       </div>
+   
+       <div class="form-row">
+           <div class="form-column">
+               <label for="serviceType"class="lbl_txt">Product Type</label>
+               <input type="text" id="serviceType" name="serviceType" placeholder="Eg - Villa Apartment">
+           </div>
+   
+           <div class="form-column" style="display:none;">
+               <label for="productName"class="lbl_txt">Product or service name:</label>
+               <input type="text" id="productName" name="productName" placeholder="Enter Product Name">
+           </div>
+   
+           <div class="form-column">
+               <label for="location"class="lbl_txt">Location :</label>
+               <input type="text" id="location" name="location" placeholder="Enter Location">
+           </div>
+       </div>
+   
+       <!-- Add more rows as needed -->
+   
+       <div class="form-row">
+           <div class="form-column">
+               <label for="description"class="lbl_txt">Description (Optional):</label>
+               <textarea id="description" name="description" placeholder="Type your Comment"></textarea>
+           </div>
+   
+            <!-- <div class="form-column">
+               <label for="file"class="lbl_txt">Add a file:</label>
+               <input type="file" id="file" name="file">
+           </div>  -->
+       </div>
+   
+       <!-- <button type="button" onclick="submitForm()">Submit</button> -->
+       <div class="sub-main">
+           <!-- <button type="submit" class="button-two" onclick="submitForm(e)"><span>Submit</span></button> -->
+           <button type="button" class="button-two" onclick="submitForm()"><span>Submit</span></button>
+       </div>
+   </form>
+       </div>
+       <!-- Landing Form -->
+			
+
+			<div style="margin-top:-20px">
+				<video controls class="video-home">
+				<source src="images/VRD_video.mp4" type="video/mp4"> 
+				<source src="images/VRD_video.ogg" type="video/ogg"></video>
+			</div>
+
+			
+			<!-- <script src="js/script.js"> -->
+			</script><section class="ls s-pt-xl-160 s-pb-xl-180 s-pb-lg-130 s-pb-md-120 s-pb-70 s-pt-lg-160 s-pt-md-90 s-pt-60">
+				<br>
+				<br><h2 class=" myh3 special-heading text-center">Board of Directors</h2><img class="bgicon icon-bg1 animate" data-animation="pulse" data-delay="150" src="images/bgicons/bgicon1.png" alt="img"><img class="bgicon icon-bg2 animate" data-animation="tossing" data-delay="150" src="images/bgicons/bgicon2.png" alt="img"><img class="bgicon icon-bg3 animate" data-animation="tossing" data-delay="150" src="images/bgicons/bgicon3.png" alt="img">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-xs-12 col-12 col-lg-6 text-center px-30 animate" data-animation="fadeInRight" data-delay="100">
+
+							<div class="mt--10">
+							</div>
+
+							<div class="divider-76 hidden-below-lg">
+							</div><h5 class="special-heading sub-title text-uppercase">14 YEARS OF EXPERIENCE</h5><h3 class="special-heading text-capitalize">
+								Dr. V R Manikanda Raman
+							</h3>
+
+							<div class="divider-40 hidden-below-md">
+							</div>
+
+							<p>
+								Dr. Manikanda Raman is the President and CEO of VR Della Group of Companies, a consortium that is a market leader in each of its respective sectors. The head of the company boasts over 14 years of experience in software development, sales, and business development. He is a leading provider of IoT products, staffing, and software services across various regions, including the US, UK, Canada, Singapore, and India.
+							</p>
+							<!--
+
+					<div class="divider-20">
+					</div>
+
+					<p class="bold color-dark">Just<a href="contact.html">
+
+					<span class="color-main2">Call Me Now
+					</span> </a>and<a href="contact.html">
+
+					<span class="color-main2">Make an Appointment
+					</span></a></p>-->
+							<!--
+
+					<p class="big color-dark">
+
+					<span class="color-main">5 Years
+					</span> Warranty
+
+					<span class="symbol">&
+					</span>
+
+					<span class="color-main">100%
+					</span> Satisfaction</p> -->
+							<!--
+
+					<div class="signature">
+
+					<div class="sighature-img"><img src="images/signature.png" alt="img">
+					</div>
+
+					<div class="signature-author"><center><h6>Manikandaraman</h6></center>
+
+					<span>VRD Constructions Founder
+					</span>
+					</div>
+					</div>-->
+						</div>
+
+						<div class="col-xs-12 col-12 col-lg-6 text-center animate" data-animation="fadeInLeft" data-delay="100">
+
+							<div class="divider-70 hidden-below-md hidden-above-lg">
+							</div>
+
+							<div class="divider-70 hidden-above-md">
+							</div>
+
+							<div class="img-wrap img-decoration">
+								<img src="images/about.JPG" alt="img" width="570" height="570">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><section class="ls s-pt-xl-160 s-pb-xl-180 s-pb-lg-130 s-pb-md-120 s-pb-70 s-pt-lg-160 s-pt-md-90 s-pt-60">
+				<img class="bgicon icon-bg1 animate" data-animation="pulse" data-delay="150" src="images/bgicons/bgicon1.png" alt="img"><img class="bgicon icon-bg2 animate" data-animation="tossing" data-delay="150" src="images/bgicons/bgicon2.png" alt="img"><img class="bgicon icon-bg3 animate" data-animation="tossing" data-delay="150" src="images/bgicons/bgicon3.png" alt="img">
+
+				<div class="container" style="margin-top:-200px;">
+
+					<div class="row">
+
+						<div class="col-xs-12 col-12 col-lg-6 text-center px-30 animate" data-animation="fadeInRight" data-delay="100">
+
+							<div class="mt--10">
+							</div>
+
+							<div class="divider-76 hidden-below-lg">
+							</div><h5 class="special-heading sub-title text-uppercase">7 YEARS OF EXPERIENCE</h5><h3 class="special-heading text-capitalize">Gayathri Ramabathiran </h3>
+
+							<div class="divider-40 hidden-below-md">
+							</div>
+
+							<p>
+								The crew leader is a registered Chartered Engineer (AM1952911) from IEI. She is a University Rank holder of B.E Civil from Anna University and possesses over 7 years of experience in Design and Construction. It is her passion to deliver exceptional results that drives her commitment to the profession. With her extensive knowledge and expertise, she leads the team to excellence in every project we undertake.
+							</p>
+							<!--
+
+					<div class="divider-20">
+					</div>
+
+					<p class="bold color-dark">Just <a href="contact.html">
+
+					<span class="color-main2">Call Me Now
+					</span></a> and <a href="contact.html">
+
+					<span class="color-main2">Make an Appointment
+					</span></a></p>-->
+							<!--
+
+					<p class="big color-dark">
+
+					<span class="color-main">5 Years
+					</span> Warranty
+
+					<span class="symbol">&
+					</span>
+
+					<span class="color-main">100%
+					</span> Satisfaction</p> -->
+							<!--
+
+					<div class="signature">
+
+					<div class="sighature-img"><img src="images/signature.png" alt="img">
+					</div>
+
+					<div class="signature-author"><h6>Gayathri Ramabathiran</h6>
+
+					<span>AZ Homes CoFounder
+					</span>
+					</div>
+					</div> -->
+						</div>
+
+
+						<div class="col-xs-12 col-12 col-lg-6 text-center animate" data-animation="fadeInLeft" data-delay="100">
+
+							<div class="divider-70 hidden-below-md hidden-above-lg">
+							</div>
+
+							<div class="divider-70 hidden-above-md">
+							</div>
+
+							<div class="img-wrap img-decoration">
+								<img src="images/square/14.jpg" alt="img" width="570" height="570">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section>
+				<h2 class=" myh3 special-heading text-center">Who we are</h2>
+
+				<div class="col-md-12">
+					<p>
+
+						Vriho Infratech, the best construction company in Tiruchirappalli, is committed to creating impressive, tranquil, and relaxing spaces. Our steadfast obsession with excellence has won us a reputation as the top building construction company in Trichy over the years. We are renowned for our impeccable project performance, transparency, and innovative interior design.
+						.
+					</p>
+					<br>
+
+					<p>
+
+						We understand that buying an asset entails both an economic and emotional investment. In this sense, we handle all tasks with utmost care and consideration, assuring a strong foundation for you and your loved ones. To redefine luxury living, we will continuously introduce and create cutting-edge real estate concepts, technologies, and innovations that will transform the way people experience their homes.
+					</p><br>
+					<p>
+						Our adherence to unparalleled craftsmanship and a keen eye for every detail distinguishes us as a reliable partner in your construction journey.
+					</p>
+
+				</div>
+			</section>
+			<br><br><br>
+			<!--<section class="ls s-pt-xl-150 s-pt-lg-120 s-pt-md-80 s-pt-50 s-pb-xl-160 s-pb-lg-130 s-pb-md-90 s-pb-60"><img class="bgicon icon-bg5 animate" data-animation="pulse" data-delay="150" src="images/bgicons/bgicon5.png" alt="img"><img class="bgicon icon-bg4 animate" data-animation="tossing" data-delay="150" src="images/bgicons/bgicon4.png" alt="img">
+
+	<div class="container">
+
+	<div class="row">
+
+	<div class="col-12"><h6 class="special-heading sub-title text-uppercase">We’re Professionals</h6><h3 class="special-heading">Meet Our Team</h3>
+
+	<div class="divider-50 hidden-below-md">
+	</div>
+
+	<div class="divider-20 hidden-above-md">
+	</div>
+
+	<div class="owl-carousel team-carousel" data-center="false" data-nav="true" data-margin="20" data-loop="true" data-responsive-lg="3" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1">
+
+	<div class="team-item">
+
+	<div class="vertical-item">
+
+	<div class="item-media"><img src="images/team/square/01.jpg" alt="team">
+
+	<div class="media-links"><a class="abs-link" title="" href="team-single.html"></a>
+	</div>
+	</div>
+
+	<div class="item-content"><h5><a href="team-single.html">Paul A. Reynolds</a></h5>
+
+	<p class="small-text color-main">Agent</p>
+	</div>
+	</div>
+	</div>
+
+	<div class="team-item">
+
+	<div class="vertical-item">
+
+	<div class="item-media"><img src="images/team/square/02.jpg" alt="team">
+
+	<div class="media-links"><a class="abs-link" title="" href="team-single.html"></a>
+	</div>
+	</div>
+
+	<div class="item-content"><h5><a href="team-single.html">Nancy E. Stanley</a></h5>
+
+	<p class="small-text color-main">Agent</p>
+	</div>
+	</div>
+	</div>
+
+	<div class="team-item">
+
+	<div class="vertical-item">
+
+	<div class="item-media"><img src="images/team/square/03.jpg" alt="team">
+
+	<div class="media-links"><a class="abs-link" title="" href="team-single.html"></a>
+	</div>
+	</div>
+
+	<div class="item-content"><h5><a href="team-single.html">Joseph L. Gustavson</a></h5>
+
+	<p class="small-text color-main">designer</p>
+	</div>
+	</div>
+	</div>
+
+	<div class="team-item">
+
+	<div class="vertical-item">
+
+	<div class="item-media"><img src="images/team/square/04.jpg" alt="team">
+
+	<div class="media-links"><a class="abs-link" title="" href="team-single.html"></a>
+	</div>
+	</div>
+
+	<div class="item-content"><h5><a href="team-single.html">Cathleen O. Hansen</a></h5>
+
+	<p class="small-text color-main">Architecht</p>
+	</div>
+	</div>
+	</div>
+
+	<div class="team-item">
+
+	<div class="vertical-item">
+
+	<div class="item-media"><img src="images/team/square/05.jpg" alt="team">
+
+	<div class="media-links"><a class="abs-link" title="" href="team-single.html"></a>
+	</div>
+	</div>
+
+	<div class="item-content"><h5><a href="team-single.html">Irving A. Childers</a></h5>
+
+	<p class="small-text color-main">Manager</p>
+	</div>
+	</div>
+	</div>
+
+	<div class="team-item">
+
+	<div class="vertical-item">
+
+	<div class="item-media"><img src="images/team/square/06.jpg" alt="team">
+
+	<div class="media-links"><a class="abs-link" title="" href="team-single.html"></a>
+	</div>
+	</div>
+
+	<div class="item-content"><h5><a href="team-single.html">Catherine J. Nichols</a></h5>
+
+	<p class="small-text color-main">agent</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div></section>-->
+			<!-- <section class="ls s-pt-xl-0 s-pt-lg-0 s-pt-md-80 s-pt-60 lots-section container-px-0"><img class="bgicon icon-bg6 animate" data-animation="pulse" data-delay="150" src="images/bgicons/bgicon6.png" alt="img">
+
+	<div class="container-fluid">
+
+	<div class="row">
+
+	<div class="col-lg-6 pt-xl-150 pb-xl-155 pt-lg-120 pb-lg-125 absolute-content"><h6 class="special-heading sub-title text-uppercase">Wanna Change a House?</h6><h3 class="special-heading">We Buy Lots</h3>
+
+	<div class="divider-50 hidden-below-md">
+	</div>
+
+	<div class="divider-20 hidden-above-md">
+	</div>
+
+	<form class="contact-form c-mb-20 c-gutter-20" method="post" action="/">
+
+	<div class="row">
+
+	<div class="col-sm-6">
+
+	<div class="form-group has-placeholder">
+	<label for="name">Full Name
+
+	<span class="required">*
+	</span>
+	</label><i class="fa fa-user color-darkgrey"></i>
+	<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Name">
+	</div>
+
+	<div class="form-group has-placeholder">
+	<label for="phone">Phone
+
+	<span class="required">*
+	</span>
+	</label><i class="fa fa-phone color-darkgrey"></i>
+	<input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone">
+	</div>
+	</div>
+
+	<div class="col-sm-6">
+
+	<div class="form-group has-placeholder">
+	<label for="location">Location
+
+	<span class="required">*
+	</span>
+	</label><i class="fa fa-map-marker color-darkgrey"></i>
+	<input type="text" aria-required="true" size="30" value="" name="location" id="location" class="form-control" placeholder="Location">
+	</div>
+
+	<div class="form-group has-placeholder">
+	<label for="email">Email address
+
+	<span class="required">*
+	</span>
+	</label><i class="fa fa-envelope color-darkgrey"></i>
+	<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email">
+	</div>
+	</div>
+
+	<div class="col-sm-12">
+
+	<div class="form-group has-placeholder">
+	<label for="message">Message
+	</label><i class="fa fa-pen color-darkgrey"></i>
+	<textarea aria-required="true" rows="3" cols="45" name="message" id="message" class="form-control" placeholder="Message">
+	</textarea>
+	</div>
+	</div>
+	</div>
+
+	<div class="row mt-xl-10 text-center text-sm-left">
+
+	<div class="col-xl-4 col-lg-5 col-md-3 col-12">
+
+	<div class="form-group"><button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-outline-maincolor">Send</button>
+	</div>
+	</div>
+
+	<div class="col-xl-8 col-lg-7 col-md-9 col-12 d-flex justify-content-center justify-content-sm-start justify-content-md-end justify-content-lg-start">
+
+	<div class="support">
+
+	<span class="symbol">OR
+	</span>
+
+	<div class="media">
+
+	<div class="media-body"><h6>Call Agent:</h6>
+
+	<p>0800 123 4567
+
+	<span class="color-main2">(Mark)
+	</span></p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</form>
+	</div>
+
+	<div class="col-lg-6">
+
+	<div class="divider-60 hidden-above-md">
+	</div>
+
+	<div class="divider-90 hidden-below-md hidden-above-lg">
+	</div>
+
+	<div class="img-wrap"><img src="images/lots.jpg" alt="img" width="960" height="844">
+	</div>
+	</div>
+	</div>
+	</div></section> -->
+			<!--<section class="ls container-px-0 s-pt-xl-150 s-pt-lg-120 s-pt-md-80 s-pt-50">
+
+	<div class="container-fluid">
+
+	<div class="row">
+
+	<div class="col-12"><h6 class="special-heading sub-title text-center text-uppercase">Check Our</h6><h3 class="special-heading text-center">Move in Ready</h3>
+
+	<div class="divider-50 hidden-below-md">
+	</div>
+
+	<div class="divider-20 hidden-above-md">
+	</div>
+
+	<div class="owl-carousel possession" data-center="true" data-nav="false" data-margin="30" data-loop="true" data-responsive-lg="4" data-responsive-md="3" data-responsive-sm="2" data-responsive-xs="1">
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/01.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 458 000
+	</span>
+	</div><h5><a href="possession-single.html">1607 Ward RoadHicksville, NY 11612</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>2647 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>4 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>4 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>3 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/02.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 247 000
+	</span>
+	</div><h5><a href="possession-single.html">3060 Spring Haven TrailNewark, NJ 07112</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>1648Sq Ft</li>
+	<li><i class="fas fa-couch"></i>2 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>2 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>2 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/03.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 285 000
+	</span>
+	</div><h5><a href="possession-single.html">1832 Dark Hollow RoadAllentown, NJ 08501</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>1956 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>3 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>2 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>1 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/04.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 313 000
+	</span>
+	</div><h5><a href="possession-single.html">3491 Windy Ridge RoadFort Wayne, IN 46818</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>1650 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>2 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>4 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>1 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/05.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 324 000
+	</span>
+	</div><h5><a href="possession-single.html">943 Eagles Nest DrvSacramento, CA 95814</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>1440 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>3 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>2 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>2 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/06.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 360 000
+	</span>
+	</div><h5><a href="possession-single.html">1493 B StreetSaint Paul, MN 55117</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>2624 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>4 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>3 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>2 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/07.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 275 000
+	</span>
+	</div><h5><a href="possession-single.html">1011 Clinton StreetPhiladelphia, PA 19108</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>1870 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>3 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>3 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>1 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/08.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 425 000
+	</span>
+	</div><h5><a href="possession-single.html">1011 Clinton StreetPhiladelphia, PA 19108</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>2465 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>4 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>4 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>3 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+
+	<div class="vertical-item text-center content-padding box-shadow">
+
+	<div class="item-media"><img src="images/possession/09.jpg" alt="img">
+	</div>
+
+	<div class="item-content">
+
+	<div class="possession-price">
+
+	<span>$ 425 000
+	</span>
+	</div><h5><a href="possession-single.html">1011 Clinton StreetPhiladelphia, PA 19108</a></h5>
+	<ul class="list-unstyled possession-category">
+	<li><i class="fas fa-vector-square"></i>2465 Sq Ft</li>
+	<li><i class="fas fa-couch"></i>4 Bedrooms</li>
+	<li><i class="fas fa-bath"></i>4 Bathrooms</li>
+	<li><i class="fas fa-warehouse"></i>3 Garages</li>
+	</ul><a class="btn btn-underline-maincolor" href="possession-single.html">posession</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div></section> -->
+			<!-- <section class="ls s-pt-xl-15 s-pt-lg-10 s-pt-md-85 s-pt-55 s-pb-xl-160 s-pb-lg-125 s-pb-md-85 s-pb-55"><img class="bgicon icon-bg8 animate" data-animation="pulse" data-delay="150" src="images/bgicons/bgicon8.png" alt="img"><img class="bgicon icon-bg7 animate" data-animation="tossing" data-delay="150" src="images/bgicons/bgicon7.png" alt="img">
+
+	<div class="container">
+
+	<div class="row">
+
+	<div class="col-12">
+
+	<div class="owl-carousel testimonials-owl-dots owl-loaded owl-theme owl-center" data-responsive-lg="3" data-responsive-md="3" data-responsive-sm="3" data-responsive-xs="3" data-center="true" data-loop="true" data-margin="60" data-draggable="false">
+
+	<div class="quote-image"><img src="images/ConstNew/2.png" alt="">
+	</div>
+
+	<div class="quote-image"><img src="images/ConstNew/3.png" alt="">
+	</div>
+
+	<div class="quote-image"><img src="images/ConstNew/4.png" alt="">
+	</div>
+
+	<div class="quote-image"><img src="images/ConstNew/5.png" alt="">
+	</div>
+
+	<div class="quote-image"><img src="images/ConstNew/6.jpeg" alt="">
+	</div>
+
+	<div class="quote-image"><img src="images/ConstNew/7.jpeg" alt="">
+	</div>
+	</div>
+
+	<div class="owl-carousel testimonials-owl-content quote-carousel" data-center="false" data-nav="true" data-margin="0" data-loop="true" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1">
+
+	<div class="quote-item">
+	<blockquote>
+
+	<p><em>Super happy in owning a smart villa from VR della constructions... unique design... Excellence in every way.</em></p><h5 class=" color-darkgrey">Mr. and Mrs. Senthil</h5>
+
+	<span class="small-text color-main">Client
+	</span>
+	</blockquote>
+	</div>
+
+	<div class="quote-item">
+	<blockquote>
+
+	<p><em>Our first villa happened with VR Della constructions. Can’t thank them enough for making our dream come true.</em></p><h5 class=" color-darkgrey">Mr.Pandian and family</h5>
+
+	<span class="small-text color-main">Client
+	</span>
+	</blockquote>
+	</div>
+
+	<div class="quote-item">
+	<blockquote>
+
+	<p><em>The extended support and guidance they provide beyond construction from customer point of view is praiseworthy... kudos to that</em></p><h5 class=" color-darkgrey">Mrs.Deepa and family</h5>
+
+	<span class="small-text color-main">Client
+	</span>
+	</blockquote>
+	</div>
+
+	<div class="quote-item">
+	<blockquote>
+
+	<p><em>Can’t thank enough for the massive changeover of our villa. Looking forward to join hands with them again for a new construction.</em></p><h5 class=" color-darkgrey">Mr. and Mrs.kamal badsha</h5>
+
+	<span class="small-text color-main">Client
+	</span>
+	</blockquote>
+	</div>
+
+	<div class="quote-item">
+	<blockquote>
+
+	<p><em>On time delivery of the villa without compromising on the quality and engineering practise.</em></p><h5 class=" color-darkgrey">Mrs.Valarmathi</h5>
+
+	<span class="small-text color-main">Client
+	</span>
+	</blockquote>
+	</div>
+
+	<div class="quote-item">
+	<blockquote>
+
+	<p><em>Quality construction at affordable pricing...</em></p><h5 class=" color-darkgrey">Mrs.Padmavathy</h5>
+
+	<span class="small-text color-main">Client
+	</span>
+	</blockquote>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="mt--10">
+	</div>
+	</div></section> -->
+
+			<section>
+
+				<div class="embed-responsive embed-responsive-16by9" style="height: 500px; ">
+					<iframe class="embed-responsive-item" src="images/client1.mp4"></iframe>
+				</div>
+			</section>
+
+
+			<!--<section class="ds before_footer container-px-0">
+
+	<div class="container-fluid">
+
+	<div class="row">
+
+	<div class="col-sm-12">
+
+	<div class="widget widget_contact_us">
+
+	<div class="contact_us_title"><h3>Start building your legacy with us today!</h3>
+	</div>
+
+	<div class="contact_us_share"><a href="#" class="btn btn-outline-maincolor">email us</a><a href="#" class="btn btn-outline-maincolor2">call us</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div></section> -->
+			<footer class="page_footer ls s-pt-55 s-pb-60 s-pt-md-85 s-pb-md-90 s-pt-lg-125 s-pb-lg-130 s-pt-xl-155 s-pb-xl-160 c-gutter-80 s-parallax c-mb-50 c-mb-lg-0">
+
+				<div class="container">
+
+					<div class="row justify-content-center">
+
+						<div class="col-lg-4 col-md-4 text-center animate" data-animation="fadeInUp">
+
+							<div class="widget widget_icons_list">
+								<h3 class="widget-title">Get in Touch</h3>
+								<ul>
+									<li class="icon-inline">
+										<i class="fa fa-map-marker icon-styled icon-top color-main2 fs-14"></i>
+
+										<p>
+											B-1,B Block Greenwoods Apartment,
+											<br>Morais city,Sempat,Trichy-07
+										</p>
+									</li>
+									<li class="icon-inline">
+										<i class="fa fa-phone icon-styled icon-top color-main2 fs-14"></i>
+
+										<p>6374824859 , 8148974859</p>
+									</li>
+									<li class="icon-inline">
+										<i class="fa fa-envelope icon-styled icon-top color-main2 fs-14"></i>
+
+										<p><a href="#">enquiry@vriho.com</a></p>
+									</li>
+									<!--<li class="icon-inline"><i class="fa fa-envelope icon-styled icon-top color-main2 fs-14"></i>
+
+							<p><a href="#">vrdellaconstructions@gmail.com </a></p></li>-->
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="col-lg-4 col-md-6 text-left animate" data-animation="fadeInUp">
+
+							<div class="widget widget_instagram">
+								<h3 class="widget-title">Useful Links</h3>
+								<ul>
+									<li><a href="index.html">Home Page </a></p></li>
+									<li><a href="about.html">About Us </a></p></li>
+									<li><a href="career.html">Career </a></p></li>
+									<li><a href="package_Construction.html">Construction </a></p></li>
+									<!--<li><a href="#">vrdellaconstructions@gmail.com </a></p></li>-->
+
+								</ul>
+
+							</div>
+						</div>
+
+						
+
+
+						<!--
+				<div class="col-lg-4 col-md-6 text-center animate mb-0" data-animation="fadeInUp">
+
+				<div class="widget widget_mailchimp"><h3 class="widget-title">Newsletter</h3>
+
+				<form class="signup" action="/">
+				<input name="email" type="email" class="form-control mailchimp_email" placeholder="Email"><button type="submit" class="search-submit">
+
+				<span class="screen-reader-text">Subscribe
+				</span></button>
+
+				<div class="response">
+				</div>
+				</form>
+				</div>
+				</div> -->
+					</div>
+				</div>
+			</footer>
+			<!-- <section class="ls after_footer container-px-xl-110 s-py-50">
+
+	<div class="container-fluid">
+
+	<div class="row">
+
+	<div class="col-sm-12 text-center">
+
+	<div class="owl-carousel widget widget_partners_carousel" data-center="false" data-margin="0" data-loop="true" data-responsive-lg="6" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2"><a href="#"><img src="images/partners/01.png" alt=""></a><a href="#"><img src="images/partners/02.png" alt=""></a><a href="#"><img src="images/partners/03.png" alt=""></a><a href="#"><img src="images/partners/04.png" alt=""></a><a href="#"><img src="images/partners/05.png" alt=""></a><a href="#"><img src="images/partners/06.png" alt=""></a>
+	</div>
+	</div>
+	</div>
+	</div></section> -->
+
+			<div class="page_copyright ds s-py-25">
+
+				<div class="container">
+
+					<div class="row align-items-center">
+
+						<div class="col-md-6 text-left">
+
+							<p>
+								&copy; Copyright
+
+								<span class="copyright_year">
+									2020
+								</span> All Rights Reserved
+							</p>
+						</div>
+
+						<div class="col-md-6 text-md-right text-center">
+
+							<span class="social-icons">
+								<a href="https://www.facebook.com/VR-Della-Constructions-LLP-107439124395827" class="fab fa-facebook" target="_blank" title="facebook"></a><a href="https://www.instagram.com/vrihoinfratech/" class="fab fa-instagram" target="_blank" title="instagram"></a><a href="https://www.youtube.com/c/VRDellaGroup" class="fab fa-youtube " target="_blank" title="youtube"></a><a href="https://twitter.com/vrihoinfratech" class="fab fa-twitter " target="_blank" title="youtube"></a>
+								<a href="https://www.linkedin.com/company/vrihoinfratech" class="fab fa-linkedin " target="_blank" title="youtube"></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+	<script src="js/compressed.js">
+	</script>
+	<script src="js/main.js">
+	</script>
+	<script>
+		// Get the modal
+		var modal = document.getElementById('login-popup');
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('#interested').change(function () {
+				var method = $('option:selected', this).text();
+				if (method == "buy a individual house" || method == "buy apartment" || method == "buy plot ") {
+					$('#contact-label').text("Description of amenities that you expect");
+				} else if (method == "Rent commercial shops" || method == "buy commercial shops" || method == "Rent commercial shops" || method == "Join Venture for construction" || method == "i am a supplier of construction material" || method == "i want to sell my land") { $('#contact-label').html("Provide description on your expectation"); }
+			});
+		});
+	</script>
+	<script>
+		$(function () { $('.selectpicker').selectpicker(); });
+	</script>
+	<script>
+		$(document).ready(function () { $('#prelocation').multiSelect(); });
+	</script>
+	<script>
+		document.getElementById('submit').onclick = function () { var selected = []; for (var option of document.getElementById('prelocation').options) { if (option.selected) { selected.push(option.value); } } alert(selected); }
+	</script>
+	<script src="multiselect/bootstrap-select.min.js">
+	</script>
+	<script src="multiselect/bootstrap-select.min.js">
+	</script>
+	<!--
+	<script src="multiselect/bootstrap.bundle.min.js">
+	</script>-->
+	<script>
+		function trackVisitors() {
+			// Get the current date and time
+			var now = new Date();
+
+			// Get the visitor's IP address
+			var ip = getIPAddress();
+
+			// Store the visitor's information in a database
+			storeVisitorInfo(ip, now);
+
+			// Log the visitor's information to the console
+			console.log("Visitor with IP " + ip + " visited at " + now);
+		}
+	</script>
+</body>
+</html>

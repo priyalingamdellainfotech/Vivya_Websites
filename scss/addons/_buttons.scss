@@ -1,0 +1,128 @@
+/*
+** Buttons
+ */
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow:none;
+}
+
+.btn-secondary {
+  border-color: $borderColor;
+  color: $darkgreyColor;
+}
+
+/*color background buttons*/
+.btn-maincolor,
+.btn-maincolor2,
+.btn-maincolor3,
+.btn-darkgrey {
+  color: $lightColor;
+}
+
+.btn-maincolor {
+  background-color: $colorMain;
+}
+
+.btn-maincolor2 {
+  background-color: $colorMain2;
+}
+
+.btn-maincolor3 {
+  background-color: $colorMain3;
+}
+
+.btn-darkgrey {
+  background-color: $darkgreyColor;
+}
+
+/*color outline buttons*/
+.btn-outline-maincolor,
+.btn-outline-maincolor2,
+.btn-outline-maincolor3,
+.btn-outline-darkgrey {
+  background-color: transparent;
+
+  transition: all 0.3s ease;
+}
+
+.btn-outline-maincolor {
+
+  border-color: $colorMain;
+}
+
+.btn-outline-maincolor2 {
+
+  border-color: $colorMain2;
+}
+
+.btn-outline-maincolor3 {
+
+  border-color: $colorMain3;
+}
+
+.btn-outline-darkgrey {
+
+  border-color: $darkgreyColor;
+}
+
+.btn-underline-maincolor,
+.btn-underline-maincolor2,
+.btn-underline-maincolor3,
+.btn-underline-darkgrey {
+  border: none;
+  padding: 14px 0;
+  text-indent: 12px;
+  position: relative;
+  min-width: auto;
+  background-color: transparent;
+  &:after{
+    content: '';
+    width: calc(100% - 22px);
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: all 0.3s ease;
+  }
+}
+
+
+.btn-underline-maincolor {
+  color: $colorMain;
+   &:after{
+     background: $colorMain;
+   }
+}
+
+.btn-underline-maincolor2 {
+  color: $colorMain2;
+  &:after{
+    background: $colorMain2;
+  }
+}
+
+.btn-underline-maincolor3 {
+  color: $colorMain3;
+  &:after{
+    background: $colorMain3;
+  }
+}
+.btn-underline-maincolor4 {
+  color: $colorMain4;
+  &:after{
+    background: $colorMain4;
+  }
+}
+
+.btn-underline-darkgrey {
+  color: $darkgreyColor;
+  &:after{
+    background: $darkgreyColor;
+  }
+}
