@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="#">
+    <meta name="description" content="Don't hesitate to contact Voni customer care services for quality and reliable support. Our team is available 24/7 to assist you with any Voni service needs.
+">
+    <title>
+        Contact Us | Voni Care | Voni Support | Voni Smart IoT
+    </title>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/VoniSmart4.png">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Icon Font -->
+    <link href="assets/css/font/flaticon.css" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Range Slider -->
+    <link href="assets/css/jquery-ui.css" rel="stylesheet">
+    <!-- magnific popup -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Nice Select -->
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <!-- Animate -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Custom Responsive -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <!-- place -->
+	 <script>
+	 document.getElementById('requirement___form').style.color = "white";
+	 </script>
+	<!--mail sent script  -->
+	
+	  <script language="JavaScript" type="text/javascript">
+function submitToRequirement(e) {
+    e.preventDefault();
+    
+//       var URL = "API Gateway";
+
+
+let headers = new Headers();
+headers.append('Access-Control-Allow-Origin', '*');
+
+  headers.append('GET', 'POST', 'OPTIONS');
+    
+
+
+    var requirement_company_name = document.getElementById('requirement_company_name').value;
+    var requirement_contact_person = document.getElementById('requirement_contact_person').value;
+    var requirement_title = document.getElementById('requirement_title').value;
+    var requirement_contact_number = document.getElementById('requirement_contact_number').value;
+    var country_req_Id = document.getElementById('country_req_Id').value;
+    var state_req_Id = document.getElementById('state_req_Id').value;
+    var city_req_Id = document.getElementById('city_req_Id').value;
+    var requirement_email = document.getElementById('requirement_email').value;
+    var requirement_establishment = document.getElementById('requirement_establishment').value;
+    var requirement_select = document.getElementById('requirement_select').value;
+    var requirement_service = document.getElementById('requirement_service').value;
+    var requirement_description = document.getElementById('requirement_description').value;
+    var requirement_dollar = document.getElementById('requirement_dollar').value;
+    var requirement_duration = document.getElementById('requirement_duration').value;
+    var requirement_doc_upload = document.getElementById('requirement_doc_upload').value;
+    var requirement_source = document.getElementById('requirement_source').value;
+    var requirement_msg = document.getElementById('requirement_msg').value;
+    
+    
+
+
+
+ 
+	  
+		
+        if (requirement_company_name == "" && requirement_contact_person == "" && requirement_title == "" && requirement_contact_number == "" &&
+        country_req_Id == "" && state_req_Id =="" && city_req_Id == "" && requirement_email == "" && requirement_establishment == "" && 
+        requirement_select == "" && requirement_service == ""  && requirement_description == "" && requirement_dollar == "" &&
+        requirement_duration == "" && requirement_doc_upload == "" && requirement_source == "" && requirement_msg == "")
+        {
+            //alert("Please Fill All Required Field");
+			//var err = "Please Fill All Required Field";
+			document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Please fill all required fields<h4>";
+            return false;
+        }
+		
+    
+    if(requirement_company_name == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Company Name is required<h4>";
+        return false;
+    }
+    if(requirement_contact_person == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Contact Person is required<h4>";
+        return false;
+    }
+	if(requirement_title == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Title is required<h4>";
+        return false;
+    } 
+    if(requirement_contact_number == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Contact Number is required<h4>";
+        return false;
+    }
+    if(country_req_Id == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Country is required<h4>";
+        return false;
+    }
+    if(state_req_Id == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>State is required<h4>";
+        return false;
+
+    }
+    if(city_req_Id == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>City is required<h4>";
+        return false;
+    }
+    if(requirement_email == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Email is required<h4>";
+        return false;
+    }
+    if(requirement_establishment == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Year of Establish is required<h4>";
+        return false;
+    }
+    if(requirement_select == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Type of Project is required<h4>";
+        return false;
+    }
+    if(requirement_service == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Service is required<h4>";
+        return false;
+    }
+    if(requirement_description == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !Problem Statement is required<h4>";
+        return false;
+    }
+    if(requirement_dollar == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !Please Select budjet<h4>";
+        return false;
+    }
+    if(requirement_duration == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !Please Select Delivery<h4>";
+        return false;
+    }
+    if(requirement_doc_upload == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !Document should be Required<h4>";
+        return false;
+    }
+    if(requirement_source == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !Please Select the Source<h4>";
+        return false;
+    }
+    if(requirement_msg == "") {
+        document.getElementById("demo").innerHTML = "<h4 style='color: red !Message is Required<h4>";
+        return false;
+    }
+
+		
+	//	mobileRE = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+	//	if(!mobileRE.test(phone)) {
+	//				document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Phone number entered, is not valid<h4>";
+				//alert("Phone number entered, is not valid");
+	//			return false;
+      //      }
+			
+		
+		emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if(!emailRE.test(requirement_email)) {
+		document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Email Address entered, is not valid<h4>";
+			//alert("Email Address entered, is not valid");
+				return false;
+		}
+		
+   
+        
+        var requirementData = {
+            requirement_company_name : requirement_company_name,
+            requirement_contact_person : requirement_contact_person,
+            requirement_title : requirement_title,
+            requirement_contact_number : requirement_contact_number,
+            country_req_Id : country_req_Id,
+            state_req_Id : state_req_Id,
+            city_req_Id : city_req_Id,
+            requirement_email : requirement_email,
+            requirement_establishment : requirement_establishment,
+            requirement_select : requirement_select,
+            requirement_service : requirement_service,
+            requirement_description : requirement_description,
+            requirement_dollar : requirement_dollar,
+            requirement_duration : requirement_duration,
+            requirement_doc_upload : requirement_doc_upload,
+            requirement_source : requirement_source,
+            requirement_msg : requirement_msg
+        }
+
+        document.getElementById("demo").style.color = "white";
+
+		document.getElementById("demo").innerHTML = "<h4 style='color: white !important'>Loading...<h4>";
+
+		var xmlhttp = new XMLHttpRequest();
+		//xmlhttp.open("POST", "https://2trth6jq68.execute-api.us-east-1.amazonaws.com/Prod/submitForm");
+		xmlhttp.open("POST","https://3phdqbagbh.execute-api.us-east-1.amazonaws.com/voni-feedback/feedbackform");
+		xmlhttp.setRequestHeader("Content-Type", "application/json");
+		xmlhttp.send(JSON.stringify(requirementData));
+	xmlhttp.onloadend = response => {
+	if (xmlhttp.readyState === 4) {
+          if (response.target.status === 200) {
+           console.log('successful');
+		   document.getElementById('requirement___form').style.color = "white";
+				document.getElementById("requirement___form").innerHTML = "<h2 style='color: white !important'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Thank you for Sending Message..<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;our team will get back to you soon!</h2>";
+          
+		 } else {
+		  document.getElementById("requirement___form").style.color = "white";
+				document.getElementById("requirement___form").innerHTML = "<h2 style='color: white !important'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Error! Please try again.</h2>";
+            console.log('failed');
+          }
+		  }
+        };  
+	
+	
+	document.getElementById('requirement___form').reset();
+	  
+}
+
+</script>
+
+<!-- end of mail script -->
+</head>
+<body class="loader">
+    <!-- Google tag (gtag.js) -->
+    
+   
+    <header class="menu-style">
+
+        <div class="container-fluid custom-container">
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="header">
+
+                        <div class="logo">
+                            <a href="#"> <img src="assets/images/VoniSmart.png" class="img-fluid image-fit" alt="Logo"> </a>
+                        </div>
+
+                        <div class="right-side">
+
+                            <div class="navigation">
+
+                                <div class="logo">
+                                    <a href="#"> <img src="assets/images/VoniSmart.png" class="img-fluid image-fit" alt="Logo"> </a>
+                                </div> <nav>
+                                    <ul class="custom main-menu">
+                                        <li class="menu-item active"> <a href="index.html" class="text-theme fs-14">Home</a> </li>
+                                        <li class="menu-item"> <a href="about.html" class="text-theme fs-14">About</a> </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="text-theme fs-14">Products</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">Vay Series</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="6modules.html" class="text-theme">6 Modules</a> </li>
+                                                        <li class="menu-item"> <a href="8modules.html" class="text-theme">8 Modules</a> </li>
+                                                        <li class="menu-item"> <a href="12modules.html" class="text-theme">12 Modules</a> </li>
+                                                        <li class="menu-item"> <a href="16modules.html" class="text-theme">16 Modules</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">SmarTouch</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="smart-touch-4m.html" class="text-theme">SmarTouch - 4M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-touch-8m.html" class="text-theme">SmarTouch - 8M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-touch-4mc.html" class="text-theme">SmarTouch - 4MC</a> </li>
+                                                        <li class="menu-item"> <a href="SmarTouch-8MC.html" class="text-theme">SmarTouch - 8MC</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">SmarTap</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="smart-tap-4m.html" class="text-theme">SmarTap - 4M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tap-8m.html" class="text-theme">SmarTap - 8M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tap-7amp.html" class="text-theme">SmarTap - 7Amp</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tap-15amp.html" class="text-theme">SmarTap - 15Amp</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">SmarTack</a>
+                                                    <ul class="custom sub-menu">
+
+                                                        <li class="menu-item"> <a href="smart-tack-2m.html" class="text-theme">SmarTack – 2M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tack-4m.html" class="text-theme">SmarTack -4M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tack-4mc.html" class="text-theme">SmarTack -4MC</a> </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">USB Type C Cable</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="c-cable-gen1.html" class="text-theme">USB Type-C Gen-1</a> </li>
+                                                        <li class="menu-item"> <a href="c-cable-gen2.html" class="text-theme">USB Type-C Gen-2</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="sliding-gate.html" class="text-theme">Sliding Gate</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="occupancy-series.html" class="text-theme">Occupancy Series</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="text-theme fs-14" id="text-transform">IoT SOLUTIONS</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail.html" class="text-theme">Smart Industry Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail.html" class="text-theme">Smart Gate Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_RTLS.html" class="text-theme">Real-Time Location System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_WIP.html" class="text-theme">Work in Progress Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Man-less.html" class="text-theme">Man-less Weighbridge</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Temp.html" class="text-theme">Condition Monitoring</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_machineVibration.html" class="text-theme">Machine Vibration Monitoring</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_shopfloor.html" class="text-theme">Shop Floor Trolley Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_asset.html" class="text-theme">Asset Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_forklift.html" class="text-theme">Forklift Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_helmet.html" class="text-theme">Helmet Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_smartIndus.html" class="text-theme">Smart Industrial Energy Monitoring</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Smartcity.html" class="text-theme">Smart City Projects</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Smartcity.html" class="text-theme">Garbage Vehicle Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartStreetLighting.html" class="text-theme">Street Lighting Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartOpen.html" class="text-theme">Vehicle Parking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartWater.html" class="text-theme">Smart Water Meter</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartElectricity.html" class="text-theme">Smart Electric Meter</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartFile.html" class="text-theme">File Tracking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartLighting.html" class="text-theme">Smart Lighting Management</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_BikeHelmet.html" class="text-theme">Bike Helmet Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartTraffic.html" class="text-theme">Traffic Signal Automation</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Smartsupply.html" class="text-theme">Supply Chain Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Smartsupply.html" class="text-theme">Warehouse Management System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Coldchain.html" class="text-theme">Cold Chain Monitoring</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_AssetTracking.html" class="text-theme">Asset Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_ForkliftTracking.html" class="text-theme">Forklift Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Employee.html" class="text-theme">Worker Tracking System</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Digital.html" class="text-theme">Mining Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Digital.html" class="text-theme">Gate & Parking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartVehicleTracking.html" class="text-theme">Vehicle Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartOre.html" class="text-theme">Ore Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_AssetTrackingSystem.html" class="text-theme">Asset Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Man-lessWeighbridge.html" class="text-theme">Weighbridge Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Employee&ContractorTracking.html" class="text-theme">Contractor Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_HelmetTrackingSystem.html" class="text-theme">Helmet Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartPredictive.html" class="text-theme">Predictive Maintenance  System</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Smartcampus.html" class="text-theme">Campus Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Smartcampus.html" class="text-theme">Gate Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartParking.html" class="text-theme">Parking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartClassroom.html" class="text-theme">Classroom Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_LibraryAutomation.html" class="text-theme">Library Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartCafeteria.html" class="text-theme">Cafeteria Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartGuardPatrolling.html" class="text-theme">Guard Patrolling</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartLabs.html" class="text-theme">Smart Labs / Sports Club Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Smart_Street_lightning.html" class="text-theme">Smart Street lighting Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Smart_Water_Management.html" class="text-theme">Water Management</a> </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="voyance-ecg.html" class="text-theme fs-14">Medical Device</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item"> <a href="voyance-ecg.html" class="text-theme">Voyance - ECG</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"> <a href="service.html" class="text-theme fs-14">Services</a> </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="contact.html" class="text-theme fs-14">Contacts</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item"> <a href="contact.html" class="text-theme">Contact Us</a> </li>
+                                                <li class="menu-item"> <a href="dealer-contact.html" class="text-theme">Dealership Interest</a> </li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"> <a href="gallery.html" class="text-theme fs-14">Gallery</a> </li>
+
+                                        <!--<li class="menu-item"> <a href="faqs.html" class="text-theme fs-14">FAQ</a> </li>
+                    <li class="menu-item"> <a href="terms-condition.html" class="text-theme fs-14">Terms and Conditions</a> </li>-->
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="text-theme fs-14">OTHERS</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item">
+                                                    <a href="privacy-policy.html" class="text-theme">Privacy Policy</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="terms-condition.html" class="text-theme">Terms and Conditions</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="faqs.html" class="text-theme">FAQ</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <div class="social-media">
+                                    <ul class="custom">
+                                        <li> <a href="https://www.facebook.com/Vonismartiot/" class="text-custom-white" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
+                                        <li> <a href="https://www.linkedin.com/company/voni-smartiot" class="text-custom-white" target="_blank"><i class="fab fa-linkedin"></i></a> </li>
+                                        <li> <a href="https://instagram.com/vonismart?utm_medium=copy_link" class="text-custom-white" target="_blank"><i class="fab fa-instagram"></i></a> </li>
+                                        <li> <a href="https://youtube.com/channel/UCKXAgincRoWsYYYzPIL7A-w" class="text-custom-white" target="_blank"><i class="fab fa-youtube"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="hamburger-menu">
+
+                                <div class="menu-btn">
+
+                                    <span>
+                                    </span>
+
+                                    <span>
+                                    </span>
+
+                                    <span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navigation -->
+    <!-- End Header -->
+    <!-- Start Subheader -->
+    <div class="subheader section-padding" style="background-image: url('assets/images/contact-header.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb-wrapper">
+                        <div class="page-title">
+                            <h1 class="text-theme fw-500">Contact Us</h1>
+                        </div>
+                       
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subheader -->
+<section style="background: url('assets/images/project-requirement/Untitled\ design\ \(34\).png');">
+    <div class="contain-requirement">
+
+        <!-- <div class="wrapper-requirement">
+          <div class="contacts-requirement">
+            <h3 class="requirement-title">Our contacts</h3>
+      
+            <ul class="requirement-list">
+              <li>San Joe St.</li>
+              <li>00-1212121-11</li>
+              <li>mail@mail.com</li>
+            </ul>
+          </div> -->
+      
+          <div class="form-requirement">
+            <h3 class="requirement-title">Send us a message</h3>
+            <form action="" class="requirement-form" method="post" id="requirement___form">
+              <p class="requirement-txt">
+                <label for="">Company Name</label>
+                <input type="text" name="requirement_company_name"class="requirement-inp" id="requirement_company_name" maxlength="30">
+              </p>
+              <p class="requirement-txt">
+                <label for="">Contact Person</label>
+                <input type="text"name="requirement_contact_person" class="requirement-inp" id="requirement_contact_person" maxlength="30">
+              </p>
+              <p class="requirement-txt">
+                <label for="">Title</label>
+                <input type="text"name="requirement_title" class="requirement-inp" id="requirement_title">
+              </p>
+              <p class="requirement-txt">
+                <label for="">Contact Number</label>
+                <input type="text" name="requirement_contact_number" class="requirement-inp" id="requirement_contact_number"
+                 onkeypress='return restrictAlphabets(event)' maxlength="15">
+              </p>
+              
+              <div class="full-width">
+              <div class="grid-thirds">
+                <div class="">
+                    <label for="">Country</label>
+                    <!-- <input type="text" class="requirement-inp"> -->
+                    <select name="country_req_Id" class="countries form-control requirement-country" id="country_req_Id">
+                        <option value="">Select Country</option>
+                    </select></div>
+                <div class="">
+                    <label for="">State</label>
+                    <!-- <input type="text" class="requirement-inp"> -->
+                    <select name="state_req_Id" class="countries form-control requirement-country" id="state_req_Id">
+                        <option value="">Select State</option>
+                    </select></div>
+                <div class="">
+                    <label for="">City</label>
+                <!-- <input type="text" class="requirement-inp"> -->
+                <select name="city_req_Id" class="countries form-control requirement-country" id="city_req_Id">
+                    <option value="">Select City</option>
+                </select>
+                </div>
+               
+            </div>
+        </div>
+              <p class="requirement-txt">
+                <label for="">Email</label>
+                <input type="text" name="requirement_email" class="requirement-inp" id="requirement_email">
+              </p>
+              <p class="requirement-txt">
+                <label for="">Year of Establishment</label>
+                <input type="text" name="requirement_establishment" class="requirement-inp" id="requirement_establishment">
+              </p>
+              <p class="requirement-txt">
+                <label for="" >Type of Project</label>
+                <!-- <input type="text" class="requirement-inp"> -->
+                
+                    <select class="select-dropdown-requirement form-control" name="requirement_select" id="requirement_select">
+                        <option value="Option 1">Select Requirement</option>
+                        <option value="Option 2">Research and Development</option>
+                        <option value="Option 3">Production / Manufacturing</option>
+                        <option value="Option 4">Both</option>
+                        <option value="Option 5">Partial Service</option>
+                    </select>
+                
+               
+              </p>
+              
+              <p class="requirement-txt">
+                <label for="">Service Type</label>
+                <!-- <input type="text" class="requirement-inp"> -->
+                <select class="select-dropdown-requirement form-control" name="requirement_service" id="requirement_service">
+                    <option value="Option 1">Select Service</option>
+                    <option value="Option 2">Complete</option>
+                    <option value="Option 3">Hardware</option>
+                    <option value="Option 4">Firmware</option>
+                    <option value="Option 5">Mechanical</option>
+                    <option value="Option 6">Mobile Application</option>
+                    <option value="Option 7">Front End</option>
+                    <option value="Option 8">Back End</option>
+                    <option value="Option 9">Cloud</option>
+                    <option value="Option 10">PCB Design</option>
+                    <option value="Option 11">Partial Service</option>
+                </select>
+            
+              </p>
+              
+              <p class="requirement-txt">
+                <label for="">Description about Requirement / Problem Statement</label>
+                <input type="text" class="requirement-inp" name="requirement_description" id="requirement_description">
+              </p>
+              <p class="requirement-txt">
+                <label for="">Approximate Project Budjet</label>
+                <!-- <input type="text" class="requirement-inp"> -->
+                <select class="select-dropdown-requirement form-control" name="requirement_dollar" id="requirement_dollar">
+                    <option value="Option 1">Select USD - $</option>
+                    <option value="Option 2"><10,000 $</option>
+                    <option value="Option 3">25,000 $</option>
+                    <option value="Option 4">50,000 $</option>
+                    <option value="Option 5">100,000 $</option>
+                    <option value="Option 5">250,000 $</option>
+                    <option value="Option 5">500,000 $</option>
+                    <option value="Option 5">Above 1 Million $</option>
+                </select>
+              </p>
+              <p class="requirement-txt">
+                <label for="">Expected Delivery Time</label>
+                <!-- <input type="text" class="requirement-inp"> -->
+                <select class="select-dropdown-requirement form-control" name="requirement_duration" id="requirement_duration">
+                    <option value="Option 1">Select Duration</option>
+                    <option value="Option 2">< 1 Month</option>
+                    <option value="Option 3">3 Months</option>
+                    <option value="Option 4">6 Months</option>
+                    <option value="Option 5">1 year</option>
+                    <option value="Option 6">Not important, can be discussed later</option>
+                    
+                </select>
+              </p>
+              
+              
+              <!-- <p class="requirement-txt">
+                <label for="">Document Attachment</label>
+                <input type="text" class="requirement-inp">
+              </p> -->
+              <p class="requirement-txt" >
+                <label for="">Document Attachment</label>
+                <input type="file" class="requirement-inp" name="requirement_doc_upload" id="requirement_doc_upload">
+              </p>
+              <p class="requirement-txt">
+                <label for="">How did you hear about us?</label>
+                <!-- <input type="text" class="requirement-inp"> -->
+                <select class="select-dropdown-requirement form-control" name="requirement_source" id="requirement_source">
+                    <option value="Option 1">Select</option>
+                    <option value="Option 2">Referral</option>
+                    <option value="Option 3">Online Search</option>
+                    
+                    <option value="Option 3">Social Media</option>
+                    <option value="Option 3">Others(Please Specify)</option>
+                    
+                    
+                </select>
+              </p>
+              <p class="requirement-txt" class="full-width">
+                <label for="">Write your message</label>
+                <textarea id="" cols="30" rows="7" class="requirement-msg" name="requirement_msg" id="requirement_msg"></textarea>
+              </p>
+              <div class="full-width">
+              <div class="box-captcha">
+                <div class="box-CAPTCHA" id="box-CAPTCHA">
+                    <div class="CAPTCHA" id="captchaValue"></div>
+                    <a class="reload" href="javascript:;" id="new_captcha">
+                        <img src = "assets/images/project-requirement/captcha-refresh-ico.png"/>
+                    </a>
+                    <input type="text" class="captchaCode" id="captcha_code" placeholder="Type CAPTCHA Here" maxlength="6" name="captcha_code">
+                    <div id="output" style="margin-left: 10px;"></div>
+                    <!-- <div id="done" style="margin-left: 10px;color: #080;"></div> -->
+                </div>
+              </div>
+            </div>  
+            <p class="full-width">
+                <h4 class="demo-cont text-custom-white" id="demo"></h4>
+                <button type="submit" class="requirement-btn" id="send_btn" onclick="submitToRequirement(event)">Send</button>
+            </p>
+              
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start Footer -->
+    <!-- Start Footer -->
+    <footer class="bg-custom-black section-padding footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-md-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Useful Links</h4>
+                        </div>
+                        <ul class="custom links">
+                            <li>
+                                <a href="index.html" class="text-custom-white">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="text-custom-white">About Us</a>
+                            </li>
+                            <!-- <li>
+                                 <a href="#" class="text-custom-white">Case Studies</a>
+                             </li>-->
+                            <!-- <li>
+                                <a href="products.html" class="text-custom-white">Products</a>
+                            </li>-->
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-xs-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Quick Links</h4>
+                        </div>
+                        <ul class="custom links">
+                          
+                            <li>
+                                <a href="faqs.html" class="text-custom-white">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="text-custom-white">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html" class="text-custom-white">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="terms-condition.html" class="text-custom-white">Terms & Conditions</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-xs-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Working Hours</h4>
+                        </div>
+                        <ul class="custom links">
+
+                            <p class="text-custom-white">Monday - Friday :  </br>9.00 a.m. - 6.00 p.m</p>
+
+                        </ul>
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Support Hours</h4>
+                        </div>
+                        <ul class="custom links">
+
+                            <p class="text-custom-white">Monday - Saturday : </br>9.00 a.m. - 9.00 p.m</p>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box">
+                        <p class="text-custom-white1">Voni SmartIoT Pvt. Ltd. is an <strong style="font-size:18px;"> ISO 9001:2015 </strong> certified body for QMS in Research, Design, Development, Manufacture, Installation, System Integration, Testing, and Support of IoT-based smart devices for Home Automation, Medical Devices, Smart City, and Agriculture Sectors.</p>
+                        <div class="social-media">
+                            <ul class="custom social-media">
+                                <li><a href="https://www.facebook.com/Vonismartiot/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://instagram.com/vonismart?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/voni-smartiot" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://youtube.com/channel/UCKXAgincRoWsYYYzPIL7A-w" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                <li> <a href="https://twitter.com/vonismart" class="text-custom-white" target="_blank"><i class="fab fa-twitter"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <p class="text-custom-white no-margin">© Voni SmartIoT-2021 | All Rights Reserved. <!--<a href="#" target="_blank" class="text-custom-white">Designed By Slidesigma</a>--></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Footer -->
+    <div id="back-top" class="back-top">
+        <a href="#top"><i class="fas fa-chevron-up"></i><span class="d-block">Top</span></a>
+    </div>
+    <style>
+        .mystyle {
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <!-- Place all Scripts Here -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.js"></script>
+    <!-- Swiper Slider -->
+    <script src="assets/js/swiper.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Nice Select -->
+    <script src="assets/js/jquery.nice-select.js"></script>
+    <!-- Isotope Gallery -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+    <!-- Wow js -->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/mf_form.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom.js"></script>
+    <!-- /Place all Scripts Here -->
+
+    <script src="assets/js/jquery.countryselector.js"></script>
+
+    <script src="assets/js/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var select = document.getElementById('mySelect');
+            select.onchange = function () {
+            select.className = 'redText';
+            }
+            $('#terms').click(function () {
+                window.location.href = "terms-condition.html"
+            })
+
+
+
+           
+        })
+
+
+        /*Allow only Alphabets in the name field*/
+        $('#requirement_company_name').bind('keydown', function (event) {
+            var key = event.which;
+            if (key >= 48 && key <= 57) {
+                event.preventDefault();
+            }
+        });
+
+        $("#requirement_contact_person").bind('keydown',function (event) {
+            var key = event.which;
+            if (key >= 48 && key <= 57) {
+                event.preventDefault();
+            }
+        })
+        
+        
+        
+    
+
+    </script>
+
+
+<script>
+    let captchaText = document.querySelector('#captchaValue');
+    let userText = document.querySelector('#captcha_code');
+    let submitButton = document.querySelector('#send_btn');
+    let outputWrong = document.querySelector("#output");
+    
+
+    // captchaText.innerHTML = emptyArr.join('');
+
+userText.addEventListener('keyup', function(e) {
+	if(e.keyCode === 13) {
+		if(userText.value === captchaText.innerHTML) {
+            
+			output.classList.add("greenText");
+			// output.innerHTML = "Correct!";
+		} else {
+			output.classList.add("red_Text");
+			output.innerHTML = "Incorrect, please try again";
+		}
+	}
+});
+
+
+    submitButton.addEventListener('click',  function() {
+	if(userText.value === captchaText.innerHTML) {
+        
+		output.classList.add("greenText");
+		// output.innerHTML = "Correct!";
+	} else {
+		output.classList.add("red_Text");
+		output.innerHTML = "Incorrect, please try again";
+	}
+    console.log(output);
+    
+});
+
+</script>
+
+
+    <!--Country, city, State dropdown-->
+    <p>
+        <script src="js/countrystatecity.js?v2"></script>
+    </p>
+</body>
+</html>

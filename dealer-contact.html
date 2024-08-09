@@ -1,0 +1,926 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="#">
+    <meta name="description" content="Apply for a dealership with us today! Join our team and start selling our top-quality products. Expand your business and increase your profits. Apply now!
+">
+    <title>
+        Apply for Voni Dealership | Voni Solutions | Voni Sales
+    </title>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/VoniSmart4.png">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Icon Font -->
+    <link href="assets/css/font/flaticon.css" rel="stylesheet">
+    <!-- Swiper Slider -->
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <!-- Slick Slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Range Slider -->
+    <link href="assets/css/jquery-ui.css" rel="stylesheet">
+    <!-- magnific popup -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Nice Select -->
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <!-- Animate -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Custom Responsive -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <!--Country Dropdown-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="assets/js/css/jquery-countryselector.min.css" rel="stylesheet" />
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- place -->
+    <script>
+        document.getElementById('dealerfeed-form').style.color = "white";
+    </script>
+    <!--mail sent script  -->
+
+    <script language="JavaScript" type="text/javascript">
+        function submitToAPI(e) {
+            e.preventDefault();
+            //       var URL = "API Gateway";
+
+
+            let headers = new Headers();
+            headers.append('Access-Control-Allow-Origin', '*');
+
+            headers.append('GET', 'POST', 'OPTIONS');
+            var name = document.getElementById("name").value;
+            console.log(name);
+            var desig = document.getElementById("desig").value;
+            console.log(desig);
+            var compname = document.getElementById("compname").value;
+            console.log(compname);
+            var compwebsite = document.getElementById("compwebsite").value;
+            console.log(compwebsite);
+            var email = document.getElementById("email").value;
+            console.log(email);
+            var phone = document.getElementById("phone").value;
+            console.log(phone);
+            var country = document.getElementById("countryId").value;
+            console.log(country);
+            var state = document.getElementById("stateId").value;
+            console.log(state);
+            var city = document.getElementById("cityId").value;
+            console.log(city);
+            
+            
+            
+            
+            let checkboxes = document.querySelectorAll('input[name="group"]:checked');
+            let output = [];
+            checkboxes.forEach((checkbox) => {
+                output.push(checkbox.value);
+            });
+            console.log(output)
+            
+
+            
+
+            //var feedback = document.getElementById("feedback").value;
+
+
+            if (name == "" && email == "" && desig == "" && compname == ""&& phone == "" &&  compwebsite == "" && city == "" && state == "" && country == "") {
+                //alert("Please Fill All Required Field");
+                //var err = "Please Fill All Required Field";
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Please fill all required fields<h4>";
+                return false;
+            }
+            if (name == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Name is required<h4>";
+                return false;
+            }
+            if (email == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Email is required<h4>";
+                return false;
+            }
+           
+            if (desig == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Designation is required<h4>";
+                return false;
+            }
+            if (compname == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Company name is required<h4>";
+                return false;
+            }
+            if (compwebsite == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Company Website is required<h4>";
+                return false;
+            }
+            if (phone == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Phone Number is required<h4>";
+                return false;
+            }
+            if (city == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>City is required<h4>";
+                return false;
+            }
+            if (state == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>State is required<h4>";
+                return false;
+            }
+            if (country == "") {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Country is required<h4>";
+                return false;
+            }
+            //	mobileRE = /^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
+            //	if(!mobileRE.test(phone)) {
+            //				document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Phone number entered, is not valid<h4>";
+            //alert("Phone number entered, is not valid");
+            //			return false;
+            //      }
+
+
+            emailRE = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!emailRE.test(email)) {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Email Address entered, is not valid<h4>";
+                //alert("Email Address entered, is not valid");
+                return false;
+            }
+            phoneRE = /^\d{10}$/;
+            if (!phoneRE.test(phone)) {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Please Enter valid Phone number<h4>";
+                //alert("Email Address entered, is not valid");
+                return false;
+
+            }
+            if (chk1.checked == false && chk2.checked == false) {
+                document.getElementById("demo").innerHTML = "<h4 style='color: red !important'>Please select the any one field<h4>";
+                return false
+            }
+
+            var data = {
+                name: name,
+                phone: phone,
+                email: email,
+                compname: compname,
+                compwebsite: compwebsite,
+                country: country,
+                state: state,
+                city: city,
+                
+                
+                chk1: chk1,
+                chk2:chk2
+                
+
+            };
+            document.getElementById("demo").style.color = "white";
+
+            document.getElementById("demo").innerHTML = "<h4 style='color: white !important'>Loading...<h4>";
+
+
+            var xmlhttp = new XMLHttpRequest();
+            //xmlhttp.open("POST", "https://2trth6jq68.execute-api.us-east-1.amazonaws.com/Prod/submitForm");
+            xmlhttp.open("POST", "https://3phdqbagbh.execute-api.us-east-1.amazonaws.com/voviDealer/dealercontactform");
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.send(JSON.stringify(data));
+            xmlhttp.onloadend = response => {
+                if (xmlhttp.readyState === 4) {
+                    if (response.target.status === 200) {
+                        console.log('successful');
+                        document.getElementById('dealerfeed-form').style.color = "white";
+                        document.getElementById("dealerfeed-form").innerHTML = "<h2 style='color: white !important'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Thank you for Sending Message..<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;our team will get back to you soon!</h2>";
+
+                    } else {
+                        document.getElementById("dealerfeed-form").style.color = "white";
+                        document.getElementById("dealerfeed-form").innerHTML = "<h2 style='color: white !important'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Error! Please try again.</h2>";
+                        console.log('failed');
+                    }
+                }
+            };
+
+
+            document.getElementById('dealerfeed-form').reset();
+
+        }
+
+    </script>
+
+    <!-- end of mail script -->
+</head>
+<body class="loader">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE7L2JWVCC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KE7L2JWVCC');
+    </script>
+    <!-- preloader -->
+    <!--<div class="preloader img-responsive">
+         <img src="assets/images/pre-loader-1.svg" alt="img">
+     </div>-->
+    <!-- preloader -->
+    <!-- Start Header -->
+    <!-- topbar -->
+    <!--<div class="topbar bg-custom-black">
+        <div class="container-fluid custom-container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="left-side ">
+                        <ul class="custom">
+                            <li>
+                                <a href="#" class="text-custom-white"><i class="fas fa-map-marker-alt text-custom-blue"></i> Bangalore, (IND) / Trichy, (IND)</a>&emsp;-->
+    <!--<a href="#" class="text-custom-white"><i class="fas fa-phone-alt text-custom-blue"></i>  95913 26826 / 0431 450 2742</a>-->
+    <!--<a href="#" class="text-custom-white"> </a>
+
+    </li>
+
+
+    <li>
+        <a href="#" class="text-custom-white"><i class="fas fa-envelope text-custom-blue"></i> support@vonismart.com / sales@vonismart.com / info@vonismart.com</a>&emsp;
+
+    </li>-->
+    <!-- <li>
+                                    <a href="#" class="text-custom-white"><i class="fas fa-map-marker-alt text-custom-blue"></i> Trichy, (IND)</a>&emsp;
+           <a href="#" class="text-custom-white"><i class="fas fa-phone-alt text-custom-blue"></i>  0431 450 2742</a>
+
+    </li>-->
+    <!--</ul>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="right-side">
+            <ul class="custom">-->
+    <!--<li class="language">
+        <select>
+            <option>English</option>
+            <option>French</option>
+        </select>
+    </li>-->
+    <!--<li>
+                                <a href="https://www.facebook.com/Vonismartiot/" class="text-custom-white" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/voni-smartiot" class="text-custom-white" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/vonismart?utm_medium=copy_link" class="text-custom-white" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://youtube.com/channel/UCKXAgincRoWsYYYzPIL7A-w" class="text-custom-white" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- topbar -->
+    <!-- navigation -->
+    <header class="menu-style">
+
+        <div class="container-fluid custom-container">
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="header">
+
+                        <div class="logo">
+                            <a href="#"> <img src="assets/images/VoniSmart.svg" class="img-fluid image-fit" alt="Logo"> </a>
+                        </div>
+
+                        <div class="right-side">
+
+                            <div class="navigation">
+
+                                <div class="logo">
+                                    <a href="#"> <img src="assets/images/VoniSmart.png" class="img-fluid image-fit" alt="Logo"> </a>
+                                </div> <nav>
+                                    <ul class="custom main-menu">
+                                        <li class="menu-item"> <a href="index.html" class="text-theme fs-14">Home</a> </li>
+                                        <li class="menu-item"> <a href="about.html" class="text-theme fs-14">About</a> </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="text-theme fs-14">Products</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">Vay Series</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="6modules.html" class="text-theme">6 Modules</a> </li>
+                                                        <li class="menu-item"> <a href="8modules.html" class="text-theme">8 Modules</a> </li>
+                                                        <li class="menu-item"> <a href="12modules.html" class="text-theme">12 Modules</a> </li>
+                                                        <li class="menu-item"> <a href="16modules.html" class="text-theme">16 Modules</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">SmarTouch</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="smart-touch-4m.html" class="text-theme">SmarTouch - 4M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-touch-8m.html" class="text-theme">SmarTouch - 8M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-touch-4mc.html" class="text-theme">SmarTouch - 4MC</a> </li>
+                                                        <li class="menu-item"> <a href="SmarTouch-8MC.html" class="text-theme">SmarTouch - 8MC</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">SmarTap</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="smart-tap-4m.html" class="text-theme">SmarTap - 4M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tap-8m.html" class="text-theme">SmarTap - 8M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tap-7amp.html" class="text-theme">SmarTap - 7Amp</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tap-15amp.html" class="text-theme">SmarTap - 15Amp</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">SmarTack</a>
+                                                    <ul class="custom sub-menu">
+
+                                                        <li class="menu-item"> <a href="smart-tack-2m.html" class="text-theme">SmarTack – 2M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tack-4m.html" class="text-theme">SmarTack -4M</a> </li>
+                                                        <li class="menu-item"> <a href="smart-tack-4mc.html" class="text-theme">SmarTack - 4MC</a> </li>
+
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="#" class="text-theme">USB Type C Cable</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="c-cable-gen1.html" class="text-theme">USB Type-C Gen-1</a> </li>
+                                                        <li class="menu-item"> <a href="c-cable-gen2.html" class="text-theme">USB Type-C Gen-2</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="sliding-gate.html" class="text-theme">Sliding Gate</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="occupancy-series.html" class="text-theme">Occupancy Series</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="text-theme fs-14" id="text-transform">IoT SOLUTIONS</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail.html" class="text-theme">Smart Industry Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail.html" class="text-theme">Smart Gate Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_RTLS.html" class="text-theme">Real-Time Location System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_WIP.html" class="text-theme">Work in Progress Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Man-less.html" class="text-theme">Man-less Weighbridge</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Temp.html" class="text-theme">Condition Monitoring</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_machineVibration.html" class="text-theme">Machine Vibration Monitoring</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_shopfloor.html" class="text-theme">Shop Floor Trolley Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_asset.html" class="text-theme">Asset Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_forklift.html" class="text-theme">Forklift Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_helmet.html" class="text-theme">Helmet Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_smartIndus.html" class="text-theme">Smart Industrial Energy Monitoring</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Smartcity.html" class="text-theme">Smart City Projects</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Smartcity.html" class="text-theme">Garbage Vehicle Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartStreetLighting.html" class="text-theme">Street Lighting Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartOpen.html" class="text-theme">Vehicle Parking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartWater.html" class="text-theme">Smart Water Meter</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartElectricity.html" class="text-theme">Smart Electric Meter</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartFile.html" class="text-theme">File Tracking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartLighting.html" class="text-theme">Smart Lighting Management</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_BikeHelmet.html" class="text-theme">Bike Helmet Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartTraffic.html" class="text-theme">Traffic Signal Automation</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Smartsupply.html" class="text-theme">Supply Chain Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Smartsupply.html" class="text-theme">Warehouse Management System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Coldchain.html" class="text-theme">Cold Chain Monitoring</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_AssetTracking.html" class="text-theme">Asset Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_ForkliftTracking.html" class="text-theme">Forklift Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Employee.html" class="text-theme">Worker Tracking System</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Digital.html" class="text-theme">Mining Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Digital.html" class="text-theme">Gate & Parking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartVehicleTracking.html" class="text-theme">Vehicle Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartOre.html" class="text-theme">Ore Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_AssetTrackingSystem.html" class="text-theme">Asset Tracking System</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Man-lessWeighbridge.html" class="text-theme">Weighbridge Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Employee&ContractorTracking.html" class="text-theme">Contractor Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_HelmetTrackingSystem.html" class="text-theme">Helmet Tracking</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartPredictive.html" class="text-theme">Predictive Maintenance  System</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item menu-item-has-children">
+                                                    <a href="service-detail_Smartcampus.html" class="text-theme">Campus Automation</a>
+                                                    <ul class="custom sub-menu">
+                                                        <li class="menu-item"> <a href="service-detail_Smartcampus.html" class="text-theme">Gate Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartParking.html" class="text-theme">Parking Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartClassroom.html" class="text-theme">Classroom Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_LibraryAutomation.html" class="text-theme">Library Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartCafeteria.html" class="text-theme">Cafeteria Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartGuardPatrolling.html" class="text-theme">Guard Patrolling</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_SmartLabs.html" class="text-theme">Smart Labs / Sports Club Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Smart_Street_lightning.html" class="text-theme">Smart Street lighting Automation</a> </li>
+                                                        <li class="menu-item"> <a href="service-detail_Smart_Water_Management.html" class="text-theme">Water Management</a> </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"> <a href="dealer-locator.html" class="text-theme fs-14">Dealer Locator</a> </li>
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="voyance-ecg.html" class="text-theme fs-14">Medical Device</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item"> <a href="https://voyanceecg.com/" class="text-theme" 
+                                                    target="_blank">Voyance - ECG</a> 
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"> <a href="service.html" class="text-theme fs-14">Services</a> </li>
+                                        <li class="menu-item active menu-item-has-children">
+                                            <a href="contact.html" class="text-theme fs-14">Contacts</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item"> <a href="contact.html" class="text-theme">Contact Us</a> </li>
+                                                <li class="menu-item"> <a href="dealer-contact.html" class="text-theme">Dealership Interest</a> </li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"> <a href="gallery.html" class="text-theme fs-14">Gallery</a> </li>
+
+                                        <!--<li class="menu-item"> <a href="faqs.html" class="text-theme fs-14">FAQ</a> </li>
+                    <li class="menu-item"> <a href="terms-condition.html" class="text-theme fs-14">Terms and Conditions</a> </li>-->
+                                        <li class="menu-item menu-item-has-children">
+                                            <a href="#" class="text-theme fs-14">OTHERS</a>
+                                            <ul class="custom sub-menu">
+                                                <li class="menu-item">
+                                                    <a href="privacy-policy.html" class="text-theme">Privacy Policy</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="terms-condition.html" class="text-theme">Terms and Conditions</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="faqs.html" class="text-theme">FAQ</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                                <div class="social-media">
+                                    <ul class="custom">
+                                        <li> <a href="https://www.facebook.com/Vonismartiot/" class="text-custom-white" target="_blank"><i class="fab fa-facebook-f"></i></a> </li>
+                                        <li> <a href="https://www.linkedin.com/company/voni-smartiot" class="text-custom-white" target="_blank"><i class="fab fa-linkedin"></i></a> </li>
+                                        <li> <a href="https://instagram.com/vonismart?utm_medium=copy_link" class="text-custom-white" target="_blank"><i class="fab fa-instagram"></i></a> </li>
+                                        <li> <a href="https://youtube.com/channel/UCKXAgincRoWsYYYzPIL7A-w" class="text-custom-white" target="_blank"><i class="fab fa-youtube"></i></a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="hamburger-menu">
+
+                                <div class="menu-btn">
+
+                                    <span>
+                                    </span>
+
+                                    <span>
+                                    </span>
+
+                                    <span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navigation -->
+    <!-- End Header -->
+    <!-- Start Subheader -->
+    <div class="subheader section-padding" style="background-image: url('assets/images/dealer-contactbanner.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="breadcrumb-wrapper">
+                        <div class="page-title">
+                            <h1 class="text-theme fw-500">
+                                Dealership Interest Contact
+                            </h1>
+                        </div>
+                        <!-- <ul class="custom breadcrumb">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="active">
+                                Contact Us
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Subheader -->
+    <!-- Start Contact map -->
+    <!-- End Contact map -->
+    <!-- Start Newsletter -->
+    <section class="section-padding bg-about-feedback" style="background-image: url(assets/images/feedback-banner.jpg); margin-top:1px;">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-heading">
+                    <!--  <h5 class="text-custom-blue wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Free Consultation</h5>-->
+                    <h3 class="text-custom-white fw-700">Dealership Interest Form</h3>
+                    <span class="text-custom-white fw-500 fs-14">
+                        Thank you for choosing Voni! Our Voni sales dealership is committed to providing you with the best
+                        Voni solutions. For questions regarding Voni support and services, you can get in touch with us by 
+                        phone, email, or by completing the form below.
+                    </span>
+                </div>
+                <!-- <div class="section-description">
+                     <p class="text-custom-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                 </div>-->
+            </div>
+            <form method="post" id="dealerfeed-form" class="row consult-form">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="name_label" for="name" style="font-size:20px">
+                            Name
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="name" id="name" class="form-control form-control-custom" placeholder="Your name" maxlength="30" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="name_label" for="desig" style="font-size:20px">
+                            Designation
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="desig" id="desig" class="form-control form-control-custom" placeholder="Your Designation" maxlength="30" required>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="name_label" for="comp-name" style="font-size:20px">
+                            Company Name
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="compname" id="compname" class="form-control form-control-custom" placeholder="Your Company" maxlength="30" required>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="name_label" for="comp-website" style="font-size:20px">
+                            Company Website
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="compwebsite" id="compwebsite" class="form-control form-control-custom" placeholder="Your Website" required>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="phone_label" for="phone" style="font-size:20px">
+                            Phone
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" name="phone" id="phone" class="form-control form-control-custom" placeholder="Your phone number" maxlength="15" pattern="[0-9]{10}">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="email_label" for="email" style="font-size:20px">
+                            Email-ID
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="email" name="email" id="email" class="form-control form-control-custom" placeholder="Your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="email_label" for="country" style="font-size:20px">
+                            Country
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <!--<input type="text" name="city" id="city" class="form-control form-control-custom" placeholder="Your city" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>-->
+                        <div class="form-group">
+
+                            <select name="country" class="countries form-control" id="countryId">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="email_label" for="state" style="font-size:20px">
+                            State
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <div class="form-group">
+
+                            <select name="state" class="states form-control" id="stateId">
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+
+
+
+
+                        <!--<input type="text" name="state" id="state" class="form-control form-control-custom" placeholder="Your state" required>-->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="form-group">
+                        <label id="email_label" for="country" style="font-size:20px">
+                            City
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <div class="form-group">
+
+                            <select name="city" class="cities form-control" id="cityId">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                        <label style="font-size:20px">Interested in : </label>
+                        <!--<span style="font-size:20px;margin-left:10px;" id="chkdistribution"><input type="checkbox" name="group1[]" id="chk1" class="largerCheckbox">Distribution</span>
+                        <span style="font-size: 20px; margin-left: 10px;" id="chkdealer"><input type="checkbox" name="group2[]" id="chk2" class="largerCheckbox" style="margin-left: 10px;">Dealership</span>-->
+                        <label for="chk1" style="font-size:20px;margin-left:10px;"> <input type="checkbox" name="group" value="distribution" id="chk1" class="largerCheckbox"><span class="chk_dist" style="padding-left:10px;">Distribution</span></label>
+                        <label for="chk2" style="font-size: 20px; margin-left: 10px;"> <input type="checkbox" name="group" value="dealer" id="chk2" class="largerCheckbox"><span class="chk_deal" style="padding-left:10px;">Dealership</span></label>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="form-group">
+                        <h4 class="demo-cont text-custom-white" id="demo"></h4>
+
+                        <button type="submit" name="feedback" id="" class="btn-first btn-submit full-width btn-height" onClick="submitToAPI(event)">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- End Newsletter -->
+    <!-- Start Footer -->
+    <footer class="bg-custom-black section-padding footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-md-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Useful Links</h4>
+                        </div>
+                        <ul class="custom links">
+                            <li>
+                                <a href="index.html" class="text-custom-white">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="text-custom-white">About Us</a>
+                            </li>
+                            <!-- <li>
+                                 <a href="#" class="text-custom-white">Case Studies</a>
+                             </li>-->
+                            <!-- <li>
+                                <a href="products.html" class="text-custom-white">Products</a>
+                            </li>-->
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-xs-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Quick Links</h4>
+                        </div>
+                        <ul class="custom links">
+                            <!--   <li>
+                                   <a href="smart-touch.html" class="text-custom-white">Smartouch</a>
+                               </li>
+                               <li>
+                                   <a href="smart-tap.html" class="text-custom-white">Smartap</a>
+                               </li>
+                               <li>
+                                   <a href="smart-tack.html" class="text-custom-white">Smartack</a>
+                               </li>-->
+                            <li>
+                                <a href="faqs.html" class="text-custom-white">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="text-custom-white">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html" class="text-custom-white">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="terms-condition.html" class="text-custom-white">Terms & Conditions</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box mb-xs-80">
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Working Hours</h4>
+                        </div>
+                        <ul class="custom links">
+
+                            <p class="text-custom-white">Monday - Friday :  </br>9.00 a.m. - 6.00 p.m</p>
+
+                        </ul>
+                        <div class="footer-heading">
+                            <h4 class="text-custom-white no-margin">Support Hours</h4>
+                        </div>
+                        <ul class="custom links">
+
+                            <p class="text-custom-white">Monday - Saturday : </br>9.00 a.m. - 9.00 p.m</p>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-box">
+                        <p class="text-custom-white1">Voni SmartIoT Pvt. Ltd. is an <strong style="font-size:18px;"> ISO 9001:2015 </strong> certified body for QMS in Research, Design, Development, Manufacture, Installation, System Integration, Testing, and Support of IoT-based smart devices for Home Automation, Medical Devices, Smart City, and Agriculture Sectors.</p>
+                        <div class="social-media">
+                            <ul class="custom social-media">
+                                <li><a href="https://www.facebook.com/Vonismartiot/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://instagram.com/vonismart?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/voni-smartiot" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="https://youtube.com/channel/UCKXAgincRoWsYYYzPIL7A-w" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                <li> <a href="https://twitter.com/vonismart" class="text-custom-white" target="_blank"><i class="fab fa-twitter"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <p class="text-custom-white no-margin">© Voni SmartIoT-2021 | All Rights Reserved. <!--<a href="#" target="_blank" class="text-custom-white">Designed By Slidesigma</a>--></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Footer -->
+    <div id="back-top" class="back-top">
+        <a href="#top"><i class="fas fa-chevron-up"></i><span class="d-block">Top</span></a>
+    </div>
+    <!-- login register -->
+
+    <style>
+        .mystyle {
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+    <!-- Place all Scripts Here -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.js"></script>
+    <!-- Swiper Slider -->
+    <script src="assets/js/swiper.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Nice Select -->
+    <script src="assets/js/jquery.nice-select.js"></script>
+    <!-- Isotope Gallery -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- magnific popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnd9JwZvXty-1gHZihMoFhJtCXmHfeRQg"></script>
+    <!-- Wow js -->
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/mf_form.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom.js"></script>
+    <!-- /Place all Scripts Here -->
+    <!--Country dropdown-->
+    <script src="assets/js/jquery.countryselector.js"></script>
+
+    <!--City Dropdown-->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#terms').click(function () {
+                window.location.href = "terms-condition.html"
+            })
+            $('input[type="checkbox"]').on('change', function () {
+                $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+            });
+
+
+
+            /* Allow only numbers in the phone field*/
+            $('#phone').keydown(function (e) {
+                if (e.shiftKey || e.ctrlKey || e.altKey) {
+                    e.preventDefault();
+                } else {
+                    var key = e.keyCode;
+                    if (!((key == 8) || (key == 46) || (key >= 35 && key <= 40) || (key >= 48 && key <= 57) || (key >= 96 && key <= 105))) {
+                        e.preventDefault();
+                    }
+                }
+            });
+
+            /*Allow only Alphabets in the name field*/
+            $('#name').bind('keydown', function (event) {
+                var key = event.which;
+                if (key >= 48 && key <= 57) {
+                    event.preventDefault();
+                }
+            });
+        })
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <!--Country, city, State dropdown-->
+    <p>
+        <script src="js/countrystatecity.js?v2"></script>
+    </p>
+
+</body>
+</html>
