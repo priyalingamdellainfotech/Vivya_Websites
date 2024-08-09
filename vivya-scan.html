@@ -1,0 +1,861 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Vivya Corp - Vivya Scan">
+        <meta name="Keywords" content="Pocket Scanner - Document scanning - Pdf creation and Editing - File Conversion - File Merging - Compression - Image Enhancements">
+       
+        <title>Vivya Corp - Vivya Scan </title>
+        
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" >
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <!-- Themify Icons CSS -->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- Elegant Line Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-line-icons.css">
+        <!-- Elegant Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-font-icons.css">
+        <!-- Saasbiz Icons CSS -->
+        <link rel="stylesheet" href="css/saasbiz-icons.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="css/nice-select.css">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Slicknav CSS -->
+        <link rel="stylesheet" href="css/slicknav.min.css">
+        <!-- Pricing CSS -->
+        <link rel="stylesheet" href="css/pricing-table.css">
+        <!-- Odometer CSS -->
+        <link rel="stylesheet" href="css/odometer.min.css">
+        <!-- Venobox CSS -->
+        <link rel="stylesheet" href="css/venobox/venobox.css">
+		<!-- OWL-Carousel CSS -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <script src="https://kit.fontawesome.com/d4ca3fea8b.js" crossorigin="anonymous"></script>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+        
+   <style>
+        /* Add your CSS styles here */
+        #popupContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #popupContainer h2 {
+            margin-bottom: 10px;
+        }
+
+        #myForm {
+            /* Additional styling for the form if needed */
+        }
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+<script>
+
+ document.addEventListener('DOMContentLoaded', function () {
+            // Check if the URL contains the parameter indicating the form should be shown
+            const urlParams = new URLSearchParams(window.location.search);
+            const showFormParam = urlParams.get('showForm');
+
+            // Declare formVisible before any function calls
+            let formVisible = false;
+
+            // Log to console to check if the script is running
+            console.log("Script is running");
+
+            // If the parameter is present and the form is available, show the form
+            if (showFormParam === 'true') {
+                const form = document.getElementById('myForm');
+                if (form) {
+                    showPopup();
+                } else {
+                    console.error("Form element with ID 'myForm' not found");
+                }
+            }
+
+            function toggleForm() {
+                const form = document.getElementById('myForm');
+                formVisible = !formVisible;
+
+                if (form) {
+                    form.style.display = formVisible ? 'block' : 'none';
+                } else {
+                    console.error("Form element with ID 'myForm' not found");
+                }
+            }
+
+            function showPopup() {
+                const popupContainer = document.getElementById('popupContainer');
+                if (popupContainer) {
+                    popupContainer.style.display = 'block';
+                } else {
+                    console.error("Popup container element not found");
+                }
+            }
+
+            // Attach functions to the window object
+            window.closePopup = function () {
+                const popupContainer = document.getElementById('popupContainer');
+                if (popupContainer) {
+                    popupContainer.style.display = 'none';
+                } else {
+                    console.error("Popup container element not found");
+                }
+            }
+
+           window.submitForm = function () {
+            const form = document.getElementById('myForm');
+            const nameInput = document.getElementById('name');
+            const messageValue = nameInput.value;
+
+            // Check if the name input is not empty
+            if (!messageValue.trim()) {
+                alert('Please enter a name.');
+                return;
+            }
+
+            // Make API call
+            fetch('http://13.127.130.23:2913/add_test_data', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: messageValue,
+                }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+           .then(data => {
+                // API call successful, check statusFlag
+                console.log('API call successful:', data);
+                if (data.statusFlag) {
+                    // Show success alert
+                    window.closePopup();
+                    alert('Thanks for submitting!');
+                } else {
+                    // Show error alert
+                    alert('Error in submitting: ' + data.message);
+                }
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Error:', error);
+                alert('An error occurred while submitting the form.');
+            });
+        }
+        });
+</script>
+    </head>
+    <body data-spy="scroll" data-target="#navmenu" data-offset="70">
+       
+        <div class="site-preloader-wrap">
+            <div class="spinner"></div>
+        </div><!-- Preloader -->
+        <header id="header" class="header-section">
+            <div class="container">
+                <nav class="navbar ">
+                    <a href="index.html" class="logo">
+                        <div class="logo_size"><img src="img/logo-dark.png" alt="Saasbiz"></div>
+                    </a>
+                    <div class="d-flex menu-wrap">
+                        <div id="mainmenu" class="mainmenu">
+                            <ul class="nav">
+                                <li>
+                                    <a href="index.html">Home<span class="sr-only">(current)</span></a>
+                                    <!--<ul>
+                                   <li><a href="index.html">Home Design Studio</a></li>
+                                   <li><a href="index-2.html">Home Web hosting</a></li>
+                                   <li><a href="index-3.html">Home Support Desk</a></li>
+                                   <li><a href="index-4.html">Home Apps Landing</a></li>
+                                   <li><a href="index-5.html">Home Cloud Based Saas</a></li>
+                                </ul>-->
+                                </li>
+                                <!--<li>
+                                <a href="#">About</a>
+                                <ul>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="about-company.html">About Company</a></li>
+                                </ul>
+                            </li>-->
+                            <li>
+                                    <a href="#" data-scroll class="nav-link active">Products</a>
+                                    <ul>
+
+                                        <li><a href="vivya-scan.html">Vivya Scan</a></li>
+                                        <li><a href="vivya-cards.html">Vivya Cards</a></li>
+                                        <li><a href="pms.html">Vivya PMS</a></li>
+                                       
+                                    </ul>
+                                </li>
+                            <li>
+                                <a href="#">Services</a>
+                                <ul>
+								                     <li><a href="artificial-intelligence.html">Artificial Intelligence</a></li>
+                                    <li><a href="internet-of-things.html">Internet of Things</a></li>
+                                    <li><a href="machine-learning.html">Machine Learning</a></li>
+                                    <li><a href="product-development-services.html">Product Development</a></li>
+                                    <li><a href="ai-chatBot.html">Vivya Chat Bot</a></li>
+
+                                    <li><a href="mobile-app-development.html">Mobile Application Development</a></li>
+                                </ul>
+                            </li>
+                             <li>
+                                <a href="#">clients</a>
+                                <ul>
+                                    <li><a href="https://www.vrihodha.com/" target="_blank">Vrihodha Organics</a></li>
+                                    <li><a href="https://www.vonismart.com/" target="_blank">VoniSmart</a></li>
+                                    
+                                </ul>
+                            </li>
+                             <li>
+                                <a href="api-service.html">Api</a>
+                                <ul>
+                                    <li><a href="file-compression.html">File Compression</a></li>
+                                    <li><a href="video-compression.html" >Video Compression</a></li>
+                                    <li><a href="file-conversion.html" >File Conversion</a></li>
+                                    <li><a href="text-extraction.html" >Text or Character Extraction</a></li>
+                                    <li><a href="id-extraction.html" >ID Extraction</a></li>
+                                    <li><a href="file-sharing.html" >File Sharing</a></li>
+                                </ul>
+                            </li>
+                               
+
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <!--<div class="header-right">
+                        <div class="cart-icon dl-search-icon"><i class="fa fa-search"></i></div>
+                    </div>-->
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="hero-section hero-4 padding">
+            <div class="wave-1"></div>
+            <!--<div class="container">
+        <div class="hero-wrap">
+            <div class="hero-content">
+                <h2 class="text-color">Easily with our Mobile Scanning Application!</h2>
+                <p>Scan, Save and Share</p>
+                <div class="app-btn">
+                    <a href="https://apps.apple.com/in/app/vivya-scans/id6449516149">
+        <img src="img/appstore.png" alt="btn"></a>
+                    <a href="https://play.google.com/store/search?q=vivya%20scan&c=apps&hl=en-IN"><img src="img/playstore.png" alt="btn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-moc d-none d-lg-block"></div>
+    </div>-->
+            <div class="slides">
+                <ul class="vivya-scan-slider">
+                    <!-- slides -->
+                    <li>
+                        <h2 class="txt-dark" id="v-scan-bannertxt"style="font-size:25px">Scan,Save and Share</h2>
+                        <div>Easily with our Mobile Scanning App!</div>
+                    </li>
+                    <li>
+                        <h2 class="txt-dark" id="v-scan-bannertxt"style="font-size:25px">Your Pocket Scanner</h2>
+                        <div>Fast, Reliable and Safe</div>
+                    </li>
+                    <li>
+                        <h2 class="txt-dark" id="v-scan-bannertxt"style="font-size:25px">Master your documents like a Pro</h2>
+                        <div>No quality loss and No more fuss</div>
+                    </li>
+                    <li>
+                        <h2 class="txt-dark" id="v-scan-bannertxt"style="font-size:25px">Your Pocket Scanner</h2>
+                        <div>Fast, Reliable and Safe</div>
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+            <div class="hero-moc d-none d-lg-block"></div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1920 242.6" style="enable-background:new 0 0 1920 242.6;" xml:space="preserve" class="hero-wave">
+            <style type="text/css">
+                .st0 {
+                    fill: #FFFFFF;
+                }
+
+                .st1 {
+                    fill: none;
+                }
+</style>
+            <path class="st0" d="M1920,70.5v172.1H0v-27.9C171.3,122.8,367.9,89,589.6,113.4C923.1,149.9,1014.7,43,1239.7,7  c224.9-35.9,442.2,77.7,576.1,75.6C1853.2,82,1888,78,1920,70.5z"></path>
+            <rect x="-1036" y="-829.4" class="st1" width="1920" height="137.6"></rect>
+            <rect x="-1136" y="-829.4" class="st1" width="2446" height="380"></rect>
+            </svg>
+            
+        </section>
+        <!--/.hero-section-->
+        
+         <div id="popupContainer">
+        <span class="closeButton" onclick="closePopup()">&times;</span>
+        <h2>Popup Title</h2>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <!-- Other form fields -->
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+
+        <section class="feature-section bg-red bd-bottom padding">
+            <div class="anim-elements">
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+            </div>
+            <div class="container">
+                <div class="section-heading mb-40 text-center wow fadeInUp" data-wow-delay="300ms">
+
+                    <h3 class="txt-large">Maximize Efficiency with Time-Saving Mobile Application</h3>
+                    <span>
+                        Transform your paper into pixels easily with an all-in-one
+                        mobile document scanning solution.
+                    </span>
+                </div>
+                <div class="feature-wrap row">
+                    <div class="col-lg-4 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="feature-item">
+                            <img src="img/Group 123.svg" />
+                            <h3>Document Scanning</h3>
+                            <p class="v-scantxt">
+                                Create high-quality scans of documents, receipts, books,
+                                ID proofs, and photos and share them smartly as PDFs or images.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="feature-item">
+                            <img src="img/Group 127.svg" />
+                            <h3>PDF Creation And Editing</h3>
+                            <p class="v-scantxt">
+                                Create and edit PDF files that allow signatures, markups, and
+                                highlighting options for your documents.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="feature-item">
+                            <img src="img/Group 126.svg" />
+                            <h3>File Conversion</h3>
+                            <p class="v-scantxt">
+                                Convert your files to any desired format, including Word, Excel,
+                                PowerPoint, etc., with just a few clicks.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="500ms">
+                        <div class="feature-item">
+                            <img src="img/Group 125.svg" />
+                            <h3>File Merging</h3>
+                            <p class="v-scantxt">
+                                Merge numerous documents into one to expedite organizing and sharing the
+                                documents easily.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="feature-item">
+                            <img src="img/Group 124.svg" />
+                            <h3>Compression</h3>
+                            <p class="v-scantxt">
+                                Reduce the file size of your documents without losing significant
+                                information or resolution.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 padding-15 wow fadeInUp" data-wow-delay="700ms">
+                        <div class="feature-item">
+                            <img src="img/Group 128.svg" />
+                            <h3>Image Enhancements</h3>
+                            <p class="v-scantxt">
+                                Customize your images and documents with filter, contrast,
+                                and brightness adjustments and achieve the perfect look and feel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/. feature-section -->
+
+        <section class="content-section content-5 bg-blue bd-bottom padding">
+            <div class="container">
+                <div class="content-wrap row">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="section-heading">
+
+                            <h2>Super Clean User Friendly <br>Interface For Easier Use.</h2>
+                            <p class="mb-30" style="line-height:2;">While designing residential property, a great emphasis is placed on landscaping design, transport accessibility, environmental friendliness and architectural solutions, that jointly form comfortable conditions.</p>
+                            <a target="_blank"
+                               href="https://play.google.com/store/search?q=vivya%20scan&c=apps&hl=en-IN"
+                               ><img src="img/Google play.svg" />  </a>
+                                                     <a target="_blank" href="https://apps.apple.com/in/app/vivya-scans/id6449516149"
+                                id="try-app-btn"><img src="img/app store.svg" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight d-none d-lg-block" data-wow-delay="300ms">
+                        <img src="img/vivya-scan (2).jpg" alt="img">
+
+                    </div>
+                </div>
+            </div>
+            <div class="content-moc d-none d-lg-block"></div>
+        </section><!--/.content-section-->
+
+        <section class="how-it-works-section bd-bottom padding"
+                 style="background-image: url('img/v-scan-bg.jpg')">
+            <div class="anim-elements">
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+            </div>
+            <div class="container">
+                <div class="section-heading mb-60 text-center wow fadeInUp" data-wow-delay="300ms">
+                    <span>Working Process</span>
+                    <h2>Discover How Vivya Scan <br>Apps Works?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 sm-padding wow fadeIn" data-wow-delay="300ms">
+                        <div class="work-pro-item text-center">
+                            <span class="number">1</span>
+                            <div class="number-line"></div>
+                            <h3>Planning & Research</h3>
+                            <p class="text-color">We are committed building a sustainable future fostering a collaborative spirit.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sm-padding wow fadeIn" data-wow-delay="400ms">
+                        <div class="work-pro-item text-center">
+                            <span class="number">2</span>
+                            <div class="number-line"></div>
+                            <h3>Design & Ideas</h3>
+                            <p class="text-color">We are committed building a sustainable future fostering a collaborative spirit.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sm-padding wow fadeIn" data-wow-delay="500ms">
+                        <div class="work-pro-item text-center">
+                            <span class="number">3</span>
+                            <div class="number-line"></div>
+                            <h3>Specialized Projects</h3>
+                            <p class="text-color">We are committed building a sustainable future fostering a collaborative spirit.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 sm-padding wow fadeIn" data-wow-delay="600ms">
+                        <div class="work-pro-item text-center">
+                            <span class="number">4</span>
+                            <h3>Final Outputs</h3>
+                            <p class="text-color">We are committed building a sustainable future fostering a collaborative spirit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/.how-it-works-section-->
+
+        <section class="tophic-team bd-bottom padding">
+            <h2 class="text-center">Explore the benefits</h2>
+            <p class="text-center" style="font-size:20px;">
+                Making the transition to paperless can be a
+                breeze!
+            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 padding-15">
+                        <div class="team-wrap">
+                            <div class="team-box">
+                                <div class="overlay"></div>
+                                <img src="img/4.jpg" alt="img">
+                                
+                            </div>
+                            <div class="team-content">
+                                <h3>
+                                    Enhanced Organization<span>
+                                        Move your documents digitally with
+                                        improved accessibility and boost your productivity
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padding-15">
+
+                        <div class="team-wrap">
+
+                            <div class="team-box">
+                                <div class="overlay"></div>
+                                <img src="img/time-saving.jpg" alt="img">
+                               
+                            </div>
+                            <div class="team-content">
+                                <h3>Time-Saving<span>Scan and share anything instantly without traveling to stores.</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padding-15">
+                        <div class="team-wrap">
+                            <div class="team-box">
+                                <div class="overlay"></div>
+                                <img src="img/cost-effective.jpg" alt="img">
+                                
+                            </div>
+                            <div class="team-content">
+                                <h3>
+                                    Cost-effective<span>
+                                        Eliminate the need for budget friendly,
+                                        costly equipment and
+                                        machines
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 padding-15">
+                        <div class="team-wrap">
+                            <div class="team-box">
+                                <div class="overlay"></div>
+                                <img src="img/environmental.jpg" alt="img">
+                               
+                            </div>
+                            <div class="team-content">
+                                <h3>Environmental Friendly<span>Reduce the need for paper, reducing environmental impact</span></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--/.content-section-->
+
+
+        <section class="download-section padding" style="background-color:#e0aaff">
+            <div class="anim-elements">
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 sm-padding wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="section-heading">
+                            <h2>The Ultimate Mobile Document Scanning Solution</h2>
+                            <p class="text-dark" style="line-height:2;">
+                                Vivya Scans is an intuitive and sophisticated
+                                mobile document scanning application that simplifies document
+                                management. Our innovative solution makes the arduous process
+                                of scanning, editing, and sharing an effortless method without
+                                having to lug around a bulky traditional scanner.
+                            </p>
+                            <p class="text-dark" style="line-height:2;">
+                                With Vivya Scans, you can swiftly scan a range of documents,
+                                including ID cards, passports, and QR codes, with our
+                                high-quality OCR technology and save them in your preferred
+                                format in a fraction of a second, making the process
+                                seamless and efficient.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 sm-padding wow fadeInRight" data-wow-delay="300ms">
+                        <img src="img/mobile 2.png" alt="img">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="download-section padding" style="background-image: url('img/v-scan-funct.jpg')">
+            <div class="anim-elements">
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+                <div class="anim-element"></div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 sm-padding wow fadeInRight" data-wow-delay="300ms">
+                        <img src="img/mobile-3.png" alt="img">
+                    </div>
+                    <div class="col-lg-6 sm-padding wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="section-heading">
+                            <h2>Added Functionalities</h2>
+                            <p class="text-dark" style="line-height:2;">
+                                You can also edit your scanned documents with a few taps,
+                                adding markups, signatures, and more. Need to compress a
+                                large file? No problem, Vivya Scans lets you quickly reduce
+                                document size. And if you are working with multiple files,
+                                you can easily merge them into one with our merging feature.
+                            </p>
+                            <p class="text-dark" style="line-height:2;">
+                                This product is ideal for those who need to stay organized
+                                and keep track of essential documents. It can be used for
+                                both personal and professional purposes, allowing users to
+                                quickly store, access, and share their documentation from
+                                anywhere.
+                            </p>
+                             <a target="_blank"
+                               href="https://play.google.com/store/search?q=vivya%20scan&c=apps&hl=en-IN"
+                               ><img src="img/Google play.svg" />  </a>
+                                                     <a target="_blank" href="https://apps.apple.com/in/app/vivya-scans/id6449516149"
+                                id="try-app-btn"><img src="img/app store.svg" /></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section class="content-section content-5 bg-red bd-bottom padding">
+            <div class="container">
+                <div class="content-wrap row">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="section-heading">
+                            <!--<span>Saasbiz Makes Your Life Easy!</span>-->
+                            <h2>How can it help businesses?</h2>
+                            <p class="txtbig">
+                                Vivya Scans helps businesses manage documents
+                                cost-effectively and efficiently.
+                                By eliminating costly equipment and physical storage space,
+                                businesses can save on expenses and increase productivity.
+                            </p>
+                            <ul style="line-height:2">
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Enhanced document organization and improved accessibility</li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Reduce delays and streamline workflows</li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Reduce carbon footprint and promote sustainability</li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Save time, money, and resources</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight d-none d-lg-block" data-wow-delay="300ms">
+                        <img src="img/v-scan-img2.jpg" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section content-5 bg-blue bd-bottom padding">
+            <div class="container">
+                <div class="content-wrap row">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="section-heading">
+                            <!--<span>Saasbiz Makes Your Life Easy!</span>-->
+                            <h2>How can it help individuals?</h2>
+                            <p class="txtbig">
+                                Digitizing and storing important documents on mobile devices can be
+                                especially helpful for artists, writers, researchers, etc.
+                                By digitizing their original artwork, manuscripts, or research
+                                notes, they can easily store and access them from anywhere at any
+                                time, making it easier to share their work with others and
+                                collaborate with colleagues.
+                            </p>
+                            <span class="text-big">
+                                It helps to protect the original documents from damage or loss,
+                                as they can be stored securely in the cloud or on a backup drive.
+                            </span>
+                            <ul style="line-height:2">
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Cost-effective solution</li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Reduce paper copies</li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Reduce clutter and save space in homes</li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Access from anywhere and at anytime</li>
+                                <li class="txt-dark">
+                                    <i class="fa-solid fa-check-square"></i>
+                                    Readily scan and store important documents on their
+                                    mobile devices
+                                </li>
+                                <li class="txt-dark"><i class="fa-solid fa-check-square"></i> Save time by avoiding travel to make physical copies</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight d-none d-lg-block" data-wow-delay="300ms">
+                        <img src="img/v-scan-img3.jpg" alt="img">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/.download-section-->
+        <section class="widget-section widget-2 bg-dark padding">
+            <div class="left-design"></div>
+            <div class="right-design"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 sm-padding">
+                        <div class="widget-content">
+                            <h4>IT SERVICES</h4>
+                            <ul class="widget-links">
+                                <li>
+                                    <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i>
+                                    <a href="artificial-intelligence.html">Artificial Intelligence</a>
+                                </li>
+                                <li> <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i><a href="machine-learning.html">Machine Learning</a></li>
+                                <li> <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i><a href="mobile-app-development.html">Mobile Application Development</a></li>
+                                <li> <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i><a href="product-development-services.html">Product Development</a></li>
+                                <li><i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i><a href="ai-chatBot.html">Vivya Chat Bot</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 sm-padding">
+                        <div class="widget-content">
+                            <h4>PRODUCTS</h4>
+                            <ul class="widget-links">
+                                <li>
+                                    <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i>
+                                    <a href="vivya-scan.html">Vivya Scan</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i>
+                                    <a href="vivya-cards.html">Vivya Cards</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-angle-right" style="padding-right: 6px;"></i>
+                                    <a href="pms.html">Vivya PMS</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 sm-padding">
+                        <div class="widget-content">
+                            <h4>Contact Us</h4>
+                            <p>
+                                5 Independence Way,
+                                Office #26,Suite #300 Princeton NJ-08540,
+                                United States
+                            </p>
+                            <span>Email: enquiry@dellainfotech.com</span>
+                            <span>Phone: +1 609-964-4254</span>
+                            <span>Fax: 609-543-2577</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 sm-padding">
+                        <div class="widget-content">
+                            <h4>Social Links</h4>
+                            <!-- <div class="subscribe-box clearfix">
+                            <div class="subscribe-form-wrap">
+                                <form action="#" class="subscribe-form">
+                                    <input type="email" name="email" id="subs-email" class="form-input" placeholder="Enter Your Email Address...">
+                                    <button type="submit" class="submit-btn">Subscribe</button>
+                                    <div id="subscribe-result">
+                                        <p class="subscription-success"></p>
+                                        <p class="subscription-error"></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+                            <div class="social-container">
+                                <ul class="social-icons">
+                                    <li>
+                                        <a href="https://www.facebook.com/VivyaCorpINC" target="_blank" class="fa fa-facebook"></a>
+
+                                         <a href="https://twitter.com/VivyaCorpINC"  target="_blank" style="padding:10px;">
+                                    <img src="img/twitter-ico.svg" style="width:50px;height:50px;"/></a>
+                                        <a href="https://www.linkedin.com/company/vivya-corp-inc/" target="_blank" class="fa fa-linkedin"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/.widget-section-->
+
+        <footer class="footer-section footer-2 align-center">
+            <div class="container">
+                <p>
+                    © Copyright VIVYA CORP All Rights Reserved
+                </p>
+                <p>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </p>
+            </div>
+        </footer><!-- /.footer-section -->
+        <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-606499080"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-606499080');
+    </script>
+
+        <!-- jQuery Lib -->
+        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <!-- Tether JS -->
+        <script src="js/vendor/tether.min.js"></script>
+        <!-- Slicknav JS -->
+        <script src="js/vendor/jquery.slicknav.min.js"></script>
+        <!-- OWL-Carousel JS -->
+        <script src="js/vendor/owl.carousel.min.js"></script>
+        <!-- Smooth Scroll JS -->
+        <script src="js/vendor/smooth-scroll.min.js"></script>
+        <!-- Venobox JS -->
+        <script src="js/vendor/venobox.min.js"></script>
+        <!-- Ajaxchimp JS -->
+        <script src="js/vendor/jquery.ajaxchimp.min.js"></script>
+        <!--YTPlayer Js-->
+        <script src="js/vendor/jquery.mb.YTPlayer.min.js"></script>
+        <!-- Nice Select JS -->
+        <script src="js/vendor/jquery.nice-select.min.js"></script>
+        <!-- Pricing Switcher JS -->
+        <script src="js/vendor/pricing-switcher.js"></script>
+        <!-- Waypoints JS -->
+        <script src="js/vendor/waypoints.min.js"></script>
+        <!-- Odometer JS -->
+        <script src="js/vendor/odometer.min.js"></script>
+        <!-- Wow JS -->
+        <script src="js/vendor/wow.min.js"></script>
+        <!-- Main JS -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

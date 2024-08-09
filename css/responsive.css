@@ -1,0 +1,455 @@
+/*
+   Saasbiz Theme Responsive Design
+*/
+
+@media (max-width: 1170px) {
+    .nav.nav-pills.tab-nav a{ font-size: 13px; }
+}
+@media (max-width: 1024px) {}
+
+/* ---- Start of max-width 992px CSS ---- */
+@media (max-width: 992px){
+    .sm-padding{ padding: 15px; }
+    .header-section .navbar-brand {
+        height: 80px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    .blog-content .read-more {
+        font-family: "Work Sans",sans-serif;
+        color: #263b5e;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: relative;
+        /* padding-left: 40px; */
+    }
+
+        .blog-content .read-more:before {
+            /* background-color: #622dfa; */
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 4px;
+            left: 0;
+            top: calc(50% - 2px);
+        }
+        .blog-content .read-more:before {
+            /* background-color: #622dfa; */
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 4px;
+            left: 0;
+            top: calc(50% - 2px);
+        }
+    .blog-content .read-more {
+        font-family: "Work Sans",sans-serif;
+        color: #263b5e;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        /* position: relative; */
+        /* padding-left: 40px; */
+    }
+    .txtlarge {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    .page-content {
+        font-size: 12px;
+    }
+    .default-btn.btn-pink {
+        background-color: #f42267;
+        -webkit-box-shadow: 0px 15px 25px 0px rgba(244, 34, 103, 0.5);
+        box-shadow: 0px 15px 25px 0px rgba(244, 34, 103, 0.5);
+        /*margin-top: -10px;
+        margin-left: 100px;*/
+    }
+    .hero-2 .hero-content h1 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .hero-section.hero-2 .hero-content {
+        top: -4em;
+        margin-left: 25px;
+        position: absolute;
+        width: 100%;
+        width: 300px;
+        /* letter-spacing: 5px; */
+        line-height: 1;
+    }
+    .mac-head::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+        margin-right: 3px;
+        width: 2rem;
+        height: 2rem;
+        content: counter(list);
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: var(--c1);
+        color: white;
+    }
+    .menu-btn,
+    .js #mainmenu { display: none; }
+    .js .slicknav_menu { display:block; }
+    .header-right .cart-icon{ padding: 0; }
+    .header-right .cart-icon,
+    .header-right .menu-btn{ margin-right: 55px; }
+    .hero-section.hero-5,
+    .hero-section.hero-2,
+    .hero-section {
+        height: auto;
+        padding: 120px 0;
+    }
+    .host-pricing-wrap .tab-nav{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .host-pricing-wrap .tab-nav a{ display: inline-block; }
+    .content-section.content-4 { padding: 100px 0 15px; }
+    .cta-2 .default-btn{ padding: 0 30px; }
+    .work-pro-item .number-line{ display: none; }
+    .sidebar-wrap,
+    .case-sidebar-item{ padding: 0; }
+    .job-details-btn .default-btn{ padding: 0 30px; }
+    .hero-bg-shape{ display: none; }
+}
+.slides .vivya-scan-slider li div {
+    color: #FFFFFF;
+    font-size: 50px;
+    /* left: 28%; */
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    width: 596px;
+    line-height: 1.5;
+    -webkit-animation-name: anim_titles;
+    -webkit-animation-duration: 24.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: anim_titles;
+    -moz-animation-duration: 24.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+    top: 100px;
+    text-align: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* left: 60px; */
+    margin-left: 45px;
+}
+  
+
+/* ---- End of max-width 992px CSS ---- */
+
+
+/* ---- Start of min-width 480px and max-width 768px CSS ---- */
+@media all and (min-width: 480px) and (max-width: 768px) {
+	
+}
+/* ---- End of min-width 480px and max-width 768px CSS ---- */
+
+
+/* ---- Start of max-width 767px CSS ---- */
+@media all and (max-width: 767px) {
+    body, p{
+        font-size: 13px;
+        line-height: 24px;
+    }
+    h1{
+        font-size: 30px;
+        line-height: 42px;
+    }
+    h2{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    #v-scan-bannertxt {
+        line-height: 28px;
+        left: 46px;
+        position: absolute;
+        width: 276px;
+        top: 0px;
+        text-align: center;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    p br{
+        display: none;
+    }
+    .padding{
+        padding: 60px 0;
+    }
+    .xs-padding{
+    	padding: 15px;
+    }
+    .bubble-effect{
+        display: none;
+    }
+    .section-heading h2{
+        line-height: 35px;
+        font-size: 24px;
+    }
+    .page-header{
+        height: 250px;
+    }
+    .page-content h2 {
+        font-size: 24px;
+        line-height: 36px;
+        margin: 0;
+        font-size: 16px;
+    }
+    .page-content h4 {
+        font-family: "Work Sans",sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+    }
+    
+
+    .error-content{ display: block; }
+    .error-content .error-info {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+    .error-content .error-info h2{
+        font-size: 120px;
+        line-height: 120px;
+        margin-bottom: 30px;
+    }
+    .error-content .error-info a{ display: block; }
+    .contact-form .form-group .col-sm-6:first-child{
+        margin-bottom: 15px;
+    }
+    .contact-info h2{
+        line-height: 28px;
+    }
+    .sidebar-wrap{
+        padding-left: 0;
+    }
+    .blog-single-content h2 a{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .blog-single-content h2{
+        line-height: 28px;
+    }
+    blockquote p{
+        line-height: 32px;
+    }
+    .hero-section.hero-2,
+    .hero-section { padding: 60px 0; }
+    .hero-section.hero-5{ padding: 80px 0 60px; }
+    .hero-section.hero-4{
+        height: 500px;
+        padding: 0;
+    }
+    .project-section{
+        padding-bottom: 100px;
+    }
+    .cta-wrap .text-right,
+    .cta-content{
+        text-align: center!important;
+    }
+    .cta-content h2{
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .sponsor-section .section-heading h2{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .domain-search-section{
+        margin: 0;
+        padding-top: 60px;
+    }
+    .nice-select{
+        width: 100%;
+        border-left: 2px solid #eee;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .search-box .nice-select {
+        width: 30%;
+        padding: 0 0 0 10px;
+        border-left: none;
+        margin: 0;
+    }
+    .table.host-table th{
+        padding: 10px 3px;
+    }
+    .table.host-table{
+        margin-top: 20px;
+    }
+    .search-box.support-search .nice-select{
+        display: inline-block;
+        margin: 0;
+        width: 20%;
+    }
+    .search-box.support-search .form-control{
+        width: 80%;
+        display: inline-block;
+    }
+    .owl-controls .owl-dots{ bottom: -40px; }
+    .case-sidebar-item{ padding: 0; }
+    .faq-item .card-header button{ font-size: 14px; }
+    .search-box .form-control{ width: 70%; }
+    .check-domain .form-control{ width: 100%; }
+    .search-box .form-group{
+        width: 65%;
+        font-size: 10px;
+        padding: 0px;
+        display: flex;
+        margin: 0;
+    }
+    .search-box .default-btn{ 
+        width: 35%; 
+        font-size: 10px;
+        padding: 0;
+    }
+    .support-search .form-group{ 
+        display: flex; 
+        margin-bottom: 0;
+    }
+    .host-pricing-wrap .tab-nav { margin-bottom: 0; }
+    .content-section.content-4 { padding: 60px 0 15px; }
+    .cta-2 .cta-content{ padding: 0; }
+    .cta-2 h2 br{ display: none; }
+    .job-details-btn {
+        text-align: left;
+        margin-top: 25px; 
+    }
+}
+/* ---- End of max-width 767px CSS ---- */
+
+
+/* ---- Start of max-width 580px CSS ---- */
+@media all and (max-width: 580px) {
+    .subscribe-form{ width: 100%; }
+    .header-right .menu-btn{
+        display: none;
+    }
+}
+/* ---- End of max-width 580px CSS ---- */
+
+
+/* ---- Start of max-width 420px CSS ---- */
+@media all and (max-width: 420px) {
+    .app-btn a{
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+/* ---- End of max-width 420px CSS ---- */
+
+
+/* ---- Start of max-width 380px CSS ---- */
+@media all and (max-width: 380px) {
+	.btn-group,
+    .btn-group a{ display: block; }
+    .btn-group a{ margin: 20px 0 0; }
+    .slides .vivya-scan-slider li div {
+        color: #FFFFFF;
+        font-size: 25px;
+        /* left: 28%; */
+        margin: 0 auto;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        width: 285px;
+        line-height: 1.5;
+        -webkit-animation-name: anim_titles;
+        -webkit-animation-duration: 24.0s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        -webkit-animation-delay: 0;
+        -webkit-animation-play-state: running;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-name: anim_titles;
+        -moz-animation-duration: 24.0s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-direction: normal;
+        -moz-animation-delay: 0;
+        -moz-animation-play-state: running;
+        -moz-animation-fill-mode: forwards;
+        top: 100px;
+        text-align: center;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* left: 60px; */
+        margin-left: 45px;
+    }
+    .blog-content .read-more:before {
+        background-color: #622dfa;
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 4px;
+        left: 0;
+        top: calc(20% - 2px);
+    }
+    #try-app-btn {
+        position: relative;
+        /* left: 60px; */
+        /* margin-right: 10px; */
+    }
+    .pms-head {
+        position: absolute;
+        left: -35px;
+        width: 285px;
+        /* top: -20px; */
+        color: #fff;
+        font-size: 20px;
+    }
+    .pms-item-1, .pms-item-2, .pms-item-3 {
+        position: absolute;
+        /* left: 25px; */
+        display: block;
+        top: 3em;
+        width: 193px;
+        line-height: 1.5;
+        font-size: 16px;
+        color: #000;
+        animation-duration: 20s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    .default-btn.btn-pink {
+    background-color: #f42267;
+    -webkit-box-shadow: 0px 15px 25px 0px rgba(244, 34, 103, 0.5);
+    box-shadow: 0px 15px 25px 0px rgba(244, 34, 103, 0.5);
+    margin-top: 0px;
+    margin-left: 8px;
+}
+    .slider--container {
+        position: relative;
+        height: 45vh;
+        z-index:1;
+    }
+    }
+/* ---- End of max-width 380px CSS ---- */
