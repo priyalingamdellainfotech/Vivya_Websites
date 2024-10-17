@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href=""
+      rel="stylesheet"
+    />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+    <style>
+      html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+  border-radius: 0 0 10px 0;
+  box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+#nav a {
+  display: block;
+  padding: 10px 10px;
+  color: #fff;
+}
+
+#nav a:hover {
+  color: #ff0;
+}
+
+.section {
+  height: 1000px;
+  padding: 30px 140px;
+}
+
+#section-1 {
+  background: #eee;
+}
+
+#section-2 {
+  background: #ddd;
+}
+
+#section-3 {
+  background: #ccc;
+}
+
+
+
+.section a {
+  color: #3399FF;
+}
+    </style>
+  </head>
+  <body>
+    <!-- <lottie-player src="js/json/bgtest.json"
+     
+      loop autoplay></lottie-player> -->
+     <!-- settings box -->
+
+<!-- the gear icon that opens the box when you click on it -->
+<ul id="nav">
+  <li>
+    <a href="#section-1" class="js-anchor-link">Section 1</a>
+  </li>
+  <li>
+    <a href="#section-2" class="js-anchor-link">Section 2</a>
+  </li>
+  <li>
+    <a href="#section-3" class="js-anchor-link">Section 3</a>
+  </li>
+</ul>
+
+<div id="section-1" class="section">
+  <h1>Section 1</h1>
+  <a href="#section-2" class="js-anchor-link">Go to section 2</a>
+</div>
+
+<div id="section-2" class="section">
+  <h1>Section 2</h1>
+  <a href="#section-3" class="js-anchor-link">Go to section 3</a>
+</div>
+
+<div id="section-3" class="section">
+  <h1>Section 3</h1>
+  <a href="#section-1" class="js-anchor-link">Back to section 1</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+  $('.js-anchor-link').click(function(e){
+  e.preventDefault();
+  var target = $($(this).attr('href'));
+  if(target.length){
+    var scrollTo = target.offset().top;
+    $('body, html').animate({scrollTop: scrollTo+'px'}, 800);
+  }
+});
+</script>
+<!-- <script src="js/lottie-player.js"></script> -->
+  </body>
+</html>

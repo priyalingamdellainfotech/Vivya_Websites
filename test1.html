@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader Example with GIF</title>
+    <style>
+        /* Loader Styles */
+        #loader {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        /* Hide content initially */
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loader Element -->
+    <div id="loader">
+        <img src="img/logos/DotsLoader.gif"  />
+    </div>
+
+    <!-- Main Content -->
+    <div id="content">
+        <h1>Welcome to the Page!</h1>
+        <p>This is the main content of your page.</p>
+    </div>
+
+    <script>
+        // Hide loader and show content after the page loads
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none'; // Hide the loader
+            document.getElementById('content').style.display = 'block'; // Show the content
+        });
+    </script>
+
+</body>
+</html>
